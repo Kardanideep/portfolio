@@ -54,15 +54,12 @@
   ],
   "hero": {
     "headlineLines": [
-      "Turning ideas",
-      "into",
-      "digital",
-      "products."
+      "Turning ideas into"
     ],
-    "headlineHighlight": "digital",
-    "introPrefix": "I'm",
-    "introName": "Deep Kardani",
-    "introBody": "I work with businesses to design and develop modern websites and custom web applications that support growth, streamline operations, and solve real business needs.",
+    "headlineHighlight": "Digital",
+    "headlinehighlight2": "Products.",
+    
+    "introBody": "Helping businesses and individuals turn ideas into high-performing products with clean design, scalable code and real results.",
     "primaryCta": {
       "label": "Explore my work",
       "href": "#work"

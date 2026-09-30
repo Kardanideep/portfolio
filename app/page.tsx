@@ -20,6 +20,14 @@ const PROCESS_STEP_MS = site.process.timing.stepMs;
 const PROCESS_HOLD_MS = site.process.timing.holdMs;
 const PROCESS_RESET_MS = site.process.timing.resetMs;
 
+/* ── Hero rotating images ──────────────────────────── */
+const HERO_IMAGES = [
+  "/images/hero-workspace.png",
+  "/images/hero-workspace-2.png",
+  "/images/hero-workspace-3.png",
+  "/images/hero-workspace-4.png",
+];
+
 const accentMap: Record<string, string> = {
   blue: "hover:border-blue-200 hover:shadow-[0_20px_50px_-25px_rgba(37,99,235,0.35)]",
   violet:
@@ -54,7 +62,7 @@ function ProjectMedia({
           src={image}
           alt={`${title} preview`}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+          className="h-full w-full object-fit transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
         />
 
         {/* Hover overlay hint */}
@@ -76,9 +84,8 @@ function ProjectMedia({
   /* ── Fallback placeholder ── */
   return (
     <div
-      className={`relative mb-6 h-44 overflow-hidden rounded-2xl border border-zinc-200 bg-gradient-to-br sm:mb-7 sm:h-52 ${
-        accentStyles[accent] ?? accentStyles.blue
-      }`}
+      className={`relative mb-6 h-44 overflow-hidden rounded-2xl border border-zinc-200 bg-gradient-to-br sm:mb-7 sm:h-52 ${accentStyles[accent] ?? accentStyles.blue
+        }`}
     >
       <div className="absolute left-3 right-3 top-3 flex items-center gap-1.5">
         <span className="h-2 w-2 rounded-full bg-zinc-300" />
@@ -176,7 +183,7 @@ function ProcessSection() {
             {site.process.eyebrow}
           </p>
 
-          <h2 className="mt-4 text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="mt-4 text-4xl font-bold leading-[1.05] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
             {site.process.heading}
             <br />
             <span className="italic text-muted">
@@ -200,11 +207,10 @@ function ProcessSection() {
               <div
                 data-flow-fill
                 style={{ width: `${processFill}%` }}
-                className={`absolute inset-y-0 left-0 border-t-2 border-dashed border-accent ease-out ${
-                  activeProcess < 0
-                    ? "opacity-0 transition-opacity duration-300"
-                    : "opacity-100 transition-[width,opacity] duration-1000"
-                }`}
+                className={`absolute inset-y-0 left-0 border-t-2 border-dashed border-accent ease-out ${activeProcess < 0
+                  ? "opacity-0 transition-opacity duration-300"
+                  : "opacity-100 transition-[width,opacity] duration-1000"
+                  }`}
               />
             </div>
           </div>
@@ -221,19 +227,17 @@ function ProcessSection() {
                 >
                   <div className="relative z-10 mb-6 sm:mb-8">
                     <span
-                      className={`relative flex h-12 w-12 items-center justify-center rounded-full border-2 text-base font-bold tracking-[-0.02em] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-14 sm:w-14 sm:text-lg ${
-                        on
-                          ? "scale-110 border-accent bg-accent text-white"
-                          : "border-border-strong bg-bg"
-                      }`}
+                      className={`relative flex h-12 w-12 items-center justify-center rounded-full border-2 text-base font-bold tracking-[-0.02em] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-14 sm:w-14 sm:text-lg ${on
+                        ? "scale-110 border-accent bg-accent text-white"
+                        : "border-border-strong bg-bg"
+                        }`}
                     >
                       {step.n}
 
                       <span
                         aria-hidden="true"
-                        className={`pointer-events-none absolute inset-0 rounded-full border-2 border-accent transition-opacity duration-500 ${
-                          on ? "animate-ping opacity-60" : "opacity-0"
-                        }`}
+                        className={`pointer-events-none absolute inset-0 rounded-full border-2 border-accent transition-opacity duration-500 ${on ? "animate-ping opacity-60" : "opacity-0"
+                          }`}
                       />
                     </span>
                   </div>
@@ -241,15 +245,13 @@ function ProcessSection() {
                   <div className="flex w-full flex-col items-start md:items-center">
                     <span
                       aria-hidden="true"
-                      className={`mb-4 block h-px bg-gradient-to-r from-accent to-transparent transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:mb-5 ${
-                        on ? "w-16" : "w-10"
-                      }`}
+                      className={`mb-4 block h-px bg-gradient-to-r from-accent to-transparent transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:mb-5 ${on ? "w-16" : "w-10"
+                        }`}
                     />
 
                     <h3
-                      className={`text-lg font-semibold leading-[1.15] tracking-[-0.02em] transition-colors duration-300 sm:text-xl md:text-2xl ${
-                        on ? "text-text" : "text-text/60"
-                      }`}
+                      className={`text-lg font-semibold leading-[1.15] tracking-[-0.02em] transition-colors duration-300 sm:text-xl md:text-2xl ${on ? "text-text" : "text-text/60"
+                        }`}
                     >
                       {step.t}
                     </h3>
@@ -262,9 +264,8 @@ function ProcessSection() {
                   {i < PROCESS.length - 1 && (
                     <span
                       aria-hidden="true"
-                      className={`absolute left-1/2 top-7.5 hidden -translate-y-1/2 translate-x-[calc(50%+2.25rem)] transition-colors duration-500 md:block ${
-                        activeProcess > i ? "text-accent" : "text-accent/25"
-                      }`}
+                      className={`absolute left-1/2 top-7.5 hidden -translate-y-1/2 translate-x-[calc(50%+2.25rem)] transition-colors duration-500 md:block ${activeProcess > i ? "text-accent" : "text-accent/25"
+                        }`}
                     >
                       ▶
                     </span>
@@ -299,6 +300,17 @@ function ProcessSection() {
 
 export default function Home() {
   const [active, setActive] = useState(0);
+
+  /* ── Hero image rotation ─────────────────────────── */
+  const [heroIndex, setHeroIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setHeroIndex((i) => (i + 1) % HERO_IMAGES.length);
+    }, 1500);
+
+    return () => clearInterval(id);
+  }, []);
 
   // Animating grid columns is smoother than animating flex sizes
   const columns = SERVICES.map((_, i) => (i === active ? "5fr" : "1fr")).join(
@@ -379,225 +391,181 @@ export default function Home() {
       {/* Navbar */}
       <Header />
 
+
       {/* ── Hero ─────────────────────────────────────────── */}
       <section
         id="home"
-        className="relative overflow-hidden px-5 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10 md:px-8 md:pb-28 md:pt-16"
+        className="relative overflow-hidden bg-[#f8f9fb] px-5 pb-14 sm:px-6 sm:pb-18 md:px-10 lg:min-h-[calc(100vh-80px)] lg:py-0"
       >
-        <div className="pointer-events-none absolute -right-40 -top-40 h-[20rem] w-[20rem] rounded-full bg-[#2563EB]/[0.07] blur-3xl sm:h-[28rem] sm:w-[28rem] lg:h-[34rem] lg:w-[34rem]" />
-        <div className="pointer-events-none absolute -left-40 top-[45%] h-[16rem] w-[16rem] rounded-full bg-[#60A5FA]/[0.05] blur-3xl sm:h-[22rem] sm:w-[22rem] lg:h-[26rem] lg:w-[26rem]" />
+        {/* Very subtle background light */}
+        <div className="pointer-events-none absolute -left-40 bottom-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#60A5FA]/[0.025] blur-3xl" />
 
-        <div className="relative mx-auto w-full max-w-7xl">
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-10">
-            {/* Left */}
-            <div className="lg:col-span-7">
-              <h1 className="reveal max-w-4xl text-[2.25rem] font-semibold leading-[1.02] tracking-[-0.045em] sm:text-5xl sm:leading-[1] md:text-6xl lg:text-7xl lg:leading-[0.98] xl:text-[6.5rem]">
-                {hero.headlineLines[0]}
-                <br />
-                <span className="text-muted">{hero.headlineLines[1]}</span>{" "}
-                <span className="relative inline-block">
-                  <span className="relative z-10 text-[#2563EB]">
-                    {hero.headlineHighlight}
-                  </span>
-
-                  <span className="absolute -bottom-1 left-0 h-[4px] w-full rounded-full bg-[#2563EB]/20 sm:h-[5px]" />
+        <div className="relative mx-auto flex min-h-full w-full max-w-[1440px] items-center">
+          <div className="grid w-full items-center lg:grid-cols-[42%_58%]">
+            {/* =====================================================
+          LEFT CONTENT
+      ====================================================== */}
+            <div className="relative z-20 py-8 lg:py-10">
+              {/* Availability */}
+              <div className="reveal mb-5 inline-flex items-center gap-2 rounded-full border border-[#e5e7eb] bg-white px-3.5 py-2 text-xs font-medium text-[#4b5563] shadow-[0_6px_20px_-12px_rgba(15,23,42,0.25)]">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inset-0 animate-ping rounded-full bg-emerald-500/40" />
+                  <span className="relative block h-2 w-2 rounded-full bg-emerald-500" />
                 </span>
+                Your Idea. My Expertise.
+              </div>
+
+              {/* Heading */}
+              <h1 className="reveal max-w-[650px] text-[3.50rem] font-semibold leading-[0.99] tracking-[-0.055em] text-[#111318] sm:text-5xl md:text-[4rem] lg:text-[4.9rem] xl:text-[5.5rem]">
+                {hero.headlineLines}{" "}
+                <span className="text-[#2563EB]">{hero.headlineHighlight}</span>
                 <br />
-                {hero.headlineLines[3]}
+                {hero.headlinehighlight2}
               </h1>
 
-              <p className="reveal mt-6 max-w-xl text-base leading-7 text-muted sm:mt-8 md:text-lg md:leading-8">
-                {hero.introPrefix}{" "}
-                <span className="font-medium text-text">{hero.introName}</span>.{" "}
+              {/* Description */}
+              <p className="reveal mt-5 max-w-[510px] text-[15px] leading-7 text-[#596171] sm:mt-6 sm:text-base md:text-lg md:leading-8">
                 {hero.introBody}
               </p>
 
               {/* CTA */}
-              <div className="reveal mt-8 flex flex-wrap items-center gap-3 sm:mt-9">
+              <div className="reveal mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
+                {/* Primary */}
                 <a
-                  href={hero.primaryCta.href}
-                  className="group inline-flex w-fit items-center gap-2 rounded-full bg-accent py-2 pl-5 pr-2 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#0F1117] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:gap-3 sm:pl-6"
+                  href="#contact"
+                  className="group inline-flex items-center gap-3 rounded-full bg-[#111827] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#2563EB] hover:shadow-[0_12px_30px_-12px_rgba(37,99,235,0.45)] sm:px-6 sm:py-3.5"
                 >
-                  {hero.primaryCta.label}
-                  <span
-                    aria-hidden="true"
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#2563EB] transition-transform duration-300 group-hover:translate-x-0.5"
-                  >
+                  Start a Project
+                  <span className="text-base transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
                 </a>
 
+                {/* Secondary */}
                 <a
-                  href={hero.secondaryCta.href}
-                  className="rounded-full border border-border-strong bg-surface px-5 py-3 text-sm font-semibold text-text transition-all duration-300 hover:border-[#2563EB] hover:bg-[#2563EB]/5 hover:text-[#2563EB] sm:px-6 sm:py-3.5"
+                  href="#projects"
+                  className="inline-flex items-center rounded-full border border-[#d1d5db] bg-white px-5 py-3 text-sm font-semibold text-[#111318] transition-all duration-300 hover:border-[#2563EB] hover:text-[#2563EB] sm:px-6 sm:py-3.5"
                 >
-                  {hero.secondaryCta.label}
+                  View Projects
                 </a>
               </div>
 
-              {/* Services chips */}
-              <div className="reveal mt-10 flex flex-wrap gap-2 sm:mt-12">
-                {hero.chips.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-border-soft bg-surface px-3.5 py-1.5 text-xs font-medium text-muted transition-all duration-300 hover:border-[#2563EB]/30 hover:bg-[#2563EB]/5 hover:text-[#2563EB] sm:px-4 sm:py-2"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Right visual */}
-            <div className="reveal hidden lg:col-span-5 lg:block">
-              <div className="relative mx-auto mt-8 max-w-[520px] sm:mt-10 lg:mt-0 lg:-mt-10">
-                <div className="pointer-events-none absolute -inset-4 -z-10 rounded-[3rem] bg-gradient-to-br from-accent/10 via-transparent to-emerald-400/10 blur-3xl sm:-inset-8" />
-
-                {/* ── Bento grid ─────────────────────────────── */}
-                <div className="relative grid aspect-[5/6] grid-cols-6 grid-rows-6 gap-2.5 sm:aspect-[5/5.2] sm:gap-3">
-                  {/* Large tile — Websites */}
-                  <div className="reveal group col-span-6 row-span-3 overflow-hidden rounded-[1.5rem] border border-border bg-surface p-4 transition-all duration-500 hover:border-accent/40 hover:shadow-[0_25px_60px_-30px_rgba(15,23,42,0.25)] sm:p-5">
-                    <div className="flex h-full flex-col justify-between">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
-                          {hero.bentoTiles.websites.index}
-                        </span>
-                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-bg-soft text-sm text-muted transition-colors duration-500 group-hover:bg-accent/10 group-hover:text-accent sm:h-8 sm:w-8">
-                          ↗
-                        </span>
-                      </div>
-
-                      <div className="relative my-2.5 flex-1 sm:my-3">
-                        <div className="absolute inset-0 rounded-2xl border border-border-soft bg-gradient-to-br from-bg-soft to-surface" />
-                        <div className="absolute left-3 right-3 top-3 flex items-center gap-1.5">
-                          <span className="h-1.5 w-1.5 rounded-full bg-border-strong" />
-                          <span className="h-1.5 w-1.5 rounded-full bg-border-strong" />
-                          <span className="h-1.5 w-1.5 rounded-full bg-border-strong" />
-                        </div>
-                        <div className="absolute left-3 right-3 top-7 space-y-1.5 sm:top-8 sm:space-y-2">
-                          <div className="h-2.5 w-1/2 rounded-full bg-text/80" />
-                          <div className="h-1.5 w-3/4 rounded-full bg-border-strong/40" />
-                        </div>
-                        <div className="absolute bottom-3 left-3 right-3 flex gap-1.5 sm:gap-2">
-                          <div className="h-8 flex-1 rounded-lg bg-gradient-to-br from-accent/25 to-accent/5 sm:h-10" />
-                          <div className="h-8 flex-1 rounded-lg bg-gradient-to-br from-emerald-400/25 to-emerald-400/5 sm:h-10" />
-                          <div className="h-8 flex-1 rounded-lg bg-gradient-to-br from-violet-400/25 to-violet-400/5 sm:h-10" />
-                        </div>
-                      </div>
-
-                      <div>
-                        <p className="text-base font-semibold leading-tight text-text sm:text-lg md:text-xl">
-                          {hero.bentoTiles.websites.title}
-                        </p>
-                        <p className="mt-1 text-[11px] text-muted sm:text-xs">
-                          {hero.bentoTiles.websites.desc}
-                        </p>
-                      </div>
-                    </div>
+              {/* =====================================================
+            SERVICES (desktop)
+        ====================================================== */}
+              <div className="reveal mt-9 hidden grid-cols-4 gap-x-6 gap-y-6 sm:mt-11 sm:gap-x-5 lg:grid">
+                {/* Web */}
+                <div className="group">
+                  <div className="mb-2.5 flex h-10 w-10 items-center justify-center rounded-xl border border-[#e5e7eb] bg-white text-[#2563EB] shadow-sm transition-all duration-300 group-hover:border-[#2563EB]/25 group-hover:bg-[#2563EB]/5">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      className="h-[19px] w-[19px]"
+                    >
+                      <path d="m8 9-3 3 3 3" />
+                      <path d="m16 9 3 3-3 3" />
+                      <path d="m14 5-4 14" />
+                    </svg>
                   </div>
-
-                  {/* Tile — SaaS */}
-                  <div className="reveal group col-span-3 row-span-3 overflow-hidden rounded-[1.5rem] border border-border bg-surface p-3.5 transition-all duration-500 hover:border-accent/40 hover:shadow-[0_25px_60px_-30px_rgba(15,23,42,0.25)] sm:p-4">
-                    <div className="flex h-full flex-col justify-between">
-                      <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
-                        {hero.bentoTiles.saas.index}
-                      </span>
-
-                      <div className="relative my-2 flex-1">
-                        <div className="absolute inset-0 rounded-xl border border-border-soft bg-bg-soft p-2 sm:p-2.5">
-                          <div className="flex items-center gap-1.5">
-                            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                            <span className="h-1 w-10 rounded-full bg-border-strong/50" />
-                          </div>
-                          <div className="mt-2.5 flex items-end gap-1 sm:mt-3">
-                            <span className="h-3 w-1.5 rounded-full bg-accent/30 sm:h-4" />
-                            <span className="h-5 w-1.5 rounded-full bg-accent/60 sm:h-7" />
-                            <span className="h-8 w-1.5 rounded-full bg-accent sm:h-10" />
-                            <span className="h-4 w-1.5 rounded-full bg-accent/50 sm:h-6" />
-                            <span className="h-6 w-1.5 rounded-full bg-accent/70 sm:h-8" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <p className="text-xs font-semibold leading-tight text-text sm:text-sm">
-                          {hero.bentoTiles.saas.title}
-                        </p>
-                        <p className="mt-1 text-[10px] text-muted sm:text-[11px]">
-                          {hero.bentoTiles.saas.desc}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Tile — Web apps */}
-                  <div className="reveal group col-span-3 row-span-3 overflow-hidden rounded-[1.5rem] border border-border bg-surface p-3.5 transition-all duration-500 hover:border-accent/40 hover:shadow-[0_25px_60px_-30px_rgba(15,23,42,0.25)] sm:p-4">
-                    <div className="flex h-full flex-col justify-between">
-                      <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
-                        {hero.bentoTiles.webapps.index}
-                      </span>
-
-                      <div className="relative my-2 flex-1">
-                        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-1.5">
-                          <div className="rounded-lg border border-border-soft bg-bg-soft" />
-                          <div className="rounded-lg bg-gradient-to-br from-emerald-400/25 to-emerald-400/5" />
-                          <div className="rounded-lg bg-gradient-to-br from-accent/20 to-accent/5" />
-                          <div className="rounded-lg border border-border-soft bg-bg-soft" />
-                        </div>
-                      </div>
-
-                      <div>
-                        <p className="text-xs font-semibold leading-tight text-text sm:text-sm">
-                          {hero.bentoTiles.webapps.title}
-                        </p>
-                        <p className="mt-1 text-[10px] text-muted sm:text-[11px]">
-                          {hero.bentoTiles.webapps.desc}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Wide strip */}
-                  <div className="reveal col-span-6 flex items-center justify-between rounded-[1.25rem] border border-border bg-surface px-3.5 py-3 sm:px-4 sm:py-3.5">
-                    <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
-                      {hero.bentoTiles.strip}
-                    </span>
-                    <div className="flex items-center gap-1.5">
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent/60" />
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent/30" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating tag — left */}
-                <div
-                  className="reveal absolute -left-4 top-1/2 hidden -translate-y-1/2 items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-2 shadow-[0_18px_40px_-18px_rgba(15,23,42,0.25)] xl:flex"
-                  style={{ animationDelay: "1.1s" }}
-                >
-                  <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/50" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-                  </span>
-                  <span className="text-[11px] font-medium text-text">
-                    {hero.floatingTags.left}
-                  </span>
-                </div>
-
-                {/* Floating tag — right */}
-                <div
-                  className="reveal absolute -right-3 bottom-16 hidden rounded-2xl border border-border bg-surface px-3.5 py-2.5 shadow-[0_18px_40px_-18px_rgba(15,23,42,0.25)] xl:block"
-                  style={{ animationDelay: "1.25s" }}
-                >
-                  <p className="text-[10px] font-medium uppercase tracking-[0.15em] text-muted">
-                    {hero.floatingTags.rightLabel}
+                  <p className="text-[11px] font-medium leading-4 text-[#111318] sm:text-xs">
+                    Web
+                    <br />
+                    Development
                   </p>
-                  <p className="mt-1 text-xs font-semibold text-text">
-                    {hero.floatingTags.rightValue}
+                </div>
+
+                {/* Mobile */}
+                <div className="group">
+                  <div className="mb-2.5 flex h-10 w-10 items-center justify-center rounded-xl border border-[#e5e7eb] bg-white text-[#2563EB] shadow-sm transition-all duration-300 group-hover:border-[#2563EB]/25 group-hover:bg-[#2563EB]/5">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      className="h-[19px] w-[19px]"
+                    >
+                      <rect x="7" y="3" width="10" height="18" rx="2" />
+                      <path d="M10.5 18h3" />
+                    </svg>
+                  </div>
+                  <p className="text-[11px] font-medium leading-4 text-[#111318] sm:text-xs">
+                    Mobile App
+                    <br />
+                    Development
+                  </p>
+                </div>
+
+                {/* Backend */}
+                <div className="group">
+                  <div className="mb-2.5 flex h-10 w-10 items-center justify-center rounded-xl border border-[#e5e7eb] bg-white text-[#2563EB] shadow-sm transition-all duration-300 group-hover:border-[#2563EB]/25 group-hover:bg-[#2563EB]/5">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      className="h-[19px] w-[19px]"
+                    >
+                      <path d="M6.5 17.5h11a4 4 0 0 0 .6-7.95A5.5 5.5 0 0 0 7.2 8.4 4.5 4.5 0 0 0 6.5 17.5Z" />
+                    </svg>
+                  </div>
+                  <p className="text-[11px] font-medium leading-4 text-[#111318] sm:text-xs">
+                    API &
+                    <br />
+                    Backend
+                  </p>
+                </div>
+
+                {/* Support */}
+                <div className="group">
+                  <div className="mb-2.5 flex h-10 w-10 items-center justify-center rounded-xl border border-[#e5e7eb] bg-white text-[#2563EB] shadow-sm transition-all duration-300 group-hover:border-[#2563EB]/25 group-hover:bg-[#2563EB]/5">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      className="h-[19px] w-[19px]"
+                    >
+                      <circle cx="12" cy="12" r="3" />
+                      <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.8 1.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-2.6V20a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1-1.8-1.8.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H4.3v-2.6h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1 1.8-1.8.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6V5h2.6v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1 1.8 1.8-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.1v2.6h-.1a1.7 1.7 0 0 0-1.6 1Z" />
+                    </svg>
+                  </div>
+                  <p className="text-[11px] font-medium leading-4 text-[#111318] sm:text-xs">
+                    Maintenance
+                    <br />
+                    & Support
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* =====================================================
+      RIGHT DEVICE VISUAL — auto-rotating images
+  ====================================================== */}
+            <div className="relative lg:-mt-20 -px-10 mx-auto w-full max-w-[900px]">
+              <div className="relative aspect-[4/3] w-full">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={HERO_IMAGES[heroIndex]}
+                  alt="Web and mobile development workspace"
+                  className="absolute inset-0 block h-full w-full select-none object-cover"
+                />
+
+                {/* LEFT FADE */}
+                <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[12%] bg-gradient-to-r from-[#f8f9fb] to-transparent" />
+
+                {/* RIGHT FADE */}
+                <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[12%] bg-gradient-to-l from-[#f8f9fb] to-transparent" />
+
+                {/* TOP FADE */}
+                <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[12%] bg-gradient-to-b from-[#f8f9fb] to-transparent" />
+
+                {/* BOTTOM FADE */}
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[12%] bg-gradient-to-t from-[#f8f9fb] to-transparent" />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -632,7 +600,7 @@ export default function Home() {
               </span>
             </div>
 
-            <h2 className="mt-4 text-4xl font-semibold leading-[0.95] tracking-[-0.05em] sm:mt-5 sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6rem]">
+            <h2 className="mt-4 text-5xl font-semibold leading-[0.95] tracking-[-0.05em] sm:mt-5 sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6rem]">
               {work.heading}{" "}
               <span className="text-muted">{work.headingHighlight}</span>
             </h2>
@@ -649,9 +617,8 @@ export default function Home() {
               return (
                 <article
                   key={project.title}
-                  className={`group relative overflow-hidden rounded-2xl border border-border-soft bg-surface p-5 transition-all duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-6 md:p-7 ${
-                    accentMap[project.accent]
-                  }`}
+                  className={`group relative overflow-hidden rounded-2xl border border-border-soft bg-surface p-5 transition-all duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-6 md:p-7 ${accentMap[project.accent]
+                    }`}
                   style={{ animationDelay: `${i * 60}ms` }}
                 >
                   {/* ── Preview ── */}
@@ -768,7 +735,7 @@ export default function Home() {
           </div>
 
           <div className="mt-4 mb-8 flex flex-col gap-4 sm:mt-5 sm:mb-10 sm:gap-5 md:mb-14">
-            <h2 className="text-3xl font-semibold leading-[1] tracking-[-0.04em] sm:text-4xl sm:leading-[0.95] md:text-5xl lg:text-7xl">
+            <h2 className="text-4xl font-semibold leading-[1] tracking-[-0.04em] sm:text-4xl sm:leading-[0.95] md:text-5xl lg:text-7xl">
               {services.heading}{" "}
               <span className="text-muted">{services.headingHighlight}</span>
             </h2>
@@ -788,11 +755,10 @@ export default function Home() {
                 <div
                   key={service.n}
                   onMouseEnter={() => setActive(i)}
-                  className={`relative min-w-0 overflow-hidden rounded-3xl border transition-colors duration-700 md:rounded-[2rem] ${EASE} motion-reduce:transition-none ${
-                    isActive
-                      ? "border-transparent bg-[#0F1117] text-white"
-                      : "border-border-soft text-text hover:bg-bg-soft"
-                  }`}
+                  className={`relative min-w-0 overflow-hidden rounded-3xl border transition-colors duration-700 md:rounded-[2rem] ${EASE} motion-reduce:transition-none ${isActive
+                    ? "border-transparent bg-[#0F1117] text-white"
+                    : "border-border-soft text-text hover:bg-bg-soft"
+                    }`}
                 >
                   {/* ─────────────────────────────────────────
                       MOBILE / TABLET (below md) — accordion card
@@ -806,18 +772,16 @@ export default function Home() {
                     >
                       <div className="min-w-0 flex-1">
                         <h3
-                          className={`text-xl font-semibold leading-tight tracking-[-0.02em] transition-colors duration-300 sm:text-2xl ${
-                            isActive ? "text-white" : "text-text"
-                          }`}
+                          className={`text-xl font-semibold leading-tight tracking-[-0.02em] transition-colors duration-300 sm:text-2xl ${isActive ? "text-white" : "text-text"
+                            }`}
                         >
                           {service.title}
                         </h3>
 
                         {!isActive && (
                           <p
-                            className={`mt-1.5 line-clamp-2 text-sm leading-6 transition-colors duration-300 ${
-                              isActive ? "text-white/60" : "text-muted"
-                            }`}
+                            className={`mt-1.5 line-clamp-2 text-sm leading-6 transition-colors duration-300 ${isActive ? "text-white/60" : "text-muted"
+                              }`}
                           >
                             {service.desc}
                           </p>
@@ -826,11 +790,10 @@ export default function Home() {
 
                       <span
                         aria-hidden="true"
-                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm transition-all duration-500 ${EASE} ${
-                          isActive
-                            ? "-rotate-45 bg-[#2563EB] text-white"
-                            : "border border-border-soft text-muted"
-                        }`}
+                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm transition-all duration-500 ${EASE} ${isActive
+                          ? "-rotate-45 bg-[#2563EB] text-white"
+                          : "border border-border-soft text-muted"
+                          }`}
                       >
                         →
                       </span>
@@ -838,11 +801,10 @@ export default function Home() {
 
                     {/* Expanded body (mobile) */}
                     <div
-                      className={`grid transition-all duration-500 ${EASE} motion-reduce:transition-none ${
-                        isActive
-                          ? "grid-rows-[1fr] opacity-100"
-                          : "grid-rows-[0fr] opacity-0"
-                      }`}
+                      className={`grid transition-all duration-500 ${EASE} motion-reduce:transition-none ${isActive
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0"
+                        }`}
                     >
                       <div className="overflow-hidden">
                         <div className="space-y-4 px-5 pb-5 sm:px-6 sm:pb-6">
@@ -903,20 +865,18 @@ export default function Home() {
                       {/* Glow */}
                       <span
                         aria-hidden="true"
-                        className={`pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-[#2563EB]/40 blur-3xl transition-opacity duration-700 ${
-                          isActive ? "opacity-100" : "opacity-0"
-                        }`}
+                        className={`pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-[#2563EB]/40 blur-3xl transition-opacity duration-700 ${isActive ? "opacity-100" : "opacity-0"
+                          }`}
                       />
 
                       {/* Arrow */}
                       <span
                         aria-hidden="true"
                         style={{ willChange: "transform, right" }}
-                        className={`pointer-events-none absolute right-8 top-8 flex h-10 w-10 items-center justify-center rounded-full transition-all duration-700 ${EASE} ${
-                          isActive
-                            ? "-rotate-45 bg-[#2563EB] text-white translate-x-0"
-                            : "right-1/2 translate-x-1/2 border border-border-soft text-muted"
-                        }`}
+                        className={`pointer-events-none absolute right-8 top-8 flex h-10 w-10 items-center justify-center rounded-full transition-all duration-700 ${EASE} ${isActive
+                          ? "-rotate-45 bg-[#2563EB] text-white translate-x-0"
+                          : "right-1/2 translate-x-1/2 border border-border-soft text-muted"
+                          }`}
                       >
                         →
                       </span>
@@ -924,20 +884,18 @@ export default function Home() {
                       {/* Collapsed vertical title */}
                       <span
                         aria-hidden="true"
-                        className={`pointer-events-none absolute bottom-8 left-1/2 hidden -translate-x-1/2 rotate-180 whitespace-nowrap text-2xl font-semibold tracking-[-0.03em] transition-opacity duration-500 [writing-mode:vertical-rl] md:block ${
-                          isActive ? "opacity-0 delay-0" : "opacity-100 delay-300"
-                        }`}
+                        className={`pointer-events-none absolute bottom-8 left-1/2 hidden -translate-x-1/2 rotate-180 whitespace-nowrap text-2xl font-semibold tracking-[-0.03em] transition-opacity duration-500 [writing-mode:vertical-rl] md:block ${isActive ? "opacity-0 delay-0" : "opacity-100 delay-300"
+                          }`}
                       >
                         {service.title}
                       </span>
 
                       {/* Active content */}
                       <div
-                        className={`pointer-events-none absolute inset-0 flex flex-col justify-between p-8 transition-all duration-700 ${EASE} motion-reduce:transition-none md:w-[400px] lg:w-[440px] ${
-                          isActive
-                            ? "translate-x-0 opacity-100 delay-200"
-                            : "translate-x-6 opacity-0"
-                        }`}
+                        className={`pointer-events-none absolute inset-0 flex flex-col justify-between p-8 transition-all duration-700 ${EASE} motion-reduce:transition-none md:w-[400px] lg:w-[440px] ${isActive
+                          ? "translate-x-0 opacity-100 delay-200"
+                          : "translate-x-6 opacity-0"
+                          }`}
                       >
                         <div>
                           <h3 className="pt-12 text-4xl font-semibold tracking-[-0.03em] lg:text-5xl">
@@ -972,11 +930,10 @@ export default function Home() {
                           <a
                             href="#contact"
                             tabIndex={isActive ? 0 : -1}
-                            className={`relative z-10 inline-flex items-center gap-3 rounded-full bg-white py-1.5 pl-5 pr-1.5 text-sm font-semibold text-[#0F1117] transition-colors duration-300 hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
-                              isActive
-                                ? "pointer-events-auto"
-                                : "pointer-events-none"
-                            }`}
+                            className={`relative z-10 inline-flex items-center gap-3 rounded-full bg-white py-1.5 pl-5 pr-1.5 text-sm font-semibold text-[#0F1117] transition-colors duration-300 hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${isActive
+                              ? "pointer-events-auto"
+                              : "pointer-events-none"
+                              }`}
                           >
                             {services.discussLabel}
                             <span

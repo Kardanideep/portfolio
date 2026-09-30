@@ -98,9 +98,9 @@ export default function Header() {
           {/* Desktop CTA */}
           <a
             href="#contact"
-            className="group hidden items-center gap-2 justify-self-end rounded-full bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#1D4ED8] hover:shadow-lg hover:shadow-blue-500/20 md:flex"
+            className="group hidden items-center gap-2 justify-self-end rounded-full bg-[#111827] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#1D4ED8] hover:shadow-lg hover:shadow-blue-500/20 md:flex"
           >
-            Hire me
+            Let's Talk
             <span className="transition-transform group-hover:translate-x-0.5">
               →
             </span>
@@ -160,10 +160,11 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-4 rounded-full bg-[#2563EB] py-3 text-center text-sm font-semibold text-white transition hover:bg-[#1D4ED8]"
+                className="mt-4 rounded-full bg-[#111827] py-3 text-center text-sm font-semibold text-white transition hover:bg-[#1D4ED8]"
               >
-                Hire me →
+                Let's Talk →
               </a>
+              
             </nav>
           </div>
         )}
