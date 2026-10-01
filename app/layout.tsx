@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -10,7 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://deepkardani.vercel.app"),
+
   title: "Deep Kardani | Web Developer for Businesses",
+
   description:
     "Deep Kardani builds modern business websites, e-commerce platforms, mobile apps, and custom web applications for businesses and growing companies.",
 
@@ -26,26 +28,41 @@ export const metadata: Metadata = {
     "Next.js Developer",
     "Node.js Developer",
     "Web Development Ahmedabad",
-    "Web Developer India"
+    "Web Developer India",
   ],
-
-  // Add your real domain when finalized
-  // metadataBase: new URL("https://yourdomain.com"),
 
   openGraph: {
     title: "Deep Kardani | Web Developer for Businesses",
+
     description:
       "Modern business websites, e-commerce platforms, mobile apps, and custom web applications built for real business needs.",
-    type: "website",
-    locale: "en_IN",
+
+    url: "https://deepkardani.vercel.app",
+
     siteName: "Deep Kardani",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Deep Kardani - Web & App Development",
+      },
+    ],
+
+    locale: "en_IN",
+    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
+
     title: "Deep Kardani | Web Developer for Businesses",
+
     description:
       "Modern websites, e-commerce, mobile apps, and custom web applications for businesses.",
+
+    images: ["/og-image.png"],
   },
 
   robots: {
@@ -65,4 +82,3 @@ export default function RootLayout({
     </html>
   );
 }
-

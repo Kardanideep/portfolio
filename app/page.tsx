@@ -175,7 +175,7 @@ function ProcessSection() {
     <section
       ref={sectionRef}
       id="process"
-      className="px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-28"
+      className="px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-12 sm:mb-16 md:mb-24">
@@ -277,7 +277,7 @@ function ProcessSection() {
         </div>
 
         {/* CTA */}
-        <div className="mt-10 flex flex-col gap-4 pt-6 sm:pt-8 md:mt-18 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 hidden md:flex flex-col gap-4 pt-6 sm:pt-8 md:mt-5 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-muted">{site.process.ctaNote}</p>
 
           <a
@@ -393,10 +393,7 @@ export default function Home() {
 
 
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section
-        id="home"
-        className="relative overflow-hidden bg-[#f8f9fb] px-5 pb-14 sm:px-6 sm:pb-18 md:px-10 lg:min-h-[calc(100vh-80px)] lg:py-0"
-      >
+      <section id="home" className="relative overflow-hidden bg-[#f8f9fb] px-5 pb-14 sm:px-6 sm:pb-18 md:px-10 lg:min-h-[calc(100vh-80px)] lg:py-0">
         {/* Very subtle background light */}
         <div className="pointer-events-none absolute -left-40 bottom-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#60A5FA]/[0.025] blur-3xl" />
 
@@ -571,7 +568,7 @@ export default function Home() {
       </section>
 
       {/* ── Tech marquee ─────────────────────────────────── */}
-      <section className="border-y border-border-soft bg-bg-soft py-6 md:py-8">
+      <section className="border-y border-border-soft bg-bg-soft py-6 md:py-8 md:mt-10">
         <div className="flex overflow-hidden">
           <div className="marquee-track flex shrink-0 items-center gap-8 pr-8 sm:gap-12 sm:pr-12 md:gap-16 md:pr-16">
             {[...TECH, ...TECH].map((tech, i) => (
@@ -588,10 +585,7 @@ export default function Home() {
       </section>
 
       {/* ── Work ─────────────────────────────────────────── */}
-      <section
-        id="work"
-        className="px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-28"
-      >
+      <section id="work" className="px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25">
         <div className="mx-auto w-full max-w-7xl">
           <div className="mb-12 sm:mb-16 md:mb-20">
             <div className="flex items-center gap-3">
@@ -723,10 +717,7 @@ export default function Home() {
       </section>
 
       {/* ── Services ─────────────────────────────────────── */}
-      <section
-        id="services"
-        className="border-y border-border-soft bg-surface px-5 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24"
-      >
+      <section id="services" className="border-y border-border-soft bg-surface px-5 py-16 sm:px-6 sm:py-20 md:px-8 md:py-25">
         <div className="mx-auto w-full max-w-7xl">
           <div className="flex items-center gap-3">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
@@ -833,7 +824,7 @@ export default function Home() {
 
                           <a
                             href="#contact"
-                            className="inline-flex w-full items-center justify-between gap-3 rounded-full bg-white py-2 pl-5 pr-2 text-sm font-semibold text-[#0F1117] transition-colors duration-300 hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto sm:justify-start"
+                            className=" inline-flex w-full items-center justify-between gap-3 rounded-full bg-white py-2 pl-5 pr-2 text-sm font-semibold text-[#0F1117] transition-colors duration-300 hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto sm:justify-start"
                           >
                             <span>{services.discussLabel}</span>
                             <span
@@ -953,7 +944,7 @@ export default function Home() {
           </div>
 
           {/* CTA */}
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-10 hidden md:flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-muted">{services.ctaNote}</p>
 
             <a
@@ -976,7 +967,7 @@ export default function Home() {
       <ProcessSection />
 
       {/* ── Why work with me ─────────────────────────────── */}
-      <section className="border-y border-border-soft bg-surface px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-32">
+      <section className="border-y border-border-soft bg-surface px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25">
         <div className="mx-auto w-full max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
@@ -1037,10 +1028,7 @@ export default function Home() {
       </section>
 
       {/* ── About ────────────────────────────────────────── */}
-      <section
-        id="about"
-        className="border-t border-border-soft px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-28"
-      >
+      <section id="about" className="border-t border-border-soft px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25">
         <div className="mx-auto grid w-full max-w-7xl gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <h2 className="text-4xl font-semibold leading-[0.95] tracking-[-0.05em] sm:text-5xl md:text-6xl lg:text-7xl">
@@ -1081,7 +1069,7 @@ export default function Home() {
 
             <a
               href="#contact"
-              className="group inline-flex w-fit items-center gap-3 rounded-full border border-border-soft py-2 pl-5 pr-2 text-sm font-semibold transition-colors duration-300 hover:border-[#2563EB] hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:pl-6"
+              className="group hidden md:inline-flex w-fit items-center gap-3 rounded-full border border-border-soft py-2 pl-5 pr-2 text-sm font-semibold transition-colors duration-300 hover:border-[#2563EB] hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:pl-6"
             >
               {about.ctaLabel}
               <span
@@ -1096,10 +1084,7 @@ export default function Home() {
       </section>
 
       {/* ── Contact ──────────────────────────────────────── */}
-      <section
-        id="contact"
-        className="border-t border-border-soft bg-surface px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-32"
-      >
+      <section id="contact" className="border-t border-border-soft bg-surface px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25">
         <div className="mx-auto grid w-full max-w-7xl gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left: contact info */}
           <div className="lg:col-span-5">

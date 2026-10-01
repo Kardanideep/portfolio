@@ -12,16 +12,15 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-12">
           {/* Brand + contact */}
           <div className="md:col-span-5">
-            <a href="#top" className="group inline-flex items-center gap-3">
-              <span className="text-[20px] font-semibold tracking-[-0.065em] text-white">
-                {footer.brandPrefix}
-              </span>
-
-              <span className="h-5 w-px bg-slate-600" />
-
-              <span className="text-[14px] font-medium uppercase tracking-[0.08em] text-slate-400 transition-colors group-hover:text-white">
-                {footer.brandSuffix}
-              </span>
+            <a
+              href="#top"
+              className="group bg-white rounded-xl inline-flex items-center md:justify-self-start"
+            >
+              <img
+                src="/images/logo.png"
+                alt="Deep Kardani"
+                className="h-15 w-auto object-contain"
+              />
             </a>
 
             <p className="mt-5 max-w-xs text-sm leading-6 text-slate-400">

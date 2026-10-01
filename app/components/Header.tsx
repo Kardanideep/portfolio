@@ -59,22 +59,17 @@ export default function Header() {
 
       {/* ── Full header ── */}
       <header className="absolute inset-x-0 top-0 z-40 border-b border-border-soft bg-surface/90 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:grid md:h-20 md:grid-cols-[1fr_auto_1fr] md:px-8">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:grid md:h-20 md:grid-cols-[1fr_auto_1fr] ">
           <a
             href="#top"
-            className="group inline-flex items-center gap-3 md:justify-self-start"
+            className="group inline-flex items-center md:justify-self-start"
           >
-            <span className="text-[20px] font-semibold tracking-[-0.065em] text-text">
-              {site.footer.brandPrefix}
-            </span>
-
-            <span className="h-5 w-px bg-border-strong" />
-
-            <span className="text-[14px] font-medium uppercase tracking-[0.08em] text-muted transition-colors group-hover:text-text">
-              {site.footer.brandSuffix}
-            </span>
+            <img
+              src="/images/logo.png"
+              alt="Deep Kardani"
+              className="h-18 w-auto object-contain"
+            />
           </a>
-
           {/* Desktop Navigation (center) */}
           <nav className="hidden items-center gap-1 rounded-full border border-border-soft bg-bg p-1.5 md:flex">
             {NAV.map((link) => {
@@ -83,11 +78,10 @@ export default function Header() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    isActive
-                      ? "bg-[#2563EB] text-white shadow-sm shadow-blue-500/25"
-                      : "text-muted hover:bg-surface hover:text-[#2563EB] hover:shadow-sm"
-                  }`}
+                  className={`relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${isActive
+                    ? "bg-[#2563EB] text-white shadow-sm shadow-blue-500/25"
+                    : "text-muted hover:bg-surface hover:text-[#2563EB] hover:shadow-sm"
+                    }`}
                 >
                   {link.label}
                 </a>
@@ -115,19 +109,16 @@ export default function Header() {
             aria-expanded={open}
           >
             <span
-              className={`h-px w-5 bg-text transition ${
-                open ? "translate-y-[7px] rotate-45" : ""
-              }`}
+              className={`h-px w-5 bg-text transition ${open ? "translate-y-[7px] rotate-45" : ""
+                }`}
             />
             <span
-              className={`h-px w-5 bg-text transition ${
-                open ? "opacity-0" : ""
-              }`}
+              className={`h-px w-5 bg-text transition ${open ? "opacity-0" : ""
+                }`}
             />
             <span
-              className={`h-px w-5 bg-text transition ${
-                open ? "-translate-y-[7px] -rotate-45" : ""
-              }`}
+              className={`h-px w-5 bg-text transition ${open ? "-translate-y-[7px] -rotate-45" : ""
+                }`}
             />
           </button>
         </div>
@@ -143,11 +134,10 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className={`flex items-center justify-between py-3 text-base font-medium transition last:border-0 ${
-                      isActive
-                        ? "text-[#2563EB]"
-                        : "text-muted hover:text-[#2563EB]"
-                    }`}
+                    className={`flex items-center justify-between py-3 text-base font-medium transition last:border-0 ${isActive
+                      ? "text-[#2563EB]"
+                      : "text-muted hover:text-[#2563EB]"
+                      }`}
                   >
                     {link.label}
                     {isActive && (
@@ -164,7 +154,7 @@ export default function Header() {
               >
                 Let's Talk →
               </a>
-              
+
             </nav>
           </div>
         )}
@@ -172,11 +162,10 @@ export default function Header() {
 
       {/* ── Floating pill nav (desktop) ── */}
       <nav
-        className={`fixed left-1/2 top-4 z-50 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-border-soft bg-surface/85 p-1.5 shadow-[0_10px_35px_-15px_rgba(15,23,42,0.25)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:flex ${
-          scrolled
-            ? "translate-y-0 opacity-100"
-            : "pointer-events-none -translate-y-4 opacity-0"
-        }`}
+        className={`fixed left-1/2 top-4 z-50 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-border-soft bg-surface/85 p-1.5 shadow-[0_10px_35px_-15px_rgba(15,23,42,0.25)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:flex ${scrolled
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none -translate-y-4 opacity-0"
+          }`}
       >
         {NAV.map((link) => {
           const isActive = active === link.href;
@@ -184,11 +173,10 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className={`relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                isActive
-                  ? "bg-[#2563EB] text-white shadow-sm shadow-blue-500/25"
-                  : "text-muted hover:bg-bg hover:text-[#2563EB]"
-              }`}
+              className={`relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${isActive
+                ? "bg-[#2563EB] text-white shadow-sm shadow-blue-500/25"
+                : "text-muted hover:bg-bg hover:text-[#2563EB]"
+                }`}
             >
               {link.label}
             </a>
@@ -200,11 +188,10 @@ export default function Header() {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className={`fixed left-1/2 top-4 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full border border-border-soft bg-surface/90 px-4 py-2 text-sm font-medium text-text shadow-[0_10px_35px_-15px_rgba(15,23,42,0.25)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
-          scrolled
-            ? "translate-y-0 opacity-100"
-            : "pointer-events-none -translate-y-4 opacity-0"
-        }`}
+        className={`fixed left-1/2 top-4 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full border border-border-soft bg-surface/90 px-4 py-2 text-sm font-medium text-text shadow-[0_10px_35px_-15px_rgba(15,23,42,0.25)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${scrolled
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none -translate-y-4 opacity-0"
+          }`}
         aria-label={open ? "Close menu" : `Open menu — currently in ${activeLabel}`}
         aria-expanded={open}
       >
@@ -212,9 +199,8 @@ export default function Header() {
         <span className="max-w-[140px] truncate">{activeLabel}</span>
         <span
           aria-hidden="true"
-          className={`text-[10px] text-muted transition-transform duration-300 ${
-            open ? "rotate-180" : ""
-          }`}
+          className={`text-[10px] text-muted transition-transform duration-300 ${open ? "rotate-180" : ""
+            }`}
         >
           ▼
         </span>
@@ -231,11 +217,10 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition ${
-                    isActive
-                      ? "bg-[#2563EB]/10 text-[#2563EB]"
-                      : "text-muted hover:bg-bg hover:text-[#2563EB]"
-                  }`}
+                  className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition ${isActive
+                    ? "bg-[#2563EB]/10 text-[#2563EB]"
+                    : "text-muted hover:bg-bg hover:text-[#2563EB]"
+                    }`}
                 >
                   {link.label}
                   {isActive && (
