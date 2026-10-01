@@ -324,6 +324,123 @@ function ProcessSection() {
   );
 }
 
+/* ── Tech marquee — auto-scroll, pauses on hover/touch, draggable ── */
+function TechMarquee() {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const pausedRef = useRef(false);
+  const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const drag = useRef({ active: false, startX: 0, startScroll: 0 });
+
+  const pause = () => {
+    if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    pausedRef.current = true;
+  };
+
+  const resume = (delay = 0) => {
+    if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    resumeTimer.current = setTimeout(() => {
+      pausedRef.current = false;
+    }, delay);
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    // Respect "reduce motion" setting
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const SPEED = 0.6; // increase for faster movement
+    let raf = 0;
+    let pos = el.scrollLeft;
+
+    const tick = () => {
+      const half = el.scrollWidth / 2; // content is duplicated, so half = one full loop
+
+      if (pausedRef.current) {
+        // User is in control: just follow their position and keep the loop seamless
+        pos = el.scrollLeft;
+        if (pos <= 0) {
+          pos = half - 1;
+          el.scrollLeft = pos;
+        } else if (pos >= half) {
+          pos -= half;
+          el.scrollLeft = pos;
+        }
+      } else {
+        pos += SPEED;
+        if (pos >= half) pos -= half;
+        el.scrollLeft = pos;
+      }
+
+      raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    };
+  }, []);
+
+  return (
+    <section className="border-y border-border-soft bg-bg-soft py-6 md:mt-10 md:py-8">
+     <div
+  ref={scrollRef}
+  className="flex cursor-ew-resize select-none overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        /* Mouse: pause on hover, drag to move */
+        onPointerEnter={(e) => {
+          if (e.pointerType === "mouse") pause();
+        }}
+        onPointerLeave={(e) => {
+          if (e.pointerType === "mouse") {
+            drag.current.active = false;
+            resume();
+          }
+        }}
+        onPointerDown={(e) => {
+          if (e.pointerType !== "mouse") return;
+          const el = scrollRef.current;
+          if (!el) return;
+          drag.current = {
+            active: true,
+            startX: e.clientX,
+            startScroll: el.scrollLeft,
+          };
+        }}
+        onPointerMove={(e) => {
+          const el = scrollRef.current;
+          if (!el || !drag.current.active) return;
+          el.scrollLeft =
+            drag.current.startScroll - (e.clientX - drag.current.startX);
+        }}
+        onPointerUp={() => {
+          drag.current.active = false;
+        }}
+        onPointerCancel={() => {
+          drag.current.active = false;
+        }}
+        /* Touch: pause while touching, resume 1.5s after finger lifts */
+        onTouchStart={pause}
+        onTouchEnd={() => resume(1500)}
+      >
+        <div className="flex shrink-0 items-center gap-8 pr-8 sm:gap-12 sm:pr-12 md:gap-16 md:pr-16">
+          {[...TECH, ...TECH].map((tech, i) => (
+            <span
+              key={`${tech}-${i}`}
+              className="flex shrink-0 items-center gap-8 text-lg font-semibold tracking-tight text-muted sm:gap-12 sm:text-2xl md:gap-16 md:text-4xl"
+            >
+              {tech}
+              <span className="text-border-strong">✦</span>
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const [active, setActive] = useState(0);
 
@@ -593,22 +710,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Tech marquee ─────────────────────────────────── */}
-      <section className="border-y border-border-soft bg-bg-soft py-6 md:py-8 md:mt-10">
-        <div className="flex overflow-hidden">
-          <div className="marquee-track flex shrink-0 items-center gap-8 pr-8 sm:gap-12 sm:pr-12 md:gap-16 md:pr-16">
-            {[...TECH, ...TECH].map((tech, i) => (
-              <span
-                key={`${tech}-${i}`}
-                className="flex shrink-0 items-center gap-8 text-lg font-semibold tracking-tight text-muted sm:gap-12 sm:text-2xl md:gap-16 md:text-4xl"
-              >
-                {tech}
-                <span className="text-border-strong">✦</span>
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── Tech marquee ── */}
+      <TechMarquee />
 
       {/* ── Work ─────────────────────────────────────────── */}
       <section

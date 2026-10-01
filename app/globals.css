@@ -153,6 +153,8 @@ select {
   outline-offset: 3px;
 }
 
+
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
