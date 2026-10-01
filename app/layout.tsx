@@ -10,12 +10,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://deepkardani.vercel.app"),
-
   title: "Deep Kardani | Web Developer for Businesses",
-
   description:
     "Deep Kardani builds modern business websites, e-commerce platforms, mobile apps, and custom web applications for businesses and growing companies.",
-
   keywords: [
     "Web Developer",
     "Web Development",
@@ -30,22 +27,17 @@ export const metadata: Metadata = {
     "Web Development Ahmedabad",
     "Web Developer India",
   ],
-
   openGraph: {
     title: "Deep Kardani | Web Developer for Businesses",
-
     description:
       "Modern business websites, e-commerce platforms, mobile apps, and custom web applications built for real business needs.",
-
     url: "https://deepkardani.vercel.app",
-
     siteName: "Deep Kardani",
-
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        width: 512,
+        height: 512,
         alt: "Deep Kardani - Web & App Development",
       },
     ],
@@ -55,7 +47,7 @@ export const metadata: Metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
 
     title: "Deep Kardani | Web Developer for Businesses",
 
