@@ -10,6 +10,11 @@ const EASE = "ease-[cubic-bezier(0.22,1,0.36,1)]";
 /* ── Destructure site data ─────────────────────────── */
 const { meta, hero, work, services, trust, about, contact } = site;
 
+const WHATSAPP_NUMBER = "919727927266";
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  "Hi Deep, I need a website for my business",
+)}`;
+
 const TECH = site.tech;
 const PROJECTS = work.items;
 const SERVICES = services.items;
@@ -34,6 +39,20 @@ const accentMap: Record<string, string> = {
     "hover:border-violet-200 hover:shadow-[0_20px_50px_-25px_rgba(99,102,241,0.25)]",
   pink: "hover:border-pink-200 hover:shadow-[0_20px_50px_-25px_rgba(236,72,153,0.2)]",
 };
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  );
+}
 
 /* ── Project media — image or placeholder ──────────── */
 function ProjectMedia({
@@ -84,8 +103,9 @@ function ProjectMedia({
   /* ── Fallback placeholder ── */
   return (
     <div
-      className={`relative mb-6 h-44 overflow-hidden rounded-2xl border border-zinc-200 bg-gradient-to-br sm:mb-7 sm:h-52 ${accentStyles[accent] ?? accentStyles.blue
-        }`}
+      className={`relative mb-6 h-44 overflow-hidden rounded-2xl border border-zinc-200 bg-gradient-to-br sm:mb-7 sm:h-52 ${
+        accentStyles[accent] ?? accentStyles.blue
+      }`}
     >
       <div className="absolute left-3 right-3 top-3 flex items-center gap-1.5">
         <span className="h-2 w-2 rounded-full bg-zinc-300" />
@@ -207,10 +227,11 @@ function ProcessSection() {
               <div
                 data-flow-fill
                 style={{ width: `${processFill}%` }}
-                className={`absolute inset-y-0 left-0 border-t-2 border-dashed border-accent ease-out ${activeProcess < 0
-                  ? "opacity-0 transition-opacity duration-300"
-                  : "opacity-100 transition-[width,opacity] duration-1000"
-                  }`}
+                className={`absolute inset-y-0 left-0 border-t-2 border-dashed border-accent ease-out ${
+                  activeProcess < 0
+                    ? "opacity-0 transition-opacity duration-300"
+                    : "opacity-100 transition-[width,opacity] duration-1000"
+                }`}
               />
             </div>
           </div>
@@ -227,17 +248,19 @@ function ProcessSection() {
                 >
                   <div className="relative z-10 mb-6 sm:mb-8">
                     <span
-                      className={`relative flex h-12 w-12 items-center justify-center rounded-full border-2 text-base font-bold tracking-[-0.02em] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-14 sm:w-14 sm:text-lg ${on
-                        ? "scale-110 border-accent bg-accent text-white"
-                        : "border-border-strong bg-bg"
-                        }`}
+                      className={`relative flex h-12 w-12 items-center justify-center rounded-full border-2 text-base font-bold tracking-[-0.02em] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-14 sm:w-14 sm:text-lg ${
+                        on
+                          ? "scale-110 border-accent bg-accent text-white"
+                          : "border-border-strong bg-bg"
+                      }`}
                     >
                       {step.n}
 
                       <span
                         aria-hidden="true"
-                        className={`pointer-events-none absolute inset-0 rounded-full border-2 border-accent transition-opacity duration-500 ${on ? "animate-ping opacity-60" : "opacity-0"
-                          }`}
+                        className={`pointer-events-none absolute inset-0 rounded-full border-2 border-accent transition-opacity duration-500 ${
+                          on ? "animate-ping opacity-60" : "opacity-0"
+                        }`}
                       />
                     </span>
                   </div>
@@ -245,13 +268,15 @@ function ProcessSection() {
                   <div className="flex w-full flex-col items-start md:items-center">
                     <span
                       aria-hidden="true"
-                      className={`mb-4 block h-px bg-gradient-to-r from-accent to-transparent transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:mb-5 ${on ? "w-16" : "w-10"
-                        }`}
+                      className={`mb-4 block h-px bg-gradient-to-r from-accent to-transparent transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:mb-5 ${
+                        on ? "w-16" : "w-10"
+                      }`}
                     />
 
                     <h3
-                      className={`text-lg font-semibold leading-[1.15] tracking-[-0.02em] transition-colors duration-300 sm:text-xl md:text-2xl ${on ? "text-text" : "text-text/60"
-                        }`}
+                      className={`text-lg font-semibold leading-[1.15] tracking-[-0.02em] transition-colors duration-300 sm:text-xl md:text-2xl ${
+                        on ? "text-text" : "text-text/60"
+                      }`}
                     >
                       {step.t}
                     </h3>
@@ -264,8 +289,9 @@ function ProcessSection() {
                   {i < PROCESS.length - 1 && (
                     <span
                       aria-hidden="true"
-                      className={`absolute left-1/2 top-7.5 hidden -translate-y-1/2 translate-x-[calc(50%+2.25rem)] transition-colors duration-500 md:block ${activeProcess > i ? "text-accent" : "text-accent/25"
-                        }`}
+                      className={`absolute left-1/2 top-7.5 hidden -translate-y-1/2 translate-x-[calc(50%+2.25rem)] transition-colors duration-500 md:block ${
+                        activeProcess > i ? "text-accent" : "text-accent/25"
+                      }`}
                     >
                       ▶
                     </span>
@@ -391,9 +417,11 @@ export default function Home() {
       {/* Navbar */}
       <Header />
 
-
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section id="home" className="relative overflow-hidden bg-[#f8f9fb] px-5 pb-14 sm:px-6 sm:pb-18 md:px-10 lg:min-h-[calc(100vh-80px)] lg:py-0">
+      <section
+        id="home"
+        className="relative overflow-hidden bg-[#f8f9fb] px-5 pb-14 sm:px-6 sm:pb-18 md:px-10 lg:min-h-[calc(100vh-80px)] lg:py-0"
+      >
         {/* Very subtle background light */}
         <div className="pointer-events-none absolute -left-40 bottom-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#60A5FA]/[0.025] blur-3xl" />
 
@@ -530,8 +558,7 @@ export default function Home() {
                   </div>
                   <p className="text-[11px] font-medium leading-4 text-[#111318] sm:text-xs">
                     Maintenance
-                    <br />
-                    & Support
+                    <br />& Support
                   </p>
                 </div>
               </div>
@@ -562,7 +589,6 @@ export default function Home() {
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[12%] bg-gradient-to-t from-[#f8f9fb] to-transparent" />
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -585,7 +611,10 @@ export default function Home() {
       </section>
 
       {/* ── Work ─────────────────────────────────────────── */}
-      <section id="work" className="px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25">
+      <section
+        id="work"
+        className="px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25"
+      >
         <div className="mx-auto w-full max-w-7xl">
           <div className="mb-12 sm:mb-16 md:mb-20">
             <div className="flex items-center gap-3">
@@ -611,8 +640,9 @@ export default function Home() {
               return (
                 <article
                   key={project.title}
-                  className={`group relative overflow-hidden rounded-2xl border border-border-soft bg-surface p-5 transition-all duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-6 md:p-7 ${accentMap[project.accent]
-                    }`}
+                  className={`group relative overflow-hidden rounded-2xl border border-border-soft bg-surface p-5 transition-all duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-6 md:p-7 ${
+                    accentMap[project.accent]
+                  }`}
                   style={{ animationDelay: `${i * 60}ms` }}
                 >
                   {/* ── Preview ── */}
@@ -717,7 +747,10 @@ export default function Home() {
       </section>
 
       {/* ── Services ─────────────────────────────────────── */}
-      <section id="services" className="border-y border-border-soft bg-surface px-5 py-16 sm:px-6 sm:py-20 md:px-8 md:py-25">
+      <section
+        id="services"
+        className="border-y border-border-soft bg-surface px-5 py-16 sm:px-6 sm:py-20 md:px-8 md:py-25"
+      >
         <div className="mx-auto w-full max-w-7xl">
           <div className="flex items-center gap-3">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
@@ -746,10 +779,11 @@ export default function Home() {
                 <div
                   key={service.n}
                   onMouseEnter={() => setActive(i)}
-                  className={`relative min-w-0 overflow-hidden rounded-3xl border transition-colors duration-700 md:rounded-[2rem] ${EASE} motion-reduce:transition-none ${isActive
-                    ? "border-transparent bg-[#0F1117] text-white"
-                    : "border-border-soft text-text hover:bg-bg-soft"
-                    }`}
+                  className={`relative min-w-0 overflow-hidden rounded-3xl border transition-colors duration-700 md:rounded-[2rem] ${EASE} motion-reduce:transition-none ${
+                    isActive
+                      ? "border-transparent bg-[#0F1117] text-white"
+                      : "border-border-soft text-text hover:bg-bg-soft"
+                  }`}
                 >
                   {/* ─────────────────────────────────────────
                       MOBILE / TABLET (below md) — accordion card
@@ -763,16 +797,18 @@ export default function Home() {
                     >
                       <div className="min-w-0 flex-1">
                         <h3
-                          className={`text-xl font-semibold leading-tight tracking-[-0.02em] transition-colors duration-300 sm:text-2xl ${isActive ? "text-white" : "text-text"
-                            }`}
+                          className={`text-xl font-semibold leading-tight tracking-[-0.02em] transition-colors duration-300 sm:text-2xl ${
+                            isActive ? "text-white" : "text-text"
+                          }`}
                         >
                           {service.title}
                         </h3>
 
                         {!isActive && (
                           <p
-                            className={`mt-1.5 line-clamp-2 text-sm leading-6 transition-colors duration-300 ${isActive ? "text-white/60" : "text-muted"
-                              }`}
+                            className={`mt-1.5 line-clamp-2 text-sm leading-6 transition-colors duration-300 ${
+                              isActive ? "text-white/60" : "text-muted"
+                            }`}
                           >
                             {service.desc}
                           </p>
@@ -781,10 +817,11 @@ export default function Home() {
 
                       <span
                         aria-hidden="true"
-                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm transition-all duration-500 ${EASE} ${isActive
-                          ? "-rotate-45 bg-[#2563EB] text-white"
-                          : "border border-border-soft text-muted"
-                          }`}
+                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm transition-all duration-500 ${EASE} ${
+                          isActive
+                            ? "-rotate-45 bg-[#2563EB] text-white"
+                            : "border border-border-soft text-muted"
+                        }`}
                       >
                         →
                       </span>
@@ -792,10 +829,11 @@ export default function Home() {
 
                     {/* Expanded body (mobile) */}
                     <div
-                      className={`grid transition-all duration-500 ${EASE} motion-reduce:transition-none ${isActive
-                        ? "grid-rows-[1fr] opacity-100"
-                        : "grid-rows-[0fr] opacity-0"
-                        }`}
+                      className={`grid transition-all duration-500 ${EASE} motion-reduce:transition-none ${
+                        isActive
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
                     >
                       <div className="overflow-hidden">
                         <div className="space-y-4 px-5 pb-5 sm:px-6 sm:pb-6">
@@ -856,18 +894,20 @@ export default function Home() {
                       {/* Glow */}
                       <span
                         aria-hidden="true"
-                        className={`pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-[#2563EB]/40 blur-3xl transition-opacity duration-700 ${isActive ? "opacity-100" : "opacity-0"
-                          }`}
+                        className={`pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-[#2563EB]/40 blur-3xl transition-opacity duration-700 ${
+                          isActive ? "opacity-100" : "opacity-0"
+                        }`}
                       />
 
                       {/* Arrow */}
                       <span
                         aria-hidden="true"
                         style={{ willChange: "transform, right" }}
-                        className={`pointer-events-none absolute right-8 top-8 flex h-10 w-10 items-center justify-center rounded-full transition-all duration-700 ${EASE} ${isActive
-                          ? "-rotate-45 bg-[#2563EB] text-white translate-x-0"
-                          : "right-1/2 translate-x-1/2 border border-border-soft text-muted"
-                          }`}
+                        className={`pointer-events-none absolute right-8 top-8 flex h-10 w-10 items-center justify-center rounded-full transition-all duration-700 ${EASE} ${
+                          isActive
+                            ? "-rotate-45 bg-[#2563EB] text-white translate-x-0"
+                            : "right-1/2 translate-x-1/2 border border-border-soft text-muted"
+                        }`}
                       >
                         →
                       </span>
@@ -875,18 +915,22 @@ export default function Home() {
                       {/* Collapsed vertical title */}
                       <span
                         aria-hidden="true"
-                        className={`pointer-events-none absolute bottom-8 left-1/2 hidden -translate-x-1/2 rotate-180 whitespace-nowrap text-2xl font-semibold tracking-[-0.03em] transition-opacity duration-500 [writing-mode:vertical-rl] md:block ${isActive ? "opacity-0 delay-0" : "opacity-100 delay-300"
-                          }`}
+                        className={`pointer-events-none absolute bottom-8 left-1/2 hidden -translate-x-1/2 rotate-180 whitespace-nowrap text-2xl font-semibold tracking-[-0.03em] transition-opacity duration-500 [writing-mode:vertical-rl] md:block ${
+                          isActive
+                            ? "opacity-0 delay-0"
+                            : "opacity-100 delay-300"
+                        }`}
                       >
                         {service.title}
                       </span>
 
                       {/* Active content */}
                       <div
-                        className={`pointer-events-none absolute inset-0 flex flex-col justify-between p-8 transition-all duration-700 ${EASE} motion-reduce:transition-none md:w-[400px] lg:w-[440px] ${isActive
-                          ? "translate-x-0 opacity-100 delay-200"
-                          : "translate-x-6 opacity-0"
-                          }`}
+                        className={`pointer-events-none absolute inset-0 flex flex-col justify-between p-8 transition-all duration-700 ${EASE} motion-reduce:transition-none md:w-[400px] lg:w-[440px] ${
+                          isActive
+                            ? "translate-x-0 opacity-100 delay-200"
+                            : "translate-x-6 opacity-0"
+                        }`}
                       >
                         <div>
                           <h3 className="pt-12 text-4xl font-semibold tracking-[-0.03em] lg:text-5xl">
@@ -921,10 +965,11 @@ export default function Home() {
                           <a
                             href="#contact"
                             tabIndex={isActive ? 0 : -1}
-                            className={`relative z-10 inline-flex items-center gap-3 rounded-full bg-white py-1.5 pl-5 pr-1.5 text-sm font-semibold text-[#0F1117] transition-colors duration-300 hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${isActive
-                              ? "pointer-events-auto"
-                              : "pointer-events-none"
-                              }`}
+                            className={`relative z-10 inline-flex items-center gap-3 rounded-full bg-white py-1.5 pl-5 pr-1.5 text-sm font-semibold text-[#0F1117] transition-colors duration-300 hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+                              isActive
+                                ? "pointer-events-auto"
+                                : "pointer-events-none"
+                            }`}
                           >
                             {services.discussLabel}
                             <span
@@ -1028,7 +1073,10 @@ export default function Home() {
       </section>
 
       {/* ── About ────────────────────────────────────────── */}
-      <section id="about" className="border-t border-border-soft px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25">
+      <section
+        id="about"
+        className="border-t border-border-soft px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25"
+      >
         <div className="mx-auto grid w-full max-w-7xl gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <h2 className="text-4xl font-semibold leading-[0.95] tracking-[-0.05em] sm:text-5xl md:text-6xl lg:text-7xl">
@@ -1084,7 +1132,10 @@ export default function Home() {
       </section>
 
       {/* ── Contact ──────────────────────────────────────── */}
-      <section id="contact" className="border-t border-border-soft bg-surface px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25">
+      <section
+        id="contact"
+        className="border-t border-border-soft bg-surface px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25"
+      >
         <div className="mx-auto grid w-full max-w-7xl gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left: contact info */}
           <div className="lg:col-span-5">
@@ -1146,9 +1197,9 @@ export default function Home() {
                 {/* Email */}
                 <a
                   href={`mailto:${meta.email}`}
-                  className="group flex items-center gap-4 rounded-2xl border border-border-soft bg-bg p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#2563EB] hover:bg-[#2563EB]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] md:p-5"
+                  className="group flex items-center gap-4 rounded-2xl border border-border-soft bg-bg p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F59E0B] hover:bg-[#F59E0B]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B] md:p-5"
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#2563EB]/10 text-[#2563EB] transition-colors duration-300 group-hover:bg-[#2563EB] group-hover:text-white sm:h-11 sm:w-11">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F59E0B]/10 text-[#F59E0B] transition-colors duration-300 group-hover:bg-[#F59E0B] group-hover:text-white sm:h-11 sm:w-11">
                     <svg
                       aria-hidden="true"
                       focusable="false"
@@ -1176,7 +1227,43 @@ export default function Home() {
 
                   <span
                     aria-hidden="true"
-                    className="text-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#2563EB]"
+                    className="text-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#F59E0B]"
+                  >
+                    ↗
+                  </span>
+                </a>
+
+                {/* WhatsApp */}
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4 rounded-2xl border border-border-soft bg-bg p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#25D366] hover:bg-[#25D366]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366] md:p-5"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#25D366]/10 text-[#25D366] transition-colors duration-300 group-hover:bg-[#25D366] group-hover:text-white sm:h-11 sm:w-11">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-5 w-5"
+                    >
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                    </svg>
+                  </span>
+
+                  <span className="flex min-w-0 flex-1 flex-col">
+                    <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted">
+                      WhatsApp me
+                    </span>
+                    <span className="mt-0.5 truncate text-base font-semibold text-text">
+                      Chat instantly
+                    </span>
+                  </span>
+
+                  <span
+                    aria-hidden="true"
+                    className="text-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#25D366]"
                   >
                     ↗
                   </span>
@@ -1195,7 +1282,7 @@ export default function Home() {
           </div>
 
           {/* Right: form */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 lg:mt-20">
             <form
               onSubmit={handleSubmit}
               className="rounded-3xl border border-border-soft bg-bg p-5 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.25)] sm:p-6 md:p-8"
@@ -1395,6 +1482,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Floating WhatsApp button */}
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="group fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full border border-[#25D366]/25 bg-[#eafaf0] p-1.5 text-[#0F1117] shadow-[0_20px_40px_-15px_rgba(37,211,102,0.35)] transition-all duration-300 hover:-translate-y-1 border-[#25D366]/50 hover:bg-[#dff6e9] hover:shadow-[0_24px_50px_-15px_rgba(37,211,102,0.5)] sm:pr-5"
+      >
+        <span className="relative flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white">
+          <WhatsAppIcon className="h-6 w-6" />
+          <span className="absolute right-0 top-0 flex h-3 w-3">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/70" />
+            <span className="relative inline-flex h-3 w-3 rounded-full border-2 border-[#eafaf0] bg-emerald-500" />
+          </span>
+        </span>
+
+        <span className="hidden flex-col leading-tight sm:flex">
+          <span className="text-[13px] font-semibold text-[#0F1117]">
+            Chat on WhatsApp
+          </span>
+          <span className="text-[11px] text-[#4b5d52]">
+            Usually replies fast
+          </span>
+        </span>
+      </a>
       {/* Footer */}
       <Footer />
     </main>
