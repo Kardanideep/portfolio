@@ -14,12 +14,12 @@ export default function Footer() {
           <div className="md:col-span-5">
             <a
               href="#top"
-              className="group bg-white rounded-xl inline-flex items-center md:justify-self-start"
+              className="group inline-flex bg-white rounded-xl p-2 items-center md:justify-self-start"
             >
               <img
-                src="/images/logo.png"
+                src="/og-image.png"
                 alt="Deep Kardani"
-                className="h-15 w-auto object-contain"
+                className="h-6 lg:h-8 w-auto object-contain"
               />
             </a>
 

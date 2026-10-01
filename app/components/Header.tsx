@@ -65,9 +65,9 @@ export default function Header() {
             className="group inline-flex items-center md:justify-self-start"
           >
             <img
-              src="/images/logo.png"
+              src="/og-image.png"
               alt="Deep Kardani"
-              className="h-15 lg:h-18 w-auto object-contain"
+              className="h-6 lg:h-8 w-auto object-contain"
             />
           </a>
           {/* Desktop Navigation (center) */}
