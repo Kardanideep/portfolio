@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "eyebrow": "Our Work",
+    "headingLine1": "Ideas turned",
+    "headingLine2": "into real",
+    "headingHighlight": "digital solutions.",
+    "description": "Explore a selection of websites, web applications, e-commerce platforms, mobile applications, and other digital solutions developed to address practical business requirements.",
+    "primaryCta": {
+      "label": "View Our Projects",
+      "href": "#projects"
+    },
+    "secondaryCta": {
+      "label": "Start a Project",
+      "href": "/contact"
+    },
+    "stats": [
+      {
+        "value": "10",
+        "suffix": "+",
+        "label": "Projects Delivered"
+      },
+      {
+        "value": "09",
+        "suffix": "",
+        "label": "Service Areas"
+      },
+      {
+        "value": "04",
+        "suffix": "",
+        "label": "Project Stages"
+      }
+    ],
+    "image": "/images/work-hero.png",
+    "imageAlt": "Selected digital projects developed by ISHWAT Technologies"
+  },
+  "projects": {
+    "eyebrow": "✦ Selected Work",
+    "heading": "Projects",
+    "headingHighlight": "built with purpose.",
+    "intro": "Explore a selection of websites, web applications, e-commerce platforms, mobile applications, and custom digital solutions developed for practical business and product needs."
+  },
+  "modal": {
+    "clientLabel": "Client",
+    "roleLabel": "Role",
+    "timelineLabel": "Timeline",
+    "yearLabel": "Year",
+    "overviewLabel": "Overview",
+    "keyFeaturesLabel": "Key features",
+    "highlightsLabel": "Highlights",
+    "techStackLabel": "Tech stack",
+    "visitLiveSiteLabel": "Visit live site",
+    "liveLinkComingSoon": "Live link coming soon",
+    "startSimilarLabel": "Start a similar project",
+    "startSimilarHref": "/contact"
+  },
+  "card": {
+    "readFullInfoLabel": "View Details",
+    "liveLabel": "Live"
+  }
+}

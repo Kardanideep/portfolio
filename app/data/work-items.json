@@ -1,0 +1,188 @@
+[
+  {
+    "n": "01",
+    "title": "LabourFlow",
+    "tag": "Compliance Management Platform",
+    "short": "LF",
+    "desc": "A digital platform for labour consultants designed to simplify client onboarding, organize compliance workflows, manage documents, and keep important tasks and deadlines in one place.",
+    "stack": ["Next.js", "Node.js", "Express", "MySQL"],
+    "accent": "blue",
+    "liveLink": "https://www.labourflow.in",
+    "img": "/images/projects/labourflow.png",
+
+    "year": "2024",
+    "client": "LabourFlow",
+    "role": "Full-stack development",
+    "timeline": "8 weeks",
+    "category": "Business Platform",
+    "overview": "A business-focused platform created for labour consultants to manage client-related compliance activities through a more organized digital workflow. The platform brings client information, documents, tasks, deadlines, and reporting into a connected workspace with role-based access.",
+    "features": [
+      "Client and organization management",
+      "Compliance workflow management",
+      "Document upload and organization",
+      "Task and deadline tracking",
+      "Role-based access control",
+      "Reports and data export"
+    ],
+    "highlights": [
+      { "label": "Platform type", "value": "Web application" },
+      { "label": "Architecture", "value": "Full-stack" },
+      { "label": "Focus", "value": "Compliance workflows" }
+    ]
+  },
+  {
+    "n": "02",
+    "title": "KDM Associates",
+    "tag": "Business Website",
+    "short": "KDM",
+    "desc": "A professional business website designed to present services clearly, strengthen the company's digital presence, and make it easier for potential customers to get in touch.",
+    "stack": ["React", "Node.js", "Express", "MongoDB"],
+    "accent": "pink",
+    "liveLink": "https://www.kdmassociates.com/",
+    "img": "/images/projects/kdm-associates.png",
+
+    "year": "2024",
+    "client": "KDM Associates",
+    "role": "Design + development",
+    "timeline": "3 weeks",
+    "category": "Business Website",
+    "overview": "A brand-focused website developed for a professional services business. The project focused on presenting the company and its services clearly, creating a trustworthy online presence, and providing straightforward ways for visitors to make contact.",
+    "features": [
+      "Custom brand-aligned interface",
+      "Structured service presentation",
+      "Contact and enquiry functionality",
+      "Basic on-page SEO setup",
+      "Responsive layouts across devices",
+      "Analytics and tracking integration"
+    ],
+    "highlights": [
+      { "label": "Project type", "value": "Company website" },
+      { "label": "Delivery", "value": "Design + development" },
+      { "label": "Focus", "value": "Professional presence" }
+    ]
+  },
+  {
+    "n": "03",
+    "title": "Deep Blogs",
+    "tag": "Content Platform",
+    "short": "DB",
+    "desc": "A modern content platform created for publishing and organizing articles with a structured content experience and responsive interface for readers.",
+    "stack": ["Next.js", "Node.js", "Express", "MongoDB"],
+    "accent": "violet",
+    "liveLink": "https://deep-blogs.vercel.app/",
+    "img": "/images/projects/deep-blogs.png",
+
+    "year": "2023",
+    "client": "Personal project",
+    "role": "Full-stack development",
+    "timeline": "4 weeks",
+    "category": "Content Platform",
+    "overview": "A self-initiated content platform focused on publishing, organizing, and presenting articles through a clean reading experience. The project includes content management functionality, categorization, search, and responsive layouts.",
+    "features": [
+      "Article creation and editing",
+      "Category and tag organization",
+      "Content search",
+      "Structured reading experience",
+      "Admin content management",
+      "Responsive design"
+    ],
+    "highlights": [
+      { "label": "Project type", "value": "Personal project" },
+      { "label": "Platform", "value": "Web application" },
+      { "label": "Focus", "value": "Content publishing" }
+    ]
+  },
+  {
+    "n": "04",
+    "title": "Quick Cart",
+    "tag": "E-Commerce",
+    "short": "QC",
+    "desc": "A full-stack e-commerce platform featuring product browsing, authentication, shopping cart management, and a structured online ordering experience.",
+    "stack": ["React", "Node.js", "Express", "MongoDB"],
+    "accent": "violet",
+    "liveLink": "",
+    "img": "/images/projects/quick-cart.png",
+
+    "year": "2023",
+    "client": "Demo project",
+    "role": "Full-stack development",
+    "timeline": "6 weeks",
+    "category": "E-Commerce",
+    "overview": "A demonstration e-commerce application created to explore common online-store workflows, including product discovery, customer accounts, cart management, checkout, order history, and administrative product and order management.",
+    "features": [
+      "Product catalogue with search and filters",
+      "User authentication and profiles",
+      "Shopping cart management",
+      "Checkout and order workflow",
+      "Order history",
+      "Admin product and order management"
+    ],
+    "highlights": [
+      { "label": "Project type", "value": "Demo project" },
+      { "label": "Platform", "value": "E-commerce web app" },
+      { "label": "Focus", "value": "Online ordering" }
+    ]
+  },
+  {
+    "n": "05",
+    "title": "iDiscuss",
+    "tag": "Community Platform",
+    "short": "iD",
+    "desc": "A real-time coding discussion platform designed for developers to share questions, exchange ideas, and participate in live conversations.",
+    "stack": ["React", "Socket.io", "Node.js"],
+    "accent": "blue",
+    "liveLink": "",
+    "img": "/images/projects/idiscuss.png",
+
+    "year": "2023",
+    "client": "Personal project",
+    "role": "Full-stack development",
+    "timeline": "5 weeks",
+    "category": "Community Platform",
+    "overview": "A self-initiated community platform exploring real-time communication and developer discussions. The application combines discussion threads with real-time updates to create a more interactive experience for participants.",
+    "features": [
+      "Real-time communication with Socket.io",
+      "Question and discussion threads",
+      "User profiles",
+      "Topic categorization",
+      "Real-time activity updates",
+      "Code snippet support"
+    ],
+    "highlights": [
+      { "label": "Project type", "value": "Personal project" },
+      { "label": "Core technology", "value": "WebSockets" },
+      { "label": "Focus", "value": "Developer community" }
+    ]
+  },
+  {
+    "n": "06",
+    "title": "Wanderlust",
+    "tag": "Travel Platform",
+    "short": "W",
+    "desc": "A travel and property listing platform designed to help users explore properties, filter listings, and move through a structured booking experience.",
+    "stack": ["React", "Node.js", "Express", "MongoDB"],
+    "accent": "pink",
+    "liveLink": "",
+    "img": "/images/projects/wanderlust.png",
+
+    "year": "2023",
+    "client": "Demo project",
+    "role": "Full-stack development",
+    "timeline": "5 weeks",
+    "category": "Travel Platform",
+    "overview": "A demonstration travel platform focused on property discovery and booking-related workflows. The project explores listing management, search and filtering, user accounts, booking flows, and property administration through a responsive interface.",
+    "features": [
+      "Property listings with image galleries",
+      "Location-based search and filters",
+      "Date-based booking workflow",
+      "User accounts and saved listings",
+      "Property management dashboard",
+      "Responsive browsing experience"
+    ],
+    "highlights": [
+      { "label": "Project type", "value": "Demo project" },
+      { "label": "Platform", "value": "Travel web app" },
+      { "label": "Focus", "value": "Property discovery" }
+    ]
+  }
+]

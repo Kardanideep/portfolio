@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "eyebrow": "About ISHWAT Technologies",
+    "headingLine1": "We don't just build",
+    "headingHighlight1": "websites.",
+    "headingLine2": "We build",
+    "headingHighlight2": "digital solutions",
+    "headingSuffix": ".",
+    "description": "Every project starts with understanding the business, not choosing a template. At ISHWAT Technologies, we work with businesses and teams to understand their goals, challenges, and workflows, then create practical digital solutions around their needs. Clear communication, thoughtful development, and reliable delivery guide every project.",
+    "primaryCta": {
+      "label": "Start a conversation",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "Explore our work",
+      "href": "/work"
+    },
+    "image": "/images/about-hero.jpg",
+    "imageAlt": "ISHWAT Technologies digital solutions",
+    "floatingBadges": [
+      {
+        "position": "top-right",
+        "label": "Approach",
+        "value": "Business-first",
+        "icon": null
+      },
+      {
+        "position": "bottom-left",
+        "label": "Focus",
+        "value": "Practical solutions",
+        "icon": "trend"
+      }
+    ]
+  },
+  "story": {
+    "eyebrow": "Our Story",
+    "headingLine1": "Technology with",
+    "headingHighlight": "a clear purpose.",
+    "paragraphs": [
+      "At ISHWAT Technologies, we believe digital products should do more than look good. They should solve practical business problems, simplify everyday work, and create useful experiences for the people who rely on them.",
+      "That is why every project begins with understanding the business, its users, and the challenge behind the requirement. We bring together design, development, testing, and clear communication to create digital solutions that are practical, maintainable, and aligned with the project's goals."
+    ],
+    "image": "/images/about-story.webp",
+    "imageAlt": "ISHWAT Technologies digital development team and workspace",
+    "features": [
+      {
+        "title": "Business focused",
+        "desc": "We make product and technical decisions around the needs and goals of the business.",
+        "icon": "chart",
+        "color": "#2563EB"
+      },
+      {
+        "title": "Thoughtful design",
+        "desc": "We create clear, useful interfaces that balance user needs with business requirements.",
+        "icon": "sparkle",
+        "color": "#7C3AED"
+      },
+      {
+        "title": "Modern technology",
+        "desc": "We choose suitable technologies and development practices based on the needs of each project.",
+        "icon": "cpu",
+        "color": "#10B981"
+      },
+      {
+        "title": "Built for the long term",
+        "desc": "We aim for maintainable solutions that can be improved as your requirements evolve.",
+        "icon": "trend",
+        "color": "#F59E0B"
+      }
+    ],
+    "stats": [
+      {
+        "value": "09",
+        "suffix": "+",
+        "label": "Services",
+        "icon": "briefcase"
+      },
+      {
+        "value": "10",
+        "suffix": "+",
+        "label": "Projects Delivered",
+        "icon": "layers"
+      },
+      {
+        "value": "04",
+        "suffix": "",
+        "label": "Project Stages",
+        "icon": "chart"
+      },
+      {
+        "value": "01",
+        "suffix": "",
+        "label": "Single Point of Contact",
+        "icon": "headset"
+      }
+    ]
+  },
+  "values": {
+    "eyebrow": "✦ Our Principles",
+    "heading": "The principles",
+    "headingHighlight": "behind our work.",
+    "intro": "We believe good digital solutions come from clear thinking, responsible development, and a practical approach to every project.",
+    "items": [
+      {
+        "n": "01",
+        "title": "Clear from the Start",
+        "desc": "We take time to understand the business, users, requirements, and priorities before development begins. Clear direction helps create better solutions.",
+        "accent": "#2563EB"
+      },
+      {
+        "n": "02",
+        "title": "Progress you can see",
+        "desc": "We break projects into clear stages, share progress regularly, and keep important decisions visible so the project stays aligned with expectations.",
+        "accent": "#7C3AED"
+      },
+      {
+        "n": "03",
+        "title": "Responsible development",
+        "desc": "We aim for clean, maintainable solutions with suitable architecture, testing, and practical technical decisions based on the project's requirements.",
+        "accent": "#10B981"
+      },
+      {
+        "n": "04",
+        "title": "Built for real use",
+        "desc": "We focus on usability, reliability, and practical outcomes. A successful product should work well for the people and business that depend on it.",
+        "accent": "#F59E0B"
+      }
+    ]
+  }
+}

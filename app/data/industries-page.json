@@ -1,0 +1,214 @@
+{
+  "hero": {
+    "eyebrow": "Our Industries",
+    "headingLine1": "Solutions built for",
+    "headingHighlight": "different industries.",
+    "description": "Every industry has its own workflows, challenges, and customer needs. We create digital solutions that are shaped around the way each business operates rather than relying on a one-size-fits-all approach.",
+    "primaryCta": {
+      "label": "Start a Project",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "See Our Work",
+      "href": "/work"
+    },
+    "stats": [
+      {
+        "value": "10",
+        "suffix": "+",
+        "label": "Projects Delivered"
+      },
+      {
+        "value": "09",
+        "suffix": "",
+        "label": "Services Offered"
+      },
+      {
+        "value": "01",
+        "suffix": "",
+        "label": "Business-first Approach"
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "✦ Industries",
+    "heading": "Experience across",
+    "headingHighlight": "different business domains.",
+    "intro": "Our projects span business, commerce, professional services, travel, and digital products. Each solution is shaped around the workflows, users, and requirements of the business.",
+    "ctaLabel": "Discuss Your Industry",
+    "items": [
+      {
+        "n": "01",
+        "key": "ecommerce",
+        "title": "E-Commerce & Retail",
+        "tagline": "Digital experiences for modern commerce.",
+        "desc": "We build online stores and commerce experiences with product browsing, customer accounts, checkout workflows, and order management.",
+        "icon": "cart",
+        "img": "/images/industries/ecommerce.jpg",
+        "accentText": "text-[#2563EB]",
+        "accentSoft": "bg-[#2563EB]/10",
+        "useCases": [
+          "Business and online storefronts",
+          "Product catalogues and search",
+          "Payment and checkout integration",
+          "Order and customer management"
+        ]
+      },
+      {
+        "n": "02",
+        "key": "labour",
+        "title": "Labour & Compliance",
+        "tagline": "Digital tools for compliance-focused businesses.",
+        "desc": "We develop practical business applications that help labour consultants organize clients, documents, workflows, tasks, and important deadlines.",
+        "icon": "briefcase",
+        "img": "/images/industries/ecommerce.jpg",
+        "accentText": "text-[#7C3AED]",
+        "accentSoft": "bg-[#7C3AED]/10",
+        "useCases": [
+          "Client management systems",
+          "Compliance workflow management",
+          "Document organization",
+          "Task and deadline tracking"
+        ]
+      },
+      {
+        "n": "03",
+        "key": "professional-services",
+        "title": "Professional Services",
+        "tagline": "Digital presence for service-led businesses.",
+        "desc": "We create professional websites and custom digital solutions that help service businesses present their offerings clearly and make it easier for customers to connect.",
+        "icon": "building",
+        "img": "/images/industries/ecommerce.jpg",
+        "accentText": "text-[#EC4899]",
+        "accentSoft": "bg-[#EC4899]/10",
+        "useCases": [
+          "Company and service websites",
+          "Lead and enquiry forms",
+          "Service information platforms",
+          "Custom internal business tools"
+        ]
+      },
+      {
+        "n": "04",
+        "key": "travel",
+        "title": "Travel & Hospitality",
+        "tagline": "Digital experiences for travel businesses.",
+        "desc": "We build travel and property-focused applications that make it easier to discover listings, manage information, and move through booking-related workflows.",
+        "icon": "plane",
+        "img": "/images/industries/ecommerce.jpg",
+        "accentText": "text-[#2563EB]",
+        "accentSoft": "bg-[#2563EB]/10",
+        "useCases": [
+          "Property listing platforms",
+          "Search and filtering",
+          "Booking-related workflows",
+          "Property management interfaces"
+        ]
+      },
+      {
+        "n": "05",
+        "key": "technology",
+        "title": "Technology & Digital Products",
+        "tagline": "Custom products for digital-first ideas.",
+        "desc": "We develop web applications and digital products for teams that need a tailored solution rather than an off-the-shelf tool.",
+        "icon": "layers",
+        "img": "/images/industries/ecommerce.jpg",
+        "accentText": "text-[#7C3AED]",
+        "accentSoft": "bg-[#7C3AED]/10",
+        "useCases": [
+          "Custom web applications",
+          "Admin and business dashboards",
+          "User and access management",
+          "API-driven digital products"
+        ]
+      },
+      {
+        "n": "06",
+        "key": "manufacturing",
+        "title": "Manufacturing & Operations",
+        "tagline": "Digital tools for smoother operations.",
+        "desc": "Custom business applications can help teams organize operational workflows, manage information, and reduce repetitive manual processes.",
+        "icon": "settings",
+        "img": "/images/industries/ecommerce.jpg",
+        "accentText": "text-[#2563EB]",
+        "accentSoft": "bg-[#2563EB]/10",
+        "useCases": [
+          "Internal workflow applications",
+          "Operations dashboards",
+          "Data and record management",
+          "Process automation"
+        ]
+      },
+      {
+        "n": "07",
+        "key": "small-business",
+        "title": "Local & Small Businesses",
+        "tagline": "Digital foundations for growing businesses.",
+        "desc": "We help smaller businesses establish a professional digital presence and introduce practical tools for customer communication, enquiries, and day-to-day operations.",
+        "icon": "store",
+        "img": "/images/industries/ecommerce.jpg",
+        "accentText": "text-[#7C3AED]",
+        "accentSoft": "bg-[#7C3AED]/10",
+        "useCases": [
+          "Business websites",
+          "Lead and enquiry systems",
+          "Customer-facing applications",
+          "Custom business tools"
+        ]
+      },
+      {
+        "n": "08",
+        "key": "content-community",
+        "title": "Content & Communities",
+        "tagline": "Platforms built around people and content.",
+        "desc": "We create content and community platforms with structured publishing, search, discussions, and interactive user experiences.",
+        "icon": "book",
+        "img": "/images/industries/ecommerce.jpg",
+        "accentText": "text-[#EC4899]",
+        "accentSoft": "bg-[#EC4899]/10",
+        "useCases": [
+          "Content publishing platforms",
+          "Blog and article systems",
+          "Discussion and community features",
+          "Search and content organization"
+        ]
+      }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "✦ Why It Matters",
+    "heading": "Solutions designed",
+    "headingHighlight": "around your business.",
+    "intro": "Every business has its own workflows, priorities, and challenges. We focus on understanding those differences and building digital solutions that fit the way your business operates.",
+    "items": [
+      {
+        "n": "01",
+        "title": "Built around your workflow",
+        "desc": "We take time to understand how your business operates before development begins, so the solution reflects your actual processes rather than forcing you into a generic approach."
+      },
+      {
+        "n": "02",
+        "title": "Focused on practical outcomes",
+        "desc": "We prioritize the features and workflows that matter most to your business, helping keep the product useful, focused, and aligned with its intended purpose."
+      },
+      {
+        "n": "03",
+        "title": "Tested for real usage",
+        "desc": "We consider different user flows, devices, browsers, and practical scenarios during development and testing to identify issues before they affect the final experience."
+      },
+      {
+        "n": "04",
+        "title": "Ready for future needs",
+        "desc": "We aim to build maintainable solutions that can be updated and extended as your business requirements, features, and users evolve."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Ready to start?",
+    "heading": "Don't see your",
+    "headingHighlight": "industry?",
+    "intro": "Tell me about your business and what you want to build. Every project is scoped fresh — regardless of industry.",
+    "primaryLabel": "Start a project",
+    "secondaryLabel": "Chat on WhatsApp"
+  }
+}

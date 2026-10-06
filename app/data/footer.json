@@ -1,0 +1,22 @@
+{
+  "brandPrefix": "deep",
+  "brandSuffix": "kardani",
+  "tagline": "Building modern websites, e-commerce platforms, mobile apps, and custom web applications for businesses.",
+  "companyTitle": "Company",
+  "servicesTitle": "Services",
+  "workTitle": "Work",
+  "services": [
+    "Web Development",
+    "E-Commerce",
+    "Custom Apps",
+    "Mobile Apps"
+  ],
+  "work": [
+    "LabourFlow",
+    "KDM Associates",
+    "Quick Cart",
+    "iDiscuss"
+  ],
+  "backToTopLabel": "Back to top ↑",
+  "copyrightLabel": "All rights reserved."
+}

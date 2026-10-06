@@ -1,0 +1,413 @@
+{
+  "hero": {
+    "headlineLines": [
+      "Turning ideas into"
+    ],
+    "headlineHighlight": "Digital",
+    "headlinehighlight2": "Products.",
+    "introBody": "We help businesses turn ideas, processes, and challenges into practical digital products through thoughtful design, reliable development, and solutions built around real business needs.",
+    "badgeText": "Your Idea. Our Expertise.",
+    "primaryCta": {
+      "label": "Start a Project",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "View Our Work",
+      "href": "/work"
+    },
+    "images": [
+      "/images/hero-workspace.png",
+      "/images/hero-workspace-2.png",
+      "/images/hero-workspace-3.png",
+      "/images/hero-workspace-4.png"
+    ],
+    "imageAlt": "ISHWAT Technologies digital product development workspace",
+    "imageRotateMs": 1500,
+    "serviceRow": [
+      {
+        "title": "Web Applications",
+        "subtitle": "Built for real business needs",
+        "icon": "web",
+        "color": "text-[#4F46E5]"
+      },
+      {
+        "title": "Mobile Applications",
+        "subtitle": "Android & iOS solutions",
+        "icon": "mobile",
+        "color": "text-[#6366F1]"
+      },
+      {
+        "title": "Custom Software",
+        "subtitle": "Designed around your workflow",
+        "icon": "code",
+        "color": "text-[#4F46E5]"
+      },
+      {
+        "title": "UI/UX Design",
+        "subtitle": "Clear, modern, user-focused",
+        "icon": "design",
+        "color": "text-[#6366F1]"
+      },
+      {
+        "title": "Ongoing Support",
+        "subtitle": "Support beyond launch",
+        "icon": "support",
+        "color": "text-[#4F46E5]"
+      }
+    ],
+    "chips": [
+      "Web Development",
+      "Mobile Applications",
+      "Custom Software",
+      "Business Websites"
+    ],
+    "bentoTiles": {
+      "websites": {
+        "index": "01 — Websites",
+        "title": "Business websites & landing pages",
+        "desc": "Professional, responsive, and aligned with your business goals."
+      },
+      "saas": {
+        "index": "02 — SaaS",
+        "title": "SaaS platforms",
+        "desc": "Connected dashboards and business tools built to scale with your needs."
+      },
+      "webapps": {
+        "index": "03 — Web apps",
+        "title": "Custom applications",
+        "desc": "Digital solutions shaped around your processes and workflows."
+      },
+      "strip": "Design · Development · Deployment"
+    },
+    "floatingTags": {
+      "left": "Open for new projects",
+      "rightLabel": "Technology",
+      "rightValue": "Modern · Practical · Reliable"
+    }
+  },
+  "techStack": {
+    "eyebrow": "Our Tech Stack",
+    "heading": "Technology chosen",
+    "headingHighlight": "for the right solution.",
+    "headingEnd": "",
+    "intro": "We use modern, proven technologies to design, develop, and support digital products based on each project's requirements, complexity, and long-term needs.",
+    "backgroundWord": "TECHNOLOGIES",
+    "selectLabel": "Select Category",
+    "categories": [
+      {
+        "key": "uiux",
+        "label": "UI/UX",
+        "techs": [
+          {
+            "name": "Figma",
+            "color": "#F24E1E",
+            "faIcon": "fa-brands fa-figma"
+          },
+          {
+            "name": "Tailwind CSS",
+            "color": "#06B6D4",
+            "faIcon": "fa-solid fa-wind"
+          },
+          {
+            "name": "Bootstrap",
+            "color": "#7952B3",
+            "faIcon": "fa-brands fa-bootstrap"
+          }
+        ]
+      },
+      {
+        "key": "frontend",
+        "label": "Frontend",
+        "techs": [
+          {
+            "name": "React",
+            "color": "#61DAFB",
+            "faIcon": "fa-brands fa-react"
+          },
+          {
+            "name": "Next.js",
+            "color": "#111111",
+            "faIcon": "fa-solid fa-n"
+          },
+          {
+            "name": "JavaScript",
+            "color": "#F7DF1E",
+            "faIcon": "fa-brands fa-js"
+          },
+          {
+            "name": "HTML5",
+            "color": "#E34F26",
+            "faIcon": "fa-brands fa-html5"
+          },
+          {
+            "name": "CSS3",
+            "color": "#1572B6",
+            "faIcon": "fa-brands fa-css3-alt"
+          },
+          {
+            "name": "Redux",
+            "color": "#764ABC",
+            "faIcon": "fa-solid fa-layer-group"
+          }
+        ]
+      },
+      {
+        "key": "backend",
+        "label": "Backend",
+        "techs": [
+          {
+            "name": "Node.js",
+            "color": "#68A063",
+            "faIcon": "fa-brands fa-node-js"
+          },
+          {
+            "name": "Express.js",
+            "color": "#222222",
+            "faIcon": "fa-solid fa-server"
+          },
+          {
+            "name": "PHP",
+            "color": "#777BB4",
+            "faIcon": "fa-brands fa-php"
+          },
+          {
+            "name": "Laravel",
+            "color": "#FF2D20",
+            "faIcon": "fa-brands fa-laravel"
+          },
+          {
+            "name": "REST APIs",
+            "color": "#4F46E5",
+            "faIcon": "fa-solid fa-plug"
+          },
+          {
+            "name": "JWT",
+            "color": "#111111",
+            "faIcon": "fa-solid fa-key"
+          }
+        ]
+      },
+      {
+        "key": "database",
+        "label": "Database",
+        "techs": [
+          {
+            "name": "MySQL",
+            "color": "#00758F",
+            "faIcon": "fa-solid fa-database"
+          },
+          {
+            "name": "MongoDB",
+            "color": "#4DB33D",
+            "faIcon": "fa-solid fa-leaf"
+          },
+          {
+            "name": "PostgreSQL",
+            "color": "#336791",
+            "faIcon": "fa-solid fa-database"
+          }
+        ]
+      },
+      {
+        "key": "mobile",
+        "label": "Mobile",
+        "techs": [
+          {
+            "name": "React Native",
+            "color": "#61DAFB",
+            "faIcon": "fa-brands fa-react"
+          },
+          {
+            "name": "Firebase",
+            "color": "#FFCA28",
+            "faIcon": "fa-solid fa-fire"
+          }
+        ]
+      },
+      {
+        "key": "testing",
+        "label": "Testing",
+        "techs": [
+          {
+            "name": "Playwright",
+            "color": "#2EAD33",
+            "faIcon": "fa-solid fa-vial"
+          },
+          {
+            "name": "Postman",
+            "color": "#FF6C37",
+            "faIcon": "fa-solid fa-paper-plane"
+          },
+          {
+            "name": "Newman",
+            "color": "#FF6C37",
+            "faIcon": "fa-solid fa-flask"
+          }
+        ]
+      }
+    ]
+  },
+  "work": {
+    "eyebrow": "✦ Selected Work",
+    "heading": "Built for",
+    "headingHighlight": "real business needs.",
+    "intro": "Explore a selection of websites, e-commerce platforms, mobile applications, and custom digital solutions developed to address practical business requirements.",
+    "ctaLabel": "Start a Project"
+  },
+  "services": {
+    "eyebrow": "✦ Services",
+    "heading": "Digital solutions",
+    "headingHighlight": "built around your business.",
+    "intro": "We design and develop modern websites, e-commerce platforms, mobile applications, and custom software tailored to your business goals and workflows.",
+    "ctaLabel": "Start a Project",
+    "ctaNote": "Whether you need a professional business website or a custom digital solution, we help turn your requirements into a practical, well-built product.",
+    "discussLabel": "Discuss Your Project"
+  },
+  "process": {
+    "eyebrow": "✦ How We Work",
+    "heading": "A clear process,",
+    "headingHighlight": "from idea to launch.",
+    "intro": "A straightforward process that keeps your project clear, organized, and moving forward from the initial discussion to final delivery.",
+    "ctaLabel": "Start Your Project",
+    "ctaNote": "From understanding your requirements to delivering and supporting a practical digital solution.",
+    "timing": {
+      "stepMs": 1200,
+      "holdMs": 1400,
+      "resetMs": 600
+    },
+    "items": [
+      {
+        "n": "01",
+        "t": "Understand",
+        "d": "We discuss your business, goals, users, requirements, priorities, and project scope to understand what needs to be solved."
+      },
+      {
+        "n": "02",
+        "t": "Plan",
+        "d": "We define the key features, technology, project structure, timeline, and development approach before work begins."
+      },
+      {
+        "n": "03",
+        "t": "Build",
+        "d": "We develop the solution in clear stages, review progress regularly, and keep communication open throughout the project."
+      },
+      {
+        "n": "04",
+        "t": "Launch",
+        "d": "We test the solution, address identified issues, prepare the deployment, and support the transition to a live environment."
+      }
+    ]
+  },
+  "trust": {
+    "heading": "Why businesses",
+    "headingHighlight": "choose to work with us.",
+    "intro": "A practical approach focused on clear communication, thoughtful development, and dependable project delivery.",
+    "ctaLabel": "Start a Conversation",
+    "points": [
+      {
+        "n": "01",
+        "title": "Clear communication",
+        "desc": "We keep requirements, timelines, progress, and project decisions clear throughout development, so everyone stays aligned from the beginning to delivery."
+      },
+      {
+        "n": "02",
+        "title": "Business-first thinking",
+        "desc": "We take time to understand your business, users, and objectives before development begins. Features and technical decisions are guided by the problem the solution needs to solve."
+      },
+      {
+        "n": "03",
+        "title": "Thoughtful development",
+        "desc": "We use suitable modern technologies and practical development practices to create responsive, maintainable digital products that match the needs of each project."
+      },
+      {
+        "n": "04",
+        "title": "End-to-end support",
+        "desc": "From initial discussions and planning through development, testing, deployment, and future improvements, we stay involved across the project lifecycle and provide a clear point of contact."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "✦ About Us",
+    "heading": "We build digital products",
+    "headingHighlight": "businesses can rely on.",
+    "profileCardText": "Technology Partner for Growing Businesses",
+    "storyHeadline": "A technology company focused on practical digital solutions for growing businesses.",
+    "paragraphs": [
+      "ISHWAT Technologies helps businesses plan, design, and develop digital solutions including business websites, e-commerce platforms, mobile applications, AI solutions, and custom web applications. We use modern technologies and practical development approaches to create solutions that are clear, maintainable, and aligned with business needs.",
+      "We begin by understanding the business, its users, and the problem that needs to be solved. From there, we work through design, development, testing, deployment, and ongoing support with clear communication throughout the process."
+    ],
+    "ctaLabel": "Work with us",
+    "ctaHref": "/contact",
+    "secondaryLabel": "See Our Work",
+    "secondaryHref": "/work",
+    "stats": [
+      {
+        "value": "05",
+        "suffix": "+",
+        "label": "Core solution areas"
+      },
+      {
+        "value": "01",
+        "suffix": "",
+        "label": "Dedicated technology partner"
+      },
+      {
+        "value": "360",
+        "suffix": "°",
+        "label": "Project support"
+      }
+    ],
+    "values": [
+      {
+        "n": "01",
+        "label": "Clear communication"
+      },
+      {
+        "n": "02",
+        "label": "Business-first thinking"
+      },
+      {
+        "n": "03",
+        "label": "Practical technology"
+      },
+      {
+        "n": "04",
+        "label": "Long-term support"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Ready to get started?",
+    "heading": "Let's build something",
+    "headingHighlight": "that moves your business forward.",
+    "intro": "Have a new website, mobile application, custom software requirement, or an idea you want to explore? Tell us about your project and let's discuss how we can turn it into a practical digital solution.",
+    "primaryLabel": "Start a Project",
+    "secondaryLabel": "Chat on WhatsApp"
+  },
+  "testimonials": [
+    {
+      "quote": "ISHWAT Technologies understood what we needed and turned our requirements into a professional, easy-to-use website. The communication throughout the project was clear and the overall experience was smooth.",
+      "name": "Rahul Shah",
+      "initials": "RS",
+      "accent": "blue"
+    },
+    {
+      "quote": "The team took the time to understand our workflow before development started. The result was a much more structured and practical platform that fits the way we work.",
+      "name": "Priya Mehta",
+      "initials": "PM",
+      "accent": "violet"
+    },
+    {
+      "quote": "What we appreciated most was the practical approach. ISHWAT Technologies focused on our actual requirements instead of adding unnecessary complexity, and the development process stayed clear from start to finish.",
+      "name": "Arjun Patel",
+      "initials": "AP",
+      "accent": "amber"
+    },
+    {
+      "quote": "The process was straightforward from the first discussion to the final delivery. The team listened to our requirements, communicated clearly, and delivered a solution that matched our expectations.",
+      "name": "Neha Desai",
+      "initials": "ND",
+      "accent": "pink"
+    }
+  ]
+}

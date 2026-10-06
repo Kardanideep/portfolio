@@ -1,0 +1,52 @@
+{
+  "name": "Deep Kardani",
+  "role": "Web Developer",
+  "tagline": "I build modern websites, e-commerce platforms, mobile apps, and custom web applications for businesses.",
+  "phoneDisplay": "+91 9727927266",
+  "phoneTel": "+919727927266",
+  "email": "kardanideep1@gmail.com",
+  "availability": "Open for new projects",
+  "responseTime": "Usually reply within 24 hours.",
+  "copyright": "Deep Kardani. All rights reserved.",
+
+  "seo": {
+    "siteUrl": "https://deepkardani.vercel.app",
+    "title": "Deep Kardani | Web Developer for Businesses",
+    "description": "Deep Kardani builds modern business websites, e-commerce platforms, mobile apps, and custom web applications for businesses and growing companies.",
+    "keywords": [
+      "Web Developer",
+      "Web Development",
+      "Business Website Development",
+      "E-Commerce Development",
+      "Custom Web Development",
+      "Web Application Development",
+      "Mobile App Development",
+      "React Developer",
+      "Next.js Developer",
+      "Node.js Developer",
+      "Web Development Ahmedabad",
+      "Web Developer India"
+    ],
+    "og": {
+      "title": "Deep Kardani | Web Developer for Businesses",
+      "description": "Modern business websites, e-commerce platforms, mobile apps, and custom web applications built for real business needs.",
+      "siteName": "Deep Kardani",
+      "locale": "en_IN",
+      "type": "website",
+      "image": "/og-image.png",
+      "imageWidth": 512,
+      "imageHeight": 512,
+      "imageAlt": "Deep Kardani - Web & App Development"
+    },
+    "twitter": {
+      "card": "summary",
+      "title": "Deep Kardani | Web Developer for Businesses",
+      "description": "Modern websites, e-commerce, mobile apps, and custom web applications for businesses.",
+      "image": "/logo.png"
+    },
+    "robots": {
+      "index": true,
+      "follow": true
+    }
+  }
+}

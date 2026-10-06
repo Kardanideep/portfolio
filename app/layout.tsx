@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import meta from "./data/meta.json";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -8,58 +10,38 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const { seo } = meta;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://deepkardani.vercel.app"),
-  title: "Deep Kardani | Web Developer for Businesses",
-  description:
-    "Deep Kardani builds modern business websites, e-commerce platforms, mobile apps, and custom web applications for businesses and growing companies.",
-  keywords: [
-    "Web Developer",
-    "Web Development",
-    "Business Website Development",
-    "E-Commerce Development",
-    "Custom Web Development",
-    "Web Application Development",
-    "Mobile App Development",
-    "React Developer",
-    "Next.js Developer",
-    "Node.js Developer",
-    "Web Development Ahmedabad",
-    "Web Developer India",
-  ],
+  metadataBase: new URL(seo.siteUrl),
+  title: seo.title,
+  description: seo.description,
+  keywords: seo.keywords,
   openGraph: {
-    title: "Deep Kardani | Web Developer for Businesses",
-    description:
-      "Modern business websites, e-commerce platforms, mobile apps, and custom web applications built for real business needs.",
-    url: "https://deepkardani.vercel.app",
-    siteName: "Deep Kardani",
+    title: seo.og.title,
+    description: seo.og.description,
+    url: seo.siteUrl,
+    siteName: seo.og.siteName,
     images: [
       {
-        url: "/og-image.png",
-        width: 512,
-        height: 512,
-        alt: "Deep Kardani - Web & App Development",
+        url: seo.og.image,
+        width: seo.og.imageWidth,
+        height: seo.og.imageHeight,
+        alt: seo.og.imageAlt,
       },
     ],
-
-    locale: "en_IN",
-    type: "website",
+    locale: seo.og.locale,
+    type: seo.og.type as "website",
   },
-
   twitter: {
-    card: "summary",
-
-    title: "Deep Kardani | Web Developer for Businesses",
-
-    description:
-      "Modern websites, e-commerce, mobile apps, and custom web applications for businesses.",
-
-    images: ["/og-image.png"],
+    card: seo.twitter.card as "summary",
+    title: seo.twitter.title,
+    description: seo.twitter.description,
+    images: [seo.twitter.image],
   },
-
   robots: {
-    index: true,
-    follow: true,
+    index: seo.robots.index,
+    follow: seo.robots.follow,
   },
 };
 

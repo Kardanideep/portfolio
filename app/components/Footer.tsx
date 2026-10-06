@@ -1,27 +1,30 @@
-import site from "../data/site.json";
+import Link from "next/link";
+import footer from "../data/footer.json";
+import meta from "../data/meta.json";
+import header from "../data/header.json";
 
-const { meta, footer } = site;
-
-const NAV = site.nav;
-const PROJECTS = footer.projects;
+const NAV = header.nav;
+const SERVICES = footer.services;
+const WORK = footer.work;
 
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-950 px-5 pb-8 pt-16 text-slate-300 md:px-8 md:pt-20">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 md:grid-cols-12">
+        {/* 4 columns on md+ — single row */}
+        <div className="grid gap-10 md:grid-cols-12 md:gap-8">
           {/* Brand + contact */}
-          <div className="md:col-span-5">
-            <a
-              href="#top"
-              className="group inline-flex bg-white rounded-xl p-2 items-center md:justify-self-start"
+          <div className="md:col-span-4">
+            <Link
+              href="/"
+              className="group inline-flex items-center rounded-xl bg-white p-2"
             >
               <img
-                src="/og-image.png"
+                src="/logo.png"
                 alt="Deep Kardani"
-                className="h-6 lg:h-8 w-auto object-contain"
+                className="h-10 w-auto object-contain lg:h-14"
               />
-            </a>
+            </Link>
 
             <p className="mt-5 max-w-xs text-sm leading-6 text-slate-400">
               {footer.tagline}
@@ -90,41 +93,61 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
-          <nav aria-label="Footer" className="md:col-span-3 md:col-start-7">
+          {/* Company */}
+          <nav aria-label="Company" className="md:col-span-2">
             <p className="text-sm font-semibold text-white">
-              {footer.navigateTitle}
+              {footer.companyTitle}
             </p>
 
             <ul className="mt-5 space-y-3 text-sm">
               {NAV.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-slate-400 transition-colors duration-300 hover:text-[#60A5FA]"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Projects */}
-          <div className="md:col-span-3 hidden lg:block">
+          {/* Services */}
+          <div className="md:col-span-3">
             <p className="text-sm font-semibold text-white">
-              {footer.projectsTitle}
+              {footer.servicesTitle}
             </p>
 
             <ul className="mt-5 space-y-3 text-sm">
-              {PROJECTS.map((project) => (
+              {SERVICES.map((service) => (
+                <li key={service}>
+                  <Link
+                    href="/services"
+                    className="text-slate-400 transition-colors duration-300 hover:text-[#60A5FA]"
+                  >
+                    {service}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Work */}
+          <div className="md:col-span-3">
+            <p className="text-sm font-semibold text-white">
+              {footer.workTitle}
+            </p>
+
+            <ul className="mt-5 space-y-3 text-sm">
+              {WORK.map((project) => (
                 <li key={project}>
-                  <a
-                    href="#work"
+                  <Link
+                    href="/work"
                     className="text-slate-400 transition-colors duration-300 hover:text-[#60A5FA]"
                   >
                     {project}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

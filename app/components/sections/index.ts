@@ -1,0 +1,10 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as TechStackSection } from "./TechStackSection";
+export { default as WorkSection } from "./WorkSection";
+export { default as ServicesSection } from "./ServicesSection";
+export { default as ProcessSection } from "./ProcessSection";
+export { default as TrustSection } from "./TrustSection";
+export { default as TestimonialSection } from "./TestimonialSection"; 
+export { default as AboutSection } from "./AboutSection";
+export { default as CTASection } from "./CTASection";
+export { default as FloatingWhatsApp } from "./FloatingWhatsApp";

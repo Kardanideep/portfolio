@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "eyebrow": "Contact",
+    "heading": "Let’s build something",
+    "headingHighlight": "worth remembering.",
+    "intro": "Have a new website, mobile application, custom software requirement, or a project idea? Tell us what you have in mind and our team will get back to you to discuss the next steps.",
+    "primaryCta": {
+      "label": "Start a Project",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Chat on WhatsApp",
+      "href": "whatsapp"
+    }
+  },
+ "eyebrow": "✦ Start a Project",
+"heading": "Have a",
+"headingHighlight": "project in mind?",
+"intro": "Tell us about your business, what you need to build, and what you want to achieve. We’ll review your requirements and get in touch to discuss the project and next steps.",
+"phoneLabel": "Call Us",
+"emailLabel": "Email Us",
+"whatsappLabel": "WhatsApp Us",
+"whatsappValue": "Start a conversation",
+"form": {
+  "nameLabel": "Your Name",
+  "namePlaceholder": "Rahul Shah",
+  "emailLabel": "Work Email",
+  "emailPlaceholder": "you@company.com",
+  "phoneLabel": "Phone Number",
+  "phonePlaceholder": "+91 00000 00000",
+  "projectLabel": "What Do You Need?",
+  "projectPlaceholder": "Business website, e-commerce, mobile application, custom software…",
+  "messageLabel": "Project Details",
+  "messagePlaceholder": "Tell us about your business, requirements, goals, timeline, budget, or any other details that may help us understand your project.",
+  "submitLabel": "Start the Conversation",
+  "submitLoadingLabel": "Sending…",
+  "successMessage": "Thank you for reaching out. We’ve received your enquiry and will review the details before getting back to you.",
+  "errorMessage": "Something went wrong while sending your enquiry. Please try again or contact us directly."
+}
+}

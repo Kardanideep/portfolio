@@ -1,0 +1,273 @@
+[
+  {
+    "n": "01",
+    "title": "Web Development",
+    "desc": "Modern, responsive websites built for businesses, brands, and professional services with a focus on usability, performance, and a clear user experience.",
+    "points": [
+      "Responsive across devices",
+      "Performance-focused and SEO-ready",
+      "Clear structure aligned with business goals"
+    ],
+    "icon": "globe",
+    "tagline": "Professional websites built around your business.",
+    "overview": "Your website is often the first digital interaction customers have with your business. We design and develop modern, responsive websites that present your brand clearly, make information easy to find, and guide visitors toward meaningful actions such as contacting your team, requesting a service, or making a purchase.",
+    "idealFor": [
+      "Small and medium businesses",
+      "Consultants and professional services",
+      "Local businesses building their online presence",
+      "Companies updating an outdated website"
+    ],
+    "deliverables": [
+      "Custom design aligned with your brand",
+      "Mobile, tablet, and desktop responsive layouts",
+      "Contact forms and lead capture",
+      "Basic on-page SEO setup",
+      "Analytics and tracking integration",
+      "Deployment and launch support"
+    ],
+    "techStack": ["Next.js", "React", "Tailwind CSS", "Node.js"],
+    "timeline": "2 – 4 weeks",
+    "startingPrice": "From ₹25,000"
+  },
+  {
+    "n": "02",
+    "title": "E-Commerce Development",
+    "desc": "Complete online stores with product management, cart, checkout, customer accounts, order management, and business-ready functionality.",
+    "points": [
+      "Smooth and intuitive shopping experience",
+      "Payment and order workflow integration",
+      "Practical product and customer management"
+    ],
+    "icon": "shopping-bag",
+    "tagline": "E-commerce experiences built for everyday business.",
+    "overview": "A successful online store needs more than a product catalogue. We build e-commerce platforms with clear navigation, practical product management, checkout flows, payment integration, and the tools businesses need to manage customers and orders effectively.",
+    "idealFor": [
+      "Retail and D2C brands",
+      "Local businesses moving online",
+      "Businesses expanding beyond marketplace platforms",
+      "Brands needing a tailored shopping experience"
+    ],
+    "deliverables": [
+      "Product catalogue with categories and search",
+      "Shopping cart and checkout",
+      "Payment gateway integration",
+      "Order management and admin dashboard",
+      "User accounts and order history",
+      "Email notifications and transactional workflows"
+    ],
+    "techStack": ["Next.js", "Node.js", "MongoDB", "Razorpay / Stripe"],
+    "timeline": "4 – 8 weeks",
+    "startingPrice": "From ₹60,000"
+  },
+  {
+    "n": "03",
+    "title": "AI Solutions",
+    "desc": "Practical AI-powered features and solutions that help businesses automate repetitive work, improve workflows, and create better digital experiences.",
+    "points": [
+      "AI features built around real use cases",
+      "Workflow and task automation",
+      "Integration with existing applications"
+    ],
+    "icon": "sparkles",
+    "tagline": "Practical AI for real business needs.",
+    "overview": "AI can be useful when it solves a specific business problem rather than being added simply because it is a trend. We help businesses identify suitable AI use cases and integrate practical capabilities such as intelligent assistants, document processing, content workflows, data interactions, and task automation into their existing products or new applications.",
+    "idealFor": [
+      "Businesses exploring practical AI use cases",
+      "Teams looking to automate repetitive tasks",
+      "Existing products that need AI-powered features",
+      "Companies building AI-enabled internal tools"
+    ],
+    "deliverables": [
+      "AI use-case planning",
+      "AI-powered application features",
+      "API and model integrations",
+      "Prompt and workflow design",
+      "Document and data processing workflows",
+      "Integration with existing business systems"
+    ],
+    "techStack": ["Node.js", "Next.js", "OpenAI API", "REST APIs"],
+    "timeline": "3 – 8 weeks",
+    "startingPrice": "From ₹50,000"
+  },
+  {
+    "n": "04",
+    "title": "Custom Web Applications",
+    "desc": "Full-stack web applications built around business workflows, including dashboards, user systems, admin panels, and custom functionality.",
+    "points": [
+      "Designed around your workflow",
+      "Custom dashboards and user systems",
+      "Structured for future expansion"
+    ],
+    "icon": "layout-dashboard",
+    "tagline": "Software shaped around how your business works.",
+    "overview": "When standard tools do not fit the way your business operates, a custom application can provide a more suitable approach. We build web applications around your workflows, business rules, users, and operational requirements — from internal systems and dashboards to customer-facing platforms.",
+    "idealFor": [
+      "Businesses with unique workflows",
+      "Companies moving beyond spreadsheets",
+      "Startups developing an initial product",
+      "Teams needing custom dashboards or admin systems"
+    ],
+    "deliverables": [
+      "Custom dashboard and admin panel",
+      "User roles and permission management",
+      "Database design and application architecture",
+      "REST APIs and system integrations",
+      "Authentication and access control",
+      "Deployment and handover support"
+    ],
+    "techStack": ["Next.js", "Node.js", "PostgreSQL", "JWT"],
+    "timeline": "6 – 12 weeks",
+    "startingPrice": "From ₹1,20,000"
+  },
+  {
+    "n": "05",
+    "title": "Mobile App Development",
+    "desc": "Mobile applications designed for customer-facing products, business services, internal operations, and digital experiences across Android and iOS.",
+    "points": [
+      "Modern and user-friendly interfaces",
+      "Built around practical business use cases",
+      "Cross-platform development for Android and iOS"
+    ],
+    "icon": "smartphone",
+    "tagline": "Mobile experiences built for your users.",
+    "overview": "Mobile applications can help businesses deliver services, connect with customers, manage operations, and provide convenient digital experiences. We develop cross-platform applications with practical interfaces, backend integration, authentication, and the features required for the intended use case.",
+    "idealFor": [
+      "Service-based businesses",
+      "Booking and delivery platforms",
+      "Membership and customer applications",
+      "Internal business tools"
+    ],
+    "deliverables": [
+      "Cross-platform Android and iOS application",
+      "Modern mobile interface",
+      "Push notification integration",
+      "User authentication and profiles",
+      "Backend API integration",
+      "Release and deployment support"
+    ],
+    "techStack": ["React Native", "Node.js", "MongoDB", "Firebase"],
+    "timeline": "6 – 10 weeks",
+    "startingPrice": "From ₹1,00,000"
+  },
+   {
+    "n": "07",
+    "title": "Backend & API Development",
+    "desc": "Reliable backend systems with APIs, authentication, databases, business logic, payments, and third-party integrations.",
+    "points": [
+      "Structured API architecture",
+      "Secure authentication and data handling",
+      "Payments and third-party integrations"
+    ],
+    "icon": "server",
+    "tagline": "Reliable systems behind your digital product.",
+    "overview": "A well-structured backend provides the foundation for reliable digital products. We develop APIs, business logic, database systems, authentication, payment workflows, and third-party integrations based on the requirements of the application.",
+    "idealFor": [
+      "Frontend teams needing backend services",
+      "Businesses building custom applications",
+      "Products requiring payment integrations",
+      "Applications that need a structured backend"
+    ],
+    "deliverables": [
+      "REST API design and implementation",
+      "Database schema and optimisation",
+      "Authentication and access control",
+      "Payment and third-party integrations",
+      "API documentation",
+      "Deployment support"
+    ],
+    "techStack": ["Node.js", "Express", "PostgreSQL", "MySQL"],
+    "timeline": "3 – 8 weeks",
+    "startingPrice": "From ₹50,000"
+  },
+  {
+    "n": "06",
+    "title": "UI/UX Design",
+    "desc": "Clear and modern digital interfaces designed around user needs, business goals, and a consistent brand experience.",
+    "points": [
+      "User-focused interface design",
+      "Clear and consistent design systems",
+      "Responsive experiences across devices"
+    ],
+    "icon": "palette",
+    "tagline": "Thoughtful design before development.",
+    "overview": "Good digital products should be easy to understand and comfortable to use. Our UI/UX process focuses on understanding users, organising information clearly, defining practical user flows, and creating polished interfaces that support both usability and business objectives.",
+    "idealFor": [
+      "New websites and digital products",
+      "Businesses redesigning existing interfaces",
+      "Web and mobile applications",
+      "Products that need a clearer user experience"
+    ],
+    "deliverables": [
+      "User flow planning",
+      "Wireframes and interface structure",
+      "High-fidelity UI design",
+      "Responsive design systems",
+      "Prototype and interaction planning",
+      "Developer-ready design handoff"
+    ],
+    "techStack": ["Figma", "Design Systems", "Responsive UI", "Prototyping"],
+    "timeline": "1 – 4 weeks",
+    "startingPrice": "From ₹20,000"
+  },
+ 
+  {
+    "n": "08",
+    "title": "Quality Assurance & Testing",
+    "desc": "Structured testing to identify functional issues, usability problems, and inconsistencies before a product reaches customers.",
+    "points": [
+      "Functional and workflow testing",
+      "Cross-device and browser testing",
+      "Issue reporting and verification"
+    ],
+    "icon": "shield-check",
+    "tagline": "Quality checked before it reaches your users.",
+    "overview": "Testing helps identify issues before they affect customers and business operations. We review digital products against their intended workflows, test important features across supported environments, document issues clearly, and verify fixes as the product moves toward release.",
+    "idealFor": [
+      "Web and mobile applications",
+      "Products preparing for launch",
+      "Existing applications with recurring issues",
+      "Development teams needing additional testing support"
+    ],
+    "deliverables": [
+      "Functional and regression testing",
+      "Cross-browser testing",
+      "Responsive and device testing",
+      "User-flow and usability checks",
+      "Detailed bug and issue reports",
+      "Fix verification and release testing"
+    ],
+    "techStack": ["Playwright", "Postman", "Newman", "Manual Testing"],
+    "timeline": "1 – 4 weeks",
+    "startingPrice": "From ₹15,000"
+  },
+  {
+    "n": "09",
+    "title": "Existing Project Support",
+    "desc": "Support for existing applications through bug fixes, feature development, code improvements, performance work, and ongoing maintenance.",
+    "points": [
+      "Fix bugs and improve stability",
+      "Add features and functionality",
+      "Maintain and improve existing code"
+    ],
+    "icon": "wrench",
+    "tagline": "Improve, maintain, and move your existing product forward.",
+    "overview": "Existing projects often need focused technical support, whether development has slowed down, issues have accumulated, or new functionality is required. We review the current application, understand its structure, and provide targeted improvements without unnecessarily rebuilding what already works.",
+    "idealFor": [
+      "Projects paused during development",
+      "Applications with technical issues",
+      "Codebases needing cleanup or improvements",
+      "Businesses needing ongoing development support"
+    ],
+    "deliverables": [
+      "Code review and technical assessment",
+      "Bug fixes and stability improvements",
+      "New feature development",
+      "Performance optimisation",
+      "Code refactoring and cleanup",
+      "Ongoing maintenance support"
+    ],
+    "techStack": ["Next.js", "React", "Node.js", "MySQL / MongoDB"],
+    "timeline": "1 – 4 weeks (varies by scope)",
+    "startingPrice": "From ₹15,000"
+  }
+]
