@@ -48,9 +48,6 @@ function TestimonialCard({
                     <span className="truncate text-[15px] font-semibold text-text sm:text-sm">
                         {testimonial.name}
                     </span>
-                    <span className="mt-0.5 truncate text-[13px] text-muted sm:text-xs">
-                        {testimonial.role} · {testimonial.company}
-                    </span>
                 </div>
 
                 <span
