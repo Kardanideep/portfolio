@@ -49,7 +49,7 @@ export default function Header() {
             <img
               src="/logo.png"
               alt="Deep Kardani"
-              className="h-10 w-auto object-contain lg:h-16"
+              className="h-12 w-auto object-contain lg:h-16"
             />
           </Link>
 
