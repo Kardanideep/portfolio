@@ -50,7 +50,7 @@ export default function Header() {
               src="/logo.png"
               alt="Deep Kardani"
               className="h-12 w-auto object-contain lg:h-16"
-            />
+            /> 
           </Link>
 
           {/* Desktop Navigation (center) */}
