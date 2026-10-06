@@ -32,7 +32,7 @@ function ProjectMedia({
 
   if (image) {
     return (
-      <div className="relative mb-6 h-44 overflow-hidden rounded-2xl border border-border-soft bg-bg-soft sm:mb-7 sm:h-52">
+      <div className="relative mb-5 h-40 overflow-hidden rounded-xl border border-border-soft bg-bg-soft xs:mb-6 xs:h-44 xs:rounded-2xl sm:mb-7 sm:h-52">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={image}
@@ -46,7 +46,7 @@ function ProjectMedia({
         />
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute bottom-3 right-3 flex h-8 w-8 translate-y-1 items-center justify-center rounded-full bg-white/95 text-[13px] font-semibold text-[#0F1117] opacity-0 shadow-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:text-xs"
+          className="pointer-events-none absolute bottom-3 right-3 flex h-7 w-7 translate-y-1 items-center justify-center rounded-full bg-white/95 text-[12px] font-semibold text-[#0F1117] opacity-0 shadow-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 xs:h-8 xs:w-8 xs:text-[13px] sm:text-xs"
         >
           ↗
         </span>
@@ -56,7 +56,7 @@ function ProjectMedia({
 
   return (
     <div
-      className={`relative mb-6 h-44 overflow-hidden rounded-2xl border border-zinc-200 bg-gradient-to-br sm:mb-7 sm:h-52 ${
+      className={`relative mb-5 h-40 overflow-hidden rounded-xl border border-zinc-200 bg-gradient-to-br xs:mb-6 xs:h-44 xs:rounded-2xl sm:mb-7 sm:h-52 ${
         accentStyles[accent] ?? accentStyles.blue
       }`}
     >
@@ -87,33 +87,33 @@ export default function WorkSection({
   const visible = limit > 0 ? PROJECTS.slice(0, limit) : PROJECTS;
 
   return (
-    <section id="work" className="px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25">
+    <section id="work" className="px-4 py-14 xs:px-5 xs:py-16 sm:px-6 sm:py-24 md:px-8 md:py-25">
       <div className="mx-auto w-full max-w-7xl">
-        <div className="mb-12 sm:mb-16 md:mb-20">
+        <div className="mb-10 xs:mb-12 sm:mb-16 md:mb-20">
           <div className="flex items-center gap-3">
-            <span className="text-[14px] font-semibold uppercase tracking-[0.25em] text-accent sm:text-xs">
+            <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-accent xs:text-[13px] xs:tracking-[0.25em] sm:text-xs">
               {WORK.eyebrow}
             </span>
           </div>
 
-          <h2 className="mt-4 text-5xl font-semibold leading-[0.95] tracking-[-0.05em] sm:mt-5 sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6rem]">
+          <h2 className="mt-3 text-[2rem] font-semibold leading-[1] tracking-[-0.04em] xs:mt-4 xs:text-[2.25rem] xs:leading-[0.98] sm:mt-5 sm:text-5xl sm:leading-[0.95] sm:tracking-[-0.05em] md:text-6xl lg:text-[5.5rem] xl:text-[6rem]">
             {WORK.heading}{" "}
             <span className="text-muted">{WORK.headingHighlight}</span>
           </h2>
 
-          <p className="mt-2 text-[16px] leading-7 text-muted sm:mt-2 sm:text-base md:text-lg md:leading-8">
+          <p className="mt-2 text-[15px] leading-6 text-muted xs:text-[15.5px] xs:leading-[1.7] sm:mt-2 sm:text-base sm:leading-7 md:text-lg md:leading-8">
             {WORK.intro}
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:mt-16 sm:gap-5 md:mt-20 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-3.5 xs:mt-12 xs:gap-4 sm:mt-16 sm:gap-5 md:mt-20 md:grid-cols-2 lg:grid-cols-3">
           {visible.map((project, i) => {
             const hasLink = Boolean(project.liveLink);
 
             return (
               <article
                 key={project.title}
-                className={`group relative overflow-hidden rounded-2xl border border-border-soft bg-surface p-5 transition-all duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-6 md:p-7 ${
+                className={`group relative overflow-hidden rounded-xl border border-border-soft bg-surface p-4 transition-all duration-300 hover:-translate-y-1 xs:rounded-2xl xs:p-5 sm:rounded-3xl sm:p-6 md:p-7 ${
                   accentMap[project.accent]
                 }`}
                 style={{ animationDelay: `${i * 60}ms` }}
@@ -143,13 +143,15 @@ export default function WorkSection({
                 )}
 
                 <div className="flex items-start justify-between gap-3">
-                  <span className="font-mono text-[13px] text-muted sm:text-xs">{project.n}</span>
-                  <span className="rounded-full border border-border-soft bg-bg px-3 py-1 text-[12px] font-medium uppercase tracking-wider text-muted sm:text-[10px]">
+                  <span className="font-mono text-[12px] text-muted xs:text-[13px] sm:text-xs">
+                    {project.n}
+                  </span>
+                  <span className="rounded-full border border-border-soft bg-bg px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-muted xs:px-3 xs:text-[12px] sm:text-[10px]">
                     {project.tag}
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-[22px] font-bold tracking-tight sm:mt-7 sm:text-2xl md:text-3xl">
+                <h3 className="mt-5 text-[19px] font-bold tracking-tight xs:mt-6 xs:text-[21px] sm:mt-7 sm:text-2xl md:text-3xl">
                   {hasLink ? (
                     <a
                       href={project.liveLink}
@@ -164,26 +166,28 @@ export default function WorkSection({
                   )}
                 </h3>
 
-                <p className="mt-3 text-[17px] leading-6 text-muted sm:text-sm">{project.desc}</p>
+                <p className="mt-2.5 text-[14px] leading-6 text-muted xs:mt-3 xs:text-[15px] sm:text-sm">
+                  {project.desc}
+                </p>
 
-                <div className="mt-5 flex flex-wrap gap-2 sm:mt-6">
+                <div className="mt-4 flex flex-wrap gap-1.5 xs:mt-5 xs:gap-2 sm:mt-6">
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-border-soft bg-bg px-2.5 py-1 text-[12px] text-muted sm:px-3 sm:text-[11px]"
+                      className="rounded-full border border-border-soft bg-bg px-2 py-1 text-[11px] text-muted xs:px-2.5 xs:text-[12px] sm:px-3 sm:text-[11px]"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="mt-7 flex flex-wrap items-center gap-2 sm:mt-8">
+                <div className="mt-6 flex flex-wrap items-center gap-2 xs:mt-7 sm:mt-8">
                   {hasLink && (
                     <a
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/visit inline-flex items-center gap-2 rounded-full border border-border-soft bg-bg px-3.5 py-2 text-[13px] font-semibold text-text transition-all duration-300 hover:border-[#2563EB] hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:px-4 sm:text-xs"
+                      className="group/visit inline-flex items-center gap-1.5 rounded-full border border-border-soft bg-bg px-3 py-1.5 text-[12px] font-semibold text-text transition-all duration-300 hover:border-[#2563EB] hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] xs:gap-2 xs:px-3.5 xs:py-2 xs:text-[13px] sm:px-4 sm:text-xs"
                     >
                       Visit project
                       <span
@@ -197,7 +201,7 @@ export default function WorkSection({
 
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-wider text-accent sm:text-xs"
+                    className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-wider text-accent xs:text-[13px] sm:text-xs"
                   >
                     {WORK.ctaLabel}
                     <span className="transition group-hover:translate-x-1">→</span>
@@ -209,15 +213,15 @@ export default function WorkSection({
         </div>
 
         {showViewAll && (
-          <div className="mt-12 flex justify-center sm:mt-14">
+          <div className="mt-10 flex justify-center xs:mt-12 sm:mt-14">
             <Link
               href={viewAllHref}
-              className="group inline-flex items-center gap-3 rounded-full bg-[#111827] py-2 pl-6 pr-2 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-[#2563EB] hover:shadow-[0_12px_30px_-12px_rgba(37,99,235,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:text-sm"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#111827] py-2 pl-5 pr-2 text-[13px] font-semibold text-white transition-all duration-300 hover:bg-[#2563EB] hover:shadow-[0_12px_30px_-12px_rgba(37,99,235,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] xs:gap-3 xs:py-2.5 xs:pl-6 xs:text-[14px] sm:text-sm"
             >
               {viewAllLabel}
               <span
                 aria-hidden="true"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#2563EB] transition-transform duration-300 group-hover:translate-x-0.5"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#2563EB] transition-transform duration-300 group-hover:translate-x-0.5 xs:h-9 xs:w-9"
               >
                 →
               </span>

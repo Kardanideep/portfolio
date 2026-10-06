@@ -96,7 +96,6 @@ export default function ServicesPage() {
           <div className="absolute -right-32 -top-32 h-[20rem] w-[20rem] rounded-full bg-[#6366F1]/[0.07] blur-3xl sm:h-[26rem] sm:w-[26rem]" />
           <div className="absolute -bottom-40 right-[20%] h-[18rem] w-[18rem] rounded-full bg-[#4F46E5]/[0.05] blur-3xl sm:h-[24rem] sm:w-[24rem]" />
 
-          {/* Faint grid */}
           <div
             className="absolute inset-0 opacity-[0.22]"
             style={{
@@ -110,7 +109,6 @@ export default function ServicesPage() {
             }}
           />
 
-          {/* Concentric arcs */}
           <div className="absolute right-[-12rem] top-1/2 hidden h-[30rem] w-[30rem] -translate-y-1/2 rounded-full border border-[#6366F1]/10 md:block md:h-[36rem] md:w-[36rem]" />
           <div className="absolute right-[-8rem] top-1/2 hidden h-[24rem] w-[24rem] -translate-y-1/2 rounded-full border border-[#6366F1]/10 md:block md:h-[28rem] md:w-[28rem]" />
           <div className="absolute right-[-4rem] top-1/2 hidden h-[18rem] w-[18rem] -translate-y-1/2 rounded-full border border-[#6366F1]/10 md:block md:h-[20rem] md:w-[20rem]" />
@@ -120,14 +118,12 @@ export default function ServicesPage() {
           <div className="grid items-center gap-10 lg:grid-cols-[46%_54%] lg:gap-8">
             {/* ── LEFT: copy ── */}
             <div className="relative z-20 mx-auto max-w-[600px] text-center lg:mx-0 lg:text-left">
-              {/* Eyebrow pill */}
               <div className="inline-flex items-center gap-2 rounded-full border border-[#E2E8F0] bg-white px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-[#64748B] shadow-[0_6px_20px_-14px_rgba(15,23,42,0.35)] sm:text-[10px]">
                 <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#2563EB]" />
                 {hero.eyebrow}
               </div>
 
-              {/* Heading */}
-              <h1 className="mt-4 text-[2.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0B1F4D] xs:text-[2.125rem] sm:mt-5 sm:text-[2.5rem] sm:leading-[1.05] md:text-[3rem] lg:text-[3.25rem] xl:text-[3.5rem]">
+              <h1 className="mt-4 text-[2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0B1F4D] xs:text-[2.25rem] sm:mt-5 sm:text-[2.5rem] sm:leading-[1.05] md:text-[3rem] lg:text-[3.25rem] xl:text-[3.5rem]">
                 {hero.headingLine1}
                 <br />
                 {hero.headingLine2}
@@ -137,16 +133,14 @@ export default function ServicesPage() {
                 </span>
               </h1>
 
-              {/* Description */}
-              <p className="mx-auto mt-4 max-w-[520px] text-[16px] leading-7 text-[#64748B] sm:mt-5 sm:text-[15px] sm:leading-7 lg:mx-0">
+              <p className="mx-auto mt-4 max-w-[520px] text-[15px] leading-6 text-[#64748B] xs:text-[16px] xs:leading-7 sm:mt-5 sm:text-[15px] sm:leading-7 lg:mx-0">
                 {hero.description}
               </p>
 
-              {/* CTAs */}
               <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
                 <Link
                   href={hero.primaryCta.href}
-                  className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#0B1F4D] px-5 py-3 text-[15px] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#142E63] hover:shadow-[0_14px_30px_-14px_rgba(11,31,77,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4F46E5] sm:text-sm sm:px-6"
+                  className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#0B1F4D] px-5 py-3 text-[15px] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#142E63] hover:shadow-[0_14px_30px_-14px_rgba(11,31,77,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4F46E5] sm:px-6 sm:text-sm"
                 >
                   {hero.primaryCta.label}
                   <span className="text-base transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -154,14 +148,13 @@ export default function ServicesPage() {
 
                 <Link
                   href={hero.secondaryCta.href}
-                  className="group inline-flex items-center justify-center gap-3 rounded-full border border-[#D7DEE8] bg-white px-5 py-3 text-[15px] font-semibold text-[#0B1F4D] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#6366F1] hover:text-[#4338CA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6366F1] sm:text-sm sm:px-6"
+                  className="group inline-flex items-center justify-center gap-3 rounded-full border border-[#D7DEE8] bg-white px-5 py-3 text-[15px] font-semibold text-[#0B1F4D] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#6366F1] hover:text-[#4338CA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6366F1] sm:px-6 sm:text-sm"
                 >
                   {hero.secondaryCta.label}
                   <span className="text-base transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </Link>
               </div>
 
-              {/* Trust checklist */}
               <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-[14px] text-[#64748B] sm:mt-7 sm:gap-x-5 sm:text-xs lg:justify-start">
                 {hero.trustItems.map((item) => (
                   <div key={item} className="flex items-center gap-1">
@@ -176,18 +169,15 @@ export default function ServicesPage() {
 
             {/* ── RIGHT: visual composition ── */}
             <div className="relative mx-auto h-[320px] w-full max-w-[520px] xs:h-[360px] sm:h-[420px] md:h-[460px] lg:h-[460px] lg:max-w-none xl:h-[460px]">
-              {/* Orbit rings */}
               <div className="pointer-events-none absolute left-1/2 top-1/2 h-[16rem] w-[16rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#6366F1]/15 sm:h-[20rem] sm:w-[20rem] md:h-[22rem] md:w-[22rem] lg:h-[24rem] lg:w-[24rem]" />
               <div className="pointer-events-none absolute left-1/2 top-1/2 h-[13rem] w-[13rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#6366F1]/20 sm:h-[16rem] sm:w-[16rem] md:h-[17rem] md:w-[17rem] lg:h-[19rem] lg:w-[19rem]" />
               <div className="pointer-events-none absolute left-1/2 top-1/2 h-[10rem] w-[10rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#6366F1]/10 sm:h-[12rem] sm:w-[12rem] md:h-[13rem] md:w-[13rem] lg:h-[14rem] lg:w-[14rem]" />
 
-              {/* Orbit nodes */}
               <span className="absolute left-[20%] top-[36%] h-1.5 w-1.5 rounded-full bg-[#22C1C3] ring-4 ring-[#22C1C3]/10 sm:h-2 sm:w-2" />
               <span className="absolute right-[18%] top-[32%] h-1.5 w-1.5 rounded-full bg-[#2563EB] ring-4 ring-[#2563EB]/10 sm:h-2 sm:w-2" />
               <span className="absolute bottom-[22%] right-[24%] h-1.5 w-1.5 rounded-full bg-[#F97316] ring-4 ring-[#F97316]/10 sm:h-2 sm:w-2" />
               <span className="absolute bottom-[18%] left-[36%] h-1.5 w-1.5 rounded-full bg-[#6366F1] ring-4 ring-[#6366F1]/10 sm:h-2 sm:w-2" />
 
-              {/* Laptop mockup (center) */}
               <div className="absolute left-1/2 top-1/2 z-20 w-[78%] max-w-[520px] -translate-x-1/2 -translate-y-1/2 sm:w-[72%] md:w-[70%] lg:w-[68%]">
                 <div className="rounded-[12px] border-[4px] border-[#0B1220] bg-[#0B1220] shadow-[0_30px_60px_-30px_rgba(15,23,42,0.4)] sm:rounded-[16px] sm:border-[6px]">
                   <div className="overflow-hidden rounded-[8px] bg-[#F8FAFC] sm:rounded-[10px]">
@@ -250,7 +240,6 @@ export default function ServicesPage() {
                 <div className="mx-auto h-1 w-[20%] rounded-b-full bg-[#64748B]/40 sm:h-1.5" />
               </div>
 
-              {/* Phone mockup */}
               <div className="absolute bottom-[14%] right-[10%] z-30 w-[70px] rotate-[4deg] rounded-[14px] border-[3px] border-[#101828] bg-[#101828] shadow-[0_20px_40px_-18px_rgba(15,23,42,0.4)] sm:bottom-[16%] sm:right-[14%] sm:w-[85px] sm:rounded-[16px] sm:border-[4px] md:w-[95px] lg:w-[105px]">
                 <div className="overflow-hidden rounded-[10px] bg-white sm:rounded-[12px]">
                   <div className="mx-auto mt-1 h-2 w-8 rounded-full bg-[#101828] sm:h-2.5 sm:w-10" />
@@ -276,7 +265,6 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              {/* Floating service cards */}
               {hero.floatingCards.map((card) => (
                 <div key={card.key} className={`absolute z-40 ${card.position}`}>
                   <div
@@ -290,10 +278,10 @@ export default function ServicesPage() {
                         <CardIcon type={card.icon} className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-[10px] font-semibold leading-tight text-[#0B1F4D] sm:text-[11px] lg:text-[12px]">
+                        <p className="text-[11px] font-semibold leading-tight text-[#0B1F4D] xs:text-[12px] sm:text-[11px] lg:text-[12px]">
                           {card.title}
                         </p>
-                        <p className="mt-0.5 text-[9px] leading-4 text-[#64748B] sm:text-[10px] sm:leading-4">
+                        <p className="mt-0.5 text-[10px] leading-3 text-[#64748B] xs:text-[11px] xs:leading-4 sm:text-[10px] sm:leading-4">
                           {card.subtitle}
                         </p>
                       </div>
@@ -311,17 +299,16 @@ export default function ServicesPage() {
       ═══════════════════════════════════════════════════ */}
       <section className="bg-surface border-b border-border-soft px-4 py-16 xs:px-5 xs:py-20 sm:px-6 sm:py-24 md:px-8 lg:px-10 lg:py-28">
         <div className="mx-auto w-full max-w-7xl">
-          {/* Header */}
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-8">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.25em] text-accent sm:text-xs">
                 {services.eyebrow}
               </p>
-              <h2 className="mt-3 text-[1.875rem] font-semibold leading-[1.05] tracking-[-0.03em] xs:text-[2.125rem] sm:mt-4 sm:text-[2.75rem] sm:leading-[1] md:text-[3.25rem] lg:text-[3.5rem] xl:text-[3.75rem]">
+              <h2 className="mt-3 text-[1.75rem] font-semibold leading-[1.08] tracking-[-0.03em] xs:text-[2rem] xs:leading-[1.05] sm:mt-4 sm:text-[2.75rem] sm:leading-[1] md:text-[3.25rem] lg:text-[3.5rem] xl:text-[3.75rem]">
                 {services.heading}{" "}
                 <span className="text-muted">{services.headingHighlight}</span>
               </h2>
-              <p className="mt-2 text-[16px] leading-7 text-muted sm:text-base sm:leading-7 md:text-lg md:leading-8">
+              <p className="mt-2 text-[15px] leading-6 text-muted xs:text-[16px] xs:leading-7 sm:text-base sm:leading-7 md:text-lg md:leading-8">
                 {services.intro}
               </p>
             </div>
@@ -330,7 +317,6 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Accordion */}
           <div className="mt-10 border-t border-border-soft sm:mt-14 lg:mt-16">
             {SERVICES.map((service, i) => {
               const isActive = i === active;
@@ -356,7 +342,7 @@ export default function ServicesPage() {
                     </span>
 
                     <span
-                      className={`flex-1 text-[22px] font-semibold tracking-[-0.02em] transition-colors duration-300 xs:text-[19px] sm:text-xl md:text-2xl lg:text-3xl ${
+                      className={`flex-1 text-[18px] font-semibold tracking-[-0.02em] transition-colors duration-300 xs:text-[19px] sm:text-xl md:text-2xl lg:text-3xl ${
                         isActive ? "text-[#2563EB]" : "text-text group-hover:text-text/60"
                       }`}
                     >
@@ -393,14 +379,14 @@ export default function ServicesPage() {
                   >
                     <div className="overflow-hidden">
                       <div className="mb-6 rounded-2xl border border-border-soft bg-bg p-4 xs:p-5 sm:mb-8 sm:p-6 md:p-8 lg:p-10">
-                        <div className="max-w-3xl">
+                        <div>
                           {service.tagline && (
-                            <p className="text-[17px] font-medium text-[#2563EB] sm:text-sm">
+                            <p className="text-[15px] font-medium text-[#2563EB] sm:text-sm">
                               {service.tagline}
                             </p>
                           )}
                           {service.overview && (
-                            <p className="mt-3 text-[17px] leading-7 text-muted sm:text-base md:text-[17px] md:leading-8">
+                            <p className="mt-3 text-[16px] leading-7 text-muted sm:text-base md:text-[17px] md:leading-8">
                               {service.overview}
                             </p>
                           )}
@@ -418,7 +404,7 @@ export default function ServicesPage() {
                                     <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#2563EB]/10 font-mono text-[11px] font-bold text-[#2563EB] sm:text-[10px]">
                                       {(idx + 1).toString().padStart(2, "0")}
                                     </span>
-                                    <span className="text-[16px] leading-6 text-text sm:text-sm">
+                                    <span className="text-[15px] leading-6 text-text sm:text-sm">
                                       {point}
                                     </span>
                                   </li>
@@ -436,7 +422,7 @@ export default function ServicesPage() {
                                 {service.idealFor.map((item: string) => (
                                   <li key={item} className="flex items-start gap-3">
                                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2563EB]" />
-                                    <span className="text-[16px] leading-6 text-text sm:text-sm">{item}</span>
+                                    <span className="text-[15px] leading-6 text-text sm:text-sm">{item}</span>
                                   </li>
                                 ))}
                               </ul>
@@ -475,7 +461,6 @@ export default function ServicesPage() {
             })}
           </div>
 
-          {/* Footer note */}
           <p className="mt-6 text-[15px] text-muted sm:mt-8 sm:text-sm">
             {services.footerNote}{" "}
             <Link
@@ -488,10 +473,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Tech Stack */}
       <TechStackSection />
-
-      {/* ── Process ── */}
       <ProcessSection />
 
       {/* ═══════════════════════════════════════════════════
@@ -504,18 +486,18 @@ export default function ServicesPage() {
               {faq.eyebrow}
             </p>
 
-            <h2 className="mt-3 text-[1.875rem] font-semibold leading-[1.05] tracking-[-0.03em] xs:text-[2.125rem] sm:mt-4 sm:text-[2.75rem] sm:leading-[1] md:text-[3.25rem] lg:text-[3.5rem] xl:text-[3.75rem]">
+            <h2 className="mt-3 text-[1.75rem] font-semibold leading-[1.08] tracking-[-0.03em] xs:text-[2rem] xs:leading-[1.05] sm:mt-4 sm:text-[2.75rem] sm:leading-[1] md:text-[3.25rem] lg:text-[3.5rem] xl:text-[3.75rem]">
               {faq.heading}{" "}
               <span className="text-muted">{faq.headingHighlight}</span>
             </h2>
 
-            <p className="mx-auto mt-4 max-w-xl text-[16px] leading-7 text-muted sm:mt-5 sm:text-base md:text-lg md:leading-8">
+            <p className="mx-auto mt-4 max-w-xl text-[15px] leading-6 text-muted xs:text-[16px] xs:leading-7 sm:mt-5 sm:text-base md:text-lg md:leading-8">
               {faq.intro}
             </p>
           </div>
 
           <div className="mt-10 space-y-3 sm:mt-14 lg:mt-16">
-            {faq.items.map((item, i) => {
+            {faq.items.map((item: { q: string; a: string }, i: number) => {
               const isOpen = openFaq === i;
               const panelId = `faq-panel-${i}`;
               const triggerId = `faq-trigger-${i}`;
@@ -538,7 +520,7 @@ export default function ServicesPage() {
                     className="flex w-full items-center gap-3 px-4 py-4 text-left sm:gap-5 sm:px-6 sm:py-6"
                   >
                     <span
-                      className={`font-mono text-[15px] tabular-nums transition-colors duration-300 sm:text-xs ${
+                      className={`font-mono text-[13px] tabular-nums transition-colors duration-300 sm:text-xs ${
                         isOpen ? "text-[#2563EB]" : "text-muted"
                       }`}
                     >
@@ -546,7 +528,7 @@ export default function ServicesPage() {
                     </span>
 
                     <span
-                      className={`flex-1 text-[17px] font-semibold tracking-[-0.01em] transition-colors duration-300 sm:text-base md:text-lg ${
+                      className={`flex-1 text-[15px] font-semibold tracking-[-0.01em] transition-colors duration-300 xs:text-[16px] sm:text-base md:text-lg ${
                         isOpen ? "text-[#2563EB]" : "text-text"
                       }`}
                     >
@@ -576,7 +558,7 @@ export default function ServicesPage() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="border-t border-border-soft px-4 pb-5 pt-4 text-[17px] leading-7 text-muted sm:px-6 sm:pb-6 sm:pl-[3.75rem] sm:pt-5 sm:text-[15px] sm:leading-7">
+                      <p className="border-t border-border-soft px-4 pb-5 pt-4 text-[14px] leading-6 text-muted xs:text-[15px] xs:leading-7 sm:px-6 sm:pb-6 sm:pl-[3.75rem] sm:pt-5 sm:text-[15px] sm:leading-7">
                         {item.a}
                       </p>
                     </div>
@@ -591,7 +573,7 @@ export default function ServicesPage() {
 
             <Link
               href={faq.footerCta.href}
-              className="group inline-flex items-center gap-3 rounded-full bg-text py-2 pl-5 pr-2 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:text-sm sm:pl-6"
+              className="group inline-flex items-center gap-3 rounded-full bg-text py-2 pl-5 pr-2 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:pl-6 sm:text-sm"
             >
               {faq.footerCta.label}
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#2563EB] transition-transform duration-300 group-hover:translate-x-0.5">

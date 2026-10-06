@@ -9,19 +9,19 @@ export default function AboutSection() {
     return (
         <section
             id="about"
-            className="border-t border-border-soft px-5 py-20 sm:px-6 sm:py-24 md:px-8 md:py-25"
+            className="border-t border-border-soft px-4 py-14 xs:px-5 xs:py-16 sm:px-6 sm:py-24 md:px-8 md:py-25"
         >
             <div className="mx-auto w-full max-w-7xl">
-                <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
+                <div className="grid gap-8 xs:gap-10 lg:grid-cols-12 lg:gap-14">
                     {/*  LEFT — Dark editorial panel*/}
                     <div className="lg:col-span-5">
-                        <div className="relative h-full overflow-hidden rounded-3xl p-7 text-white sm:p-9 lg:p-10">
+                        <div className="relative h-full overflow-hidden rounded-2xl p-5 text-white xs:rounded-3xl xs:p-6 sm:p-9 lg:p-10">
                             {/* Background image */}
                             <img
                                 src="/images/about-panel.webp"
                                 alt=""
                                 aria-hidden="true"
-                                className="absolute inset-0 h-full w-full object-fit"
+                                className="absolute inset-0 h-full w-full object-cover"
                             />
 
                             {/* Dark overlay for text legibility */}
@@ -54,11 +54,11 @@ export default function AboutSection() {
                             <div className="relative flex h-full flex-col justify-between">
                                 {/* Top — eyebrow + heading */}
                                 <div>
-                                    <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.25em] text-white/60 sm:text-[11px]">
+                                    <p className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-white/60 sm:text-[11px]">
                                         {about.eyebrow}
                                     </p>
 
-                                    <h2 className="mt-6 text-3xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-4xl lg:text-[2.5rem]">
+                                    <h2 className="mt-4 text-[1.5rem] font-semibold leading-[1.1] tracking-[-0.035em] xs:mt-5 xs:text-[1.75rem] sm:mt-6 sm:text-4xl sm:leading-[1.05] sm:tracking-[-0.04em] lg:text-[2.5rem]">
                                         {about.heading}{" "}
                                         <span className="italic text-white/50">
                                             {about.headingHighlight}
@@ -67,9 +67,9 @@ export default function AboutSection() {
                                 </div>
 
                                 {/* Middle — profile card */}
-                                <div className="my-10 rounded-2xl border border-white/10 bg-white/[0.06] p-5 backdrop-blur-md">
-                                    <div className="flex items-start gap-4">
-                                        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 backdrop-blur">
+                                <div className="my-6 rounded-xl border border-white/10 bg-white/[0.06] p-3.5 backdrop-blur-md xs:my-7 xs:rounded-2xl xs:p-4 sm:my-10 sm:p-5">
+                                    <div className="flex items-start gap-3 xs:gap-4">
+                                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 backdrop-blur xs:h-10 xs:w-10 xs:rounded-xl sm:h-12 sm:w-12">
                                             <svg
                                                 viewBox="0 0 24 24"
                                                 fill="none"
@@ -77,7 +77,7 @@ export default function AboutSection() {
                                                 strokeWidth="1.8"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
-                                                className="h-5 w-5 text-white"
+                                                className="h-4 w-4 text-white xs:h-5 xs:w-5"
                                             >
                                                 <path d="M3 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2" />
                                                 <circle cx="10" cy="7" r="4" />
@@ -86,15 +86,15 @@ export default function AboutSection() {
                                             </svg>
                                         </span>
 
-                                        <div className="flex flex-col">
-                                            <p className="flex items-center gap-2 text-[15px] font-semibold text-white sm:text-sm">
-                                                <span className="relative flex h-2 w-2">
+                                        <div className="flex min-w-0 flex-col">
+                                            <p className="flex items-center gap-2 text-[13px] font-semibold text-white sm:text-sm">
+                                                <span className="relative flex h-2 w-2 shrink-0">
                                                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/60 motion-reduce:animate-none" />
                                                     <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                                                 </span>
                                                 {about.profileCardText}
                                             </p>
-                                            <p className="mt-1 text-[14px] text-white/60 sm:text-xs">
+                                            <p className="mt-1 text-[12px] text-white/60 xs:text-[13px] sm:text-xs">
                                                 Reply within 24 hours
                                             </p>
                                         </div>
@@ -103,18 +103,18 @@ export default function AboutSection() {
 
                                 {/* Bottom — stats */}
                                 <div>
-                                    <p className="text-[12px] font-bold uppercase tracking-[0.25em] text-white/40 sm:text-[10px]">
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/40 xs:text-[11px] sm:text-[10px]">
                                         By the numbers
                                     </p>
 
-                                    <div className="mt-5 grid grid-cols-3 gap-4">
+                                    <div className="mt-3 grid grid-cols-3 gap-2 xs:mt-4 xs:gap-3 sm:mt-5 sm:gap-4">
                                         {about.stats.map((stat) => (
-                                            <div key={stat.label} className="flex flex-col">
-                                                <span className="text-2xl font-bold tracking-[-0.03em] text-white sm:text-3xl">
+                                            <div key={stat.label} className="flex min-w-0 flex-col">
+                                                <span className="text-xl font-bold tracking-[-0.03em] text-white xs:text-[1.375rem] sm:text-3xl">
                                                     {stat.value}
                                                     <span className="text-[#60A5FA]">{stat.suffix}</span>
                                                 </span>
-                                                <span className="mt-1 text-[12px] font-semibold uppercase tracking-[0.15em] text-white/50 sm:text-[10px]">
+                                                <span className="mt-1 text-[10px] font-semibold uppercase leading-tight tracking-[0.12em] text-white/50 xs:text-[11px] sm:text-[10px] sm:tracking-[0.15em]">
                                                     {stat.label}
                                                 </span>
                                             </div>
@@ -132,19 +132,19 @@ export default function AboutSection() {
                         {/* Top: story */}
                         <div>
                             {/* Story headline */}
-                            <p className="text-[20px] font-medium leading-[1.3] tracking-[-0.02em] text-text sm:text-2xl md:text-[1.75rem]">
+                            <p className="text-[17px] font-medium leading-[1.35] tracking-[-0.02em] text-text xs:text-[18px] sm:text-2xl sm:leading-[1.3] md:text-[1.75rem]">
                                 {about.storyHeadline}
                             </p>
 
                             {/* Divider */}
-                            <span className="mt-7 block h-px w-16 bg-[#2563EB]" />
+                            <span className="mt-5 block h-px w-16 bg-[#2563EB] xs:mt-6 sm:mt-7" />
 
                             {/* Paragraphs */}
-                            <div className="mt-7 space-y-5">
+                            <div className="mt-5 space-y-4 xs:mt-6 xs:space-y-5 sm:mt-7">
                                 {about.paragraphs.map((paragraph, i) => (
                                     <p
                                         key={i}
-                                        className="text-[17px] leading-7 text-muted sm:text-[17px] sm:leading-8"
+                                        className="text-[15px] leading-6 text-muted xs:text-[15.5px] xs:leading-[1.7] sm:text-[17px] sm:leading-8"
                                     >
                                         {paragraph}
                                     </p>
@@ -153,21 +153,21 @@ export default function AboutSection() {
                         </div>
 
                         {/* Middle: values as inline chips */}
-                        <div className="mt-10">
-                            <p className="text-[12px] font-bold uppercase tracking-[0.25em] text-muted sm:text-[10px]">
+                        <div className="mt-8 xs:mt-10">
+                            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[11px] sm:text-[10px]">
                                 How we work
                             </p>
 
-                            <div className="mt-4 flex flex-wrap gap-2">
+                            <div className="mt-3 flex flex-wrap gap-1.5 xs:mt-4 xs:gap-2">
                                 {about.values.map((value) => (
                                     <span
                                         key={value.n}
-                                        className="group inline-flex items-center gap-1 rounded-full border border-border-soft bg-surface px-4 py-2 transition-colors duration-300 hover:border-[#2563EB]/40 hover:bg-[#2563EB]/[0.04]"
+                                        className="group inline-flex items-center gap-1 rounded-full border border-border-soft bg-surface px-3 py-1.5 transition-colors duration-300 hover:border-[#2563EB]/40 hover:bg-[#2563EB]/[0.04] xs:px-4 xs:py-2"
                                     >
-                                        <span className="font-mono text-[12px] text-[#2563EB] sm:text-[10px]">
+                                        <span className="font-mono text-[10px] text-[#2563EB] xs:text-[11px] sm:text-[10px]">
                                             {value.n}
                                         </span>
-                                        <span className="text-[15px] font-medium text-text sm:text-sm">
+                                        <span className="text-[13px] font-medium text-text xs:text-[14px] sm:text-sm">
                                             {value.label}
                                         </span>
                                     </span>
@@ -176,15 +176,15 @@ export default function AboutSection() {
                         </div>
 
                         {/* Bottom: CTAs */}
-                        <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-border-soft pt-8">
+                        <div className="mt-8 flex flex-wrap items-center gap-2.5 border-t border-border-soft pt-6 xs:mt-10 xs:gap-3 xs:pt-8">
                             <Link
                                 href={about.ctaHref}
-                                className="group inline-flex items-center gap-3 rounded-full bg-text py-2.5 pl-6 pr-2.5 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:text-sm"
+                                className="group inline-flex items-center gap-2 rounded-full bg-text py-2 pl-5 pr-2 text-[13px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] xs:gap-3 xs:py-2.5 xs:pl-6 xs:pr-2.5 xs:text-[14px] sm:text-sm"
                             >
                                 {about.ctaLabel}
                                 <span
                                     aria-hidden="true"
-                                    className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#2563EB] transition-transform duration-300 group-hover:translate-x-0.5"
+                                    className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#2563EB] transition-transform duration-300 group-hover:translate-x-0.5 xs:h-9 xs:w-9"
                                 >
                                     →
                                 </span>
@@ -192,12 +192,12 @@ export default function AboutSection() {
 
                             <Link
                                 href={about.secondaryHref}
-                                className="group inline-flex items-center gap-3 rounded-full border border-border-soft py-2.5 pl-6 pr-2.5 text-[15px] font-semibold text-text transition-colors duration-300 hover:border-[#2563EB] hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:text-sm"
+                                className="group inline-flex items-center gap-2 rounded-full border border-border-soft py-2 pl-5 pr-2 text-[13px] font-semibold text-text transition-colors duration-300 hover:border-[#2563EB] hover:bg-[#2563EB] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] xs:gap-3 xs:py-2.5 xs:pl-6 xs:pr-2.5 xs:text-[14px] sm:text-sm"
                             >
                                 {about.secondaryLabel}
                                 <span
                                     aria-hidden="true"
-                                    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2563EB] text-white transition-transform duration-300 group-hover:translate-x-0.5"
+                                    className="flex h-8 w-8 items-center justify-center rounded-full bg-[#2563EB] text-white transition-transform duration-300 group-hover:translate-x-0.5 xs:h-9 xs:w-9"
                                 >
                                     ↗
                                 </span>

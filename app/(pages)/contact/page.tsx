@@ -100,7 +100,7 @@ export default function ContactPage() {
       <Header />
 
       {/* ── Contact Hero ─────────────────────────────────── */}
-      <section className="relative overflow-hidden border-b border-border-soft bg-surface px-4 pb-12 pt-12 xs:px-5 xs:pb-14 xs:pt-14 sm:px-6 sm:pb-16 sm:pt-16 md:px-8 md:pb-20 md:pt-15 lg:px-10 lg:pb-24 lg:pt-15">
+      <section className="relative overflow-hidden border-b border-border-soft bg-surface px-4 pb-12 pt-12 xs:px-5 xs:pb-14 xs:pt-14 sm:px-6 sm:pb-16 sm:pt-16 md:px-8 md:pb-20 md:pt-20 lg:px-10 lg:pb-24 lg:pt-24">
         {/* Ambient glows — blue accent */}
         <div
           aria-hidden="true"
@@ -115,7 +115,7 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             {/* Heading */}
             <div className="lg:col-span-11">
-              <h1 className="text-[2.5rem] font-bold leading-[1.02] tracking-[-0.035em] text-text xs:text-[2.5rem] sm:text-[3.25rem] sm:leading-[0.98] md:text-[4rem] lg:text-[5.5rem]">
+              <h1 className="text-[2rem] font-bold leading-[1.05] tracking-[-0.03em] text-text xs:text-[2.5rem] xs:leading-[1.02] sm:text-[3.25rem] sm:leading-[0.98] sm:tracking-[-0.035em] md:text-[4rem] lg:text-[5.5rem]">
                 {hero.heading}{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10 font-serif italic text-muted">
@@ -135,7 +135,7 @@ export default function ContactPage() {
           <div className="mt-10 grid gap-8 sm:mt-12 lg:mt-20 lg:grid-cols-12 lg:gap-8">
             {/* Intro text */}
             <div className="lg:col-span-5">
-              <p className="max-w-md text-[16px] leading-8 text-muted sm:text-base sm:leading-8 md:text-[17px]">
+              <p className="max-w-md text-[15px] leading-7 text-muted xs:text-[16px] xs:leading-8 sm:text-base sm:leading-8 md:text-[17px]">
                 {hero.intro}
               </p>
             </div>
@@ -181,19 +181,19 @@ export default function ContactPage() {
             {/* Stats / facts */}
             <div className="grid grid-cols-2 gap-5 sm:gap-6 lg:col-span-3 lg:pt-1">
               <div className="flex flex-col gap-1.5 border-l-2 border-[#2563EB] pl-4">
-                <span className="text-[1.5rem] font-bold tracking-[-0.03em] text-text sm:text-3xl">
+                <span className="text-[1.375rem] font-bold tracking-[-0.03em] text-text xs:text-[1.5rem] sm:text-3xl">
                   24<span className="text-muted">h</span>
                 </span>
-                <span className="text-[12px] font-semibold uppercase tracking-[0.18em] text-muted sm:text-[10px]">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted xs:text-[12px] sm:text-[10px]">
                   Avg reply
                 </span>
               </div>
 
               <div className="flex flex-col gap-1.5 border-l-2 border-border-strong pl-4">
-                <span className="text-[1.5rem] font-bold tracking-[-0.03em] text-text sm:text-3xl">
+                <span className="text-[1.375rem] font-bold tracking-[-0.03em] text-text xs:text-[1.5rem] sm:text-3xl">
                   100<span className="text-muted">%</span>
                 </span>
-                <span className="text-[12px] font-semibold uppercase tracking-[0.18em] text-muted sm:text-[10px]">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted xs:text-[12px] sm:text-[10px]">
                   Response rate
                 </span>
               </div>
@@ -211,18 +211,18 @@ export default function ContactPage() {
           {/* Left: contact info */}
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-24">
-              <p className="text-[14px] font-semibold uppercase tracking-[0.25em] text-accent sm:text-xs">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.25em] text-accent sm:text-xs">
                 {contact.eyebrow}
               </p>
 
-              <h2 className="mt-3 text-[1.875rem] font-semibold leading-[1] tracking-[-0.035em] xs:text-[2.125rem] sm:mt-4 sm:text-[2.5rem] md:text-[3rem] lg:text-[3.25rem]">
+              <h2 className="mt-3 text-[1.75rem] font-semibold leading-[1.05] tracking-[-0.03em] xs:text-[2rem] xs:leading-[1] sm:mt-4 sm:text-[2.5rem] md:text-[3rem] lg:text-[3.25rem]">
                 {contact.heading}{" "}
                 <span className="italic text-muted">
                   {contact.headingHighlight}
                 </span>
               </h2>
 
-              <p className="mt-4 max-w-md text-[16px] leading-7 text-muted sm:mt-5 sm:text-base sm:leading-7 md:text-lg md:leading-8">
+              <p className="mt-4 max-w-md text-[15px] leading-6 text-muted xs:text-[16px] xs:leading-7 sm:mt-5 sm:text-base sm:leading-7 md:text-lg md:leading-8">
                 {contact.intro}
               </p>
 
@@ -249,10 +249,10 @@ export default function ContactPage() {
                   </span>
 
                   <span className="flex min-w-0 flex-1 flex-col">
-                    <span className="text-[12px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[11px]">
+                    <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]">
                       {contact.phoneLabel}
                     </span>
-                    <span className="mt-0.5 truncate text-[15px] font-semibold text-text sm:text-base">
+                    <span className="mt-0.5 truncate text-[14px] font-semibold text-text xs:text-[15px] sm:text-base">
                       {meta.phoneDisplay}
                     </span>
                   </span>
@@ -288,10 +288,10 @@ export default function ContactPage() {
                   </span>
 
                   <span className="flex min-w-0 flex-1 flex-col">
-                    <span className="text-[12px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[11px]">
+                    <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]">
                       {contact.emailLabel}
                     </span>
-                    <span className="mt-0.5 truncate text-[15px] font-semibold text-text sm:text-base">
+                    <span className="mt-0.5 truncate text-[14px] font-semibold text-text xs:text-[15px] sm:text-base">
                       {meta.email}
                     </span>
                   </span>
@@ -316,10 +316,10 @@ export default function ContactPage() {
                   </span>
 
                   <span className="flex min-w-0 flex-1 flex-col">
-                    <span className="text-[12px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[11px]">
+                    <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]">
                       {contact.whatsappLabel}
                     </span>
-                    <span className="mt-0.5 truncate text-[15px] font-semibold text-text sm:text-base">
+                    <span className="mt-0.5 truncate text-[14px] font-semibold text-text xs:text-[15px] sm:text-base">
                       {contact.whatsappValue}
                     </span>
                   </span>
@@ -334,7 +334,7 @@ export default function ContactPage() {
               </div>
 
               {/* Availability pill */}
-              <p className="mt-6 flex items-center gap-2 text-[14px] text-muted sm:text-sm">
+              <p className="mt-6 flex items-center gap-2 text-[13px] text-muted xs:text-[14px] sm:text-sm">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/60 motion-reduce:animate-none" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
@@ -348,7 +348,7 @@ export default function ContactPage() {
           <div className="lg:col-span-7 lg:mt-20">
             <form
               onSubmit={handleSubmit}
-              className="rounded-3xl border border-border-soft bg-bg p-4 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.25)] xs:p-5 sm:p-6 md:p-8"
+              className="rounded-2xl border border-border-soft bg-bg p-4 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.25)] xs:rounded-3xl xs:p-5 sm:p-6 md:p-8"
             >
               {/* Honeypot */}
               <div className="hidden" aria-hidden="true">
@@ -374,7 +374,7 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-1.5">
                   <label
                     htmlFor="name"
-                    className="text-[12px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[11px]"
+                    className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]"
                   >
                     {contact.form.nameLabel}
                   </label>
@@ -392,14 +392,14 @@ export default function ContactPage() {
                         name: e.target.value,
                       }))
                     }
-                    className="w-full rounded-xl border border-border-soft bg-surface px-4 py-3 text-[15px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 sm:py-3.5 sm:text-sm"
+                    className="w-full rounded-xl border border-border-soft bg-surface px-4 py-3 text-[14px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 xs:text-[15px] sm:py-3.5 sm:text-sm"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
                   <label
                     htmlFor="email"
-                    className="text-[12px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[11px]"
+                    className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]"
                   >
                     {contact.form.emailLabel}
                   </label>
@@ -417,7 +417,7 @@ export default function ContactPage() {
                         email: e.target.value,
                       }))
                     }
-                    className="w-full rounded-xl border border-border-soft bg-surface px-4 py-3 text-[15px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 sm:py-3.5 sm:text-sm"
+                    className="w-full rounded-xl border border-border-soft bg-surface px-4 py-3 text-[14px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 xs:text-[15px] sm:py-3.5 sm:text-sm"
                   />
                 </div>
               </div>
@@ -427,7 +427,7 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-1.5">
                   <label
                     htmlFor="phone"
-                    className="text-[12px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[11px]"
+                    className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]"
                   >
                     {contact.form.phoneLabel}
                   </label>
@@ -445,14 +445,14 @@ export default function ContactPage() {
                         phone: e.target.value,
                       }))
                     }
-                    className="w-full rounded-xl border border-border-soft bg-surface px-4 py-3 text-[15px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 sm:py-3.5 sm:text-sm"
+                    className="w-full rounded-xl border border-border-soft bg-surface px-4 py-3 text-[14px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 xs:text-[15px] sm:py-3.5 sm:text-sm"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
                   <label
                     htmlFor="project"
-                    className="text-[12px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[11px]"
+                    className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]"
                   >
                     {contact.form.projectLabel}
                   </label>
@@ -469,7 +469,7 @@ export default function ContactPage() {
                         project: e.target.value,
                       }))
                     }
-                    className="w-full rounded-xl border border-border-soft bg-surface px-4 py-3 text-[15px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 sm:py-3.5 sm:text-sm"
+                    className="w-full rounded-xl border border-border-soft bg-surface px-4 py-3 text-[14px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 xs:text-[15px] sm:py-3.5 sm:text-sm"
                   />
                 </div>
               </div>
@@ -478,7 +478,7 @@ export default function ContactPage() {
               <div className="mt-3 flex flex-col gap-1.5">
                 <label
                   htmlFor="message"
-                  className="text-[12px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[11px]"
+                  className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]"
                 >
                   {contact.form.messageLabel}
                 </label>
@@ -495,18 +495,20 @@ export default function ContactPage() {
                       message: e.target.value,
                     }))
                   }
-                  className="w-full resize-none rounded-xl border border-border-soft bg-surface px-4 py-3 text-[15px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 sm:py-3.5 sm:text-sm"
+                  className="w-full resize-none rounded-xl border border-border-soft bg-surface px-4 py-3 text-[14px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 xs:text-[15px] sm:py-3.5 sm:text-sm"
                 />
               </div>
 
               {/* Submit row */}
               <div className="mt-6 flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-[13px] text-muted sm:text-xs">{meta.responseTime}</p>
+                <p className="text-[12px] text-muted xs:text-[13px] sm:text-xs">
+                  {meta.responseTime}
+                </p>
 
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-text px-6 py-3 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] disabled:cursor-not-allowed disabled:opacity-60 sm:px-7 sm:py-3.5 sm:text-sm"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-text px-6 py-3 text-[14px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] disabled:cursor-not-allowed disabled:opacity-60 xs:text-[15px] sm:px-7 sm:py-3.5 sm:text-sm"
                 >
                   {status === "loading"
                     ? contact.form.submitLoadingLabel
@@ -526,7 +528,7 @@ export default function ContactPage() {
               {status === "success" && (
                 <div
                   aria-live="polite"
-                  className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 px-5 py-4 text-center text-[14px] text-emerald-700 sm:text-sm"
+                  className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 px-5 py-4 text-center text-[13px] text-emerald-700 xs:text-[14px] sm:text-sm"
                 >
                   {contact.form.successMessage}
                 </div>
@@ -535,7 +537,7 @@ export default function ContactPage() {
               {status === "error" && (
                 <div
                   aria-live="polite"
-                  className="mt-4 rounded-xl border border-red-200 bg-red-50 px-5 py-4 text-center text-[14px] text-red-700 sm:text-sm"
+                  className="mt-4 rounded-xl border border-red-200 bg-red-50 px-5 py-4 text-center text-[13px] text-red-700 xs:text-[14px] sm:text-sm"
                 >
                   {contact.form.errorMessage}
                 </div>

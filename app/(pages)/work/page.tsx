@@ -131,55 +131,55 @@ function ProjectModal({
                     </div>
 
                     {/* Body */}
-                    <div className="p-5 xs:p-6 sm:p-8 md:p-10">
+                    <div className="p-4 xs:p-6 sm:p-8 md:p-10">
                         <div className="flex flex-wrap items-center gap-3">
-                            <span className="font-mono text-[13px] text-muted sm:text-xs">
+                            <span className="font-mono text-[12px] text-muted xs:text-[13px] sm:text-xs">
                                 {project.n}
                             </span>
                             <span className="h-3 w-px bg-border-soft" />
-                            <span className="text-[12px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[11px]">
+                            <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]">
                                 {project.tag}
                             </span>
                         </div>
 
                         <h2
                             id="project-modal-title"
-                            className="mt-3 text-[1.75rem] font-semibold leading-[1.05] tracking-[-0.03em] text-text xs:text-[2rem] sm:mt-4 sm:text-4xl md:text-5xl"
+                            className="mt-3 text-[1.5rem] font-semibold leading-[1.08] tracking-[-0.03em] text-text xs:mt-4 xs:text-[1.75rem] xs:leading-[1.05] sm:text-4xl md:text-5xl"
                         >
                             {project.title}
                         </h2>
 
                         {/* Meta grid */}
-                        <div className="mt-6 grid grid-cols-2 gap-4 border-y border-border-soft py-5 sm:mt-7 sm:grid-cols-4 sm:py-6">
+                        <div className="mt-5 grid grid-cols-2 gap-4 border-y border-border-soft py-5 xs:mt-6 sm:mt-7 sm:grid-cols-4 sm:py-6">
                             <div>
-                                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted sm:text-[10px]">
+                                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
                                     {modal.clientLabel}
                                 </p>
-                                <p className="mt-1 text-[15px] font-semibold text-text sm:text-sm">
+                                <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
                                     {project.client}
                                 </p>
                             </div>
                             <div>
-                                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted sm:text-[10px]">
+                                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
                                     {modal.roleLabel}
                                 </p>
-                                <p className="mt-1 text-[15px] font-semibold text-text sm:text-sm">
+                                <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
                                     {project.role}
                                 </p>
                             </div>
                             <div>
-                                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted sm:text-[10px]">
+                                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
                                     {modal.timelineLabel}
                                 </p>
-                                <p className="mt-1 text-[15px] font-semibold text-text sm:text-sm">
+                                <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
                                     {project.timeline}
                                 </p>
                             </div>
                             <div>
-                                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted sm:text-[10px]">
+                                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
                                     {modal.yearLabel}
                                 </p>
-                                <p className="mt-1 text-[15px] font-semibold text-text sm:text-sm">
+                                <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
                                     {project.year}
                                 </p>
                             </div>
@@ -187,27 +187,27 @@ function ProjectModal({
 
                         {/* Overview */}
                         <div className="mt-6 sm:mt-8">
-                            <p className="text-[12px] font-bold uppercase tracking-[0.25em] text-muted sm:text-[11px]">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[12px] sm:text-[11px]">
                                 {modal.overviewLabel}
                             </p>
-                            <p className="mt-3 text-[16px] leading-7 text-text sm:text-base sm:leading-7 md:text-[17px] md:leading-8">
+                            <p className="mt-3 text-[15px] leading-6 text-text xs:text-[16px] xs:leading-7 sm:text-base sm:leading-7 md:text-[17px] md:leading-8">
                                 {project.overview}
                             </p>
                         </div>
 
                         {/* Two-column: features + highlights */}
-                        <div className="mt-8 grid gap-8 border-t border-border-soft pt-6 sm:pt-8 md:grid-cols-2 md:gap-12">
+                        <div className="mt-7 grid gap-7 border-t border-border-soft pt-6 xs:gap-8 sm:pt-8 md:grid-cols-2 md:gap-12">
                             <div>
-                                <p className="text-[12px] font-bold uppercase tracking-[0.25em] text-muted sm:text-[11px]">
+                                <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[12px] sm:text-[11px]">
                                     {modal.keyFeaturesLabel}
                                 </p>
                                 <ul className="mt-4 space-y-3">
                                     {project.features.map((f, i) => (
                                         <li
                                             key={f}
-                                            className="flex items-start gap-3 text-[15px] leading-6 text-text sm:text-sm"
+                                            className="flex items-start gap-3 text-[14px] leading-6 text-text xs:text-[15px] sm:text-sm"
                                         >
-                                            <span className="mt-0.5 w-6 shrink-0 font-mono text-[13px] text-[#2563EB] sm:text-xs">
+                                            <span className="mt-0.5 w-6 shrink-0 font-mono text-[12px] text-[#2563EB] xs:text-[13px] sm:text-xs">
                                                 {(i + 1).toString().padStart(2, "0")}
                                             </span>
                                             <span>{f}</span>
@@ -217,7 +217,7 @@ function ProjectModal({
                             </div>
 
                             <div>
-                                <p className="text-[12px] font-bold uppercase tracking-[0.25em] text-muted sm:text-[11px]">
+                                <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[12px] sm:text-[11px]">
                                     {modal.highlightsLabel}
                                 </p>
                                 <ul className="mt-4 space-y-4">
@@ -226,10 +226,10 @@ function ProjectModal({
                                             key={h.label}
                                             className="flex flex-col gap-1 border-l-2 border-[#2563EB]/30 pl-4"
                                         >
-                                            <span className="text-2xl font-bold tracking-[-0.02em] text-text sm:text-3xl">
+                                            <span className="text-xl font-bold tracking-[-0.02em] text-text xs:text-2xl sm:text-3xl">
                                                 {h.value}
                                             </span>
-                                            <span className="text-[12px] font-semibold uppercase tracking-[0.15em] text-muted sm:text-[10px]">
+                                            <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[10px]">
                                                 {h.label}
                                             </span>
                                         </li>
@@ -239,15 +239,15 @@ function ProjectModal({
                         </div>
 
                         {/* Stack */}
-                        <div className="mt-8 border-t border-border-soft pt-6">
-                            <p className="text-[12px] font-bold uppercase tracking-[0.25em] text-muted sm:text-[11px]">
+                        <div className="mt-7 border-t border-border-soft pt-6 sm:mt-8">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[12px] sm:text-[11px]">
                                 {modal.techStackLabel}
                             </p>
                             <div className="mt-3 flex flex-wrap gap-2">
                                 {project.stack.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="rounded-full border border-border-soft bg-bg px-3 py-1.5 text-[13px] font-medium text-text sm:text-xs"
+                                        className="rounded-full border border-border-soft bg-bg px-3 py-1.5 text-[12px] font-medium text-text xs:text-[13px] sm:text-xs"
                                     >
                                         {tech}
                                     </span>
@@ -256,13 +256,13 @@ function ProjectModal({
                         </div>
 
                         {/* Footer actions */}
-                        <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-border-soft pt-6">
+                        <div className="mt-7 flex flex-wrap items-center gap-3 border-t border-border-soft pt-6 sm:mt-8">
                             {project.liveLink ? (
                                 <a
                                     href={project.liveLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group inline-flex items-center gap-3 rounded-full bg-text py-2.5 pl-5 pr-2.5 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] sm:pl-6 sm:text-sm"
+                                    className="group inline-flex items-center gap-3 rounded-full bg-text py-2.5 pl-5 pr-2.5 text-[14px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] xs:text-[15px] sm:pl-6 sm:text-sm"
                                 >
                                     {modal.visitLiveSiteLabel}
                                     <span
@@ -273,14 +273,14 @@ function ProjectModal({
                                     </span>
                                 </a>
                             ) : (
-                                <span className="inline-flex items-center gap-2 rounded-full border border-border-soft bg-bg px-4 py-2.5 text-[13px] italic text-muted sm:text-xs">
+                                <span className="inline-flex items-center gap-2 rounded-full border border-border-soft bg-bg px-4 py-2.5 text-[12px] italic text-muted xs:text-[13px] sm:text-xs">
                                     {modal.liveLinkComingSoon}
                                 </span>
                             )}
 
                             <Link
                                 href={modal.startSimilarHref}
-                                className="group inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.15em] text-[#2563EB] sm:text-xs"
+                                className="group inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.15em] text-[#2563EB] xs:text-[13px] sm:text-xs"
                             >
                                 {modal.startSimilarLabel}
                                 <span
@@ -312,7 +312,7 @@ function ProjectCard({
     const hasLink = Boolean(project.liveLink);
 
     return (
-        <article className="group flex flex-col overflow-hidden rounded-2xl border border-border-soft bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/30 hover:shadow-[0_20px_50px_-25px_rgba(15,23,42,0.2)] sm:rounded-3xl">
+        <article className="group flex flex-col overflow-hidden rounded-xl border border-border-soft bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/30 hover:shadow-[0_20px_50px_-25px_rgba(15,23,42,0.2)] xs:rounded-2xl sm:rounded-3xl">
             {/* Image */}
             <div className="relative aspect-[4/3] overflow-hidden bg-bg-soft">
                 <img
@@ -322,12 +322,12 @@ function ProjectCard({
                     className="h-full w-full object-fit transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                 />
 
-                <span className="absolute left-3 top-3 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-semibold text-white backdrop-blur-sm sm:text-[10px]">
+                <span className="absolute left-3 top-3 rounded-full bg-black/60 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm xs:text-[11px] sm:text-[10px]">
                     {project.year}
                 </span>
 
                 <span
-                    className={`absolute right-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold backdrop-blur-sm sm:text-[10px] ${theme.text}`}
+                    className={`absolute right-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-semibold backdrop-blur-sm xs:text-[11px] sm:text-[10px] ${theme.text}`}
                 >
                     {project.category}
                 </span>
@@ -336,23 +336,23 @@ function ProjectCard({
             {/* Body */}
             <div className="flex flex-1 flex-col p-4 xs:p-5 sm:p-6">
                 <div className="flex items-center justify-between gap-3">
-                    <span className="font-mono text-[15px] text-muted sm:text-[11px]">
+                    <span className="font-mono text-[12px] text-muted xs:text-[13px] sm:text-[11px]">
                         {project.n}
                     </span>
-                    <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted sm:text-[10px]">
+                    <span className="text-[10px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[11px] sm:text-[10px]">
                         {project.tag}
                     </span>
                 </div>
 
-                <h3 className="mt-3 text-[20px] font-semibold tracking-[-0.02em] text-text xs:text-[22px] sm:text-2xl">
+                <h3 className="mt-3 text-[18px] font-semibold tracking-[-0.02em] text-text xs:text-[20px] sm:text-2xl">
                     {project.title}
                 </h3>
 
-                <p className="mt-1.5 text-[14px] text-muted sm:text-xs">
+                <p className="mt-1.5 text-[13px] text-muted xs:text-[14px] sm:text-xs">
                     {project.role} · {project.timeline}
                 </p>
 
-                <p className="mt-3 line-clamp-3 text-[17px] leading-6 text-muted sm:text-sm">
+                <p className="mt-3 line-clamp-3 text-[14px] leading-6 text-muted xs:text-[15px] sm:text-sm">
                     {project.desc}
                 </p>
 
@@ -361,7 +361,7 @@ function ProjectCard({
                     {project.stack.map((tech) => (
                         <span
                             key={tech}
-                            className="rounded-full border border-border-soft bg-bg px-2 py-0.5 text-[13px] text-muted sm:text-[10px]"
+                            className="rounded-full border border-border-soft bg-bg px-2 py-0.5 text-[11px] text-muted xs:text-[12px] sm:text-[10px]"
                         >
                             {tech}
                         </span>
@@ -373,7 +373,7 @@ function ProjectCard({
                     <button
                         type="button"
                         onClick={onOpen}
-                        className="group/read inline-flex items-center gap-2 rounded-full bg-text py-2 pl-4 pr-2 text-[13px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] sm:text-xs"
+                        className="group/read inline-flex items-center gap-2 rounded-full bg-text py-2 pl-4 pr-2 text-[12px] font-semibold text-white transition-colors duration-300 hover:bg-[#2563EB] xs:text-[13px] sm:text-xs"
                     >
                         {card.readFullInfoLabel}
                         <span
@@ -389,7 +389,7 @@ function ProjectCard({
                             href={project.liveLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`group/visit inline-flex items-center gap-1.5 rounded-full border border-border-soft px-3 py-2 text-[13px] font-semibold transition-colors duration-300 hover:border-current sm:text-xs ${theme.text}`}
+                            className={`group/visit inline-flex items-center gap-1.5 rounded-full border border-border-soft px-3 py-2 text-[12px] font-semibold transition-colors duration-300 hover:border-current xs:text-[13px] sm:text-xs ${theme.text}`}
                         >
                             {card.liveLabel}
                             <span
@@ -427,7 +427,7 @@ export default function WorkPage() {
             <Header />
 
             {/* ═══ HERO ═══ */}
-            <section className="relative isolate overflow-hidden border-b border-border-soft bg-[#FBFCFE] px-4 py-12 xs:px-5 xs:py-14 sm:px-6 sm:py-15 md:px-8 md:py-15 lg:px-10 lg:py-15">
+            <section className="relative isolate overflow-hidden border-b border-border-soft bg-[#FBFCFE] px-4 py-10 xs:px-5 xs:py-14 sm:px-6 sm:py-15 md:px-8 md:py-15 lg:px-10 lg:py-15">
                 <div
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
@@ -445,7 +445,7 @@ export default function WorkPage() {
                                 {hero.eyebrow}
                             </div>
 
-                            <h1 className="mt-4 text-[2.2rem] font-semibold leading-[1.05] tracking-[-0.035em] xs:text-[2.125rem] sm:mt-5 sm:text-[2.5rem] sm:leading-[1] md:text-[3rem] lg:text-[3.5rem] xl:text-[3.75rem]">
+                            <h1 className="mt-4 text-[2rem] font-semibold leading-[1.08] tracking-[-0.03em] xs:text-[2.25rem] sm:mt-5 sm:text-[2.5rem] sm:leading-[1] md:text-[3rem] lg:text-[3.5rem] xl:text-[3.75rem]">
                                 {hero.headingLine1}
                                 <br />
                                 {hero.headingLine2}{" "}
@@ -454,7 +454,7 @@ export default function WorkPage() {
                                 </span>
                             </h1>
 
-                            <p className="mx-auto mt-5 max-w-lg text-[16px] leading-7 text-[#64748B] sm:mt-6 sm:text-base sm:leading-7 md:text-lg md:leading-8 lg:mx-0">
+                            <p className="mx-auto mt-5 max-w-lg text-[15px] leading-6 text-[#64748B] xs:text-[16px] xs:leading-7 sm:mt-6 sm:text-base sm:leading-7 md:text-lg md:leading-8 lg:mx-0">
                                 {hero.description}
                             </p>
 
@@ -477,18 +477,21 @@ export default function WorkPage() {
                                 </Link>
                             </div>
 
-                            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-5 border-t border-border-soft pt-4 sm:mt-8 sm:justify-start sm:gap-x-12">
+                            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-4 border-t border-border-soft pt-4 xs:gap-x-6 xs:gap-y-5 sm:mt-8 sm:justify-start sm:gap-x-10 md:gap-x-12">
                                 {hero.stats.map((stat, i) => (
-                                    <div key={stat.label} className="flex items-center gap-x-6 sm:gap-x-12">
+                                    <div
+                                        key={stat.label}
+                                        className="flex items-center gap-x-4 xs:gap-x-6 sm:gap-x-10 md:gap-x-12"
+                                    >
                                         {i > 0 && (
-                                            <span className="hidden h-12 w-px bg-border-soft sm:block" />
+                                            <span className="hidden h-10 w-px shrink-0 bg-border-soft sm:block sm:h-12" />
                                         )}
-                                        <div className="flex flex-col gap-1">
-                                            <span className="text-[1.75rem] font-bold tracking-[-0.03em] text-[#0B1F4D] sm:text-4xl">
+                                        <div className="flex flex-col gap-0.5 xs:gap-1">
+                                            <span className="text-[1.375rem] font-bold tracking-[-0.03em] text-[#0B1F4D] xs:text-[1.5rem] sm:text-3xl md:text-4xl">
                                                 {stat.value}
                                                 <span className="text-[#2563EB]">{stat.suffix}</span>
                                             </span>
-                                            <span className="text-[13px] font-medium text-[#64748B] sm:text-sm">
+                                            <span className="text-[11px] font-medium leading-tight text-[#64748B] xs:text-[12px] sm:text-[13px] md:text-sm">
                                                 {stat.label}
                                             </span>
                                         </div>
@@ -522,16 +525,16 @@ export default function WorkPage() {
                 <div className="mx-auto w-full max-w-7xl">
                     <div>
                         <div>
-                            <p className="text-[14px] font-semibold uppercase tracking-[0.25em] text-accent sm:text-xs">
+                            <p className="text-[13px] font-semibold uppercase tracking-[0.25em] text-accent sm:text-xs">
                                 {projects.eyebrow}
                             </p>
 
-                            <h2 className="mt-3 text-[1.875rem] font-semibold leading-[1.05] tracking-[-0.035em] text-text xs:text-[2.125rem] sm:mt-4 sm:text-[2.5rem] sm:leading-[1] md:text-[3rem] lg:text-[3.5rem]">
+                            <h2 className="mt-3 text-[1.75rem] font-semibold leading-[1.08] tracking-[-0.03em] text-text xs:text-[2rem] xs:leading-[1.05] sm:mt-4 sm:text-[2.5rem] sm:leading-[1] md:text-[3rem] lg:text-[3.5rem]">
                                 {projects.heading}{" "}
                                 <span className="text-muted">{projects.headingHighlight}</span>
                             </h2>
 
-                            <p className="mt-3 max-w-2xl text-[16px] leading-7 text-muted sm:mt-4 sm:text-base sm:leading-7 md:text-[17px] md:leading-8">
+                            <p className="mt-3 text-[15px] leading-6 text-muted xs:text-[16px] xs:leading-7 sm:mt-4 sm:text-base sm:leading-7 md:text-[17px] md:leading-8">
                                 {projects.intro}
                             </p>
                         </div>

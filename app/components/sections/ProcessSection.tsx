@@ -44,18 +44,18 @@ export default function ProcessSection() {
     <section
       ref={sectionRef}
       id="process"
-      className="px-5 py-20 border-b border-border-soft bg-surface sm:px-6 sm:py-24 md:px-8 md:py-25"
+      className="border-b border-border-soft bg-surface px-4 py-14 xs:px-5 xs:py-16 sm:px-6 sm:py-24 md:px-8 md:py-25"
     >
       <div className="mx-auto w-full max-w-7xl">
-        <div className="mb-12 sm:mb-16 md:mb-24">
-          <p className="text-[14px] font-semibold uppercase tracking-[0.25em] text-accent sm:text-xs">
+        <div className="mb-10 xs:mb-12 sm:mb-16 md:mb-24">
+          <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-accent xs:text-[13px] xs:tracking-[0.25em] sm:text-xs">
             {process.eyebrow}
           </p>
-          <h2 className="mt-4 text-4xl font-bold leading-[1.05] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="mt-3 text-[1.75rem] font-bold leading-[1.1] tracking-[-0.03em] xs:mt-4 xs:text-[2rem] xs:leading-[1.08] sm:text-4xl sm:leading-[1.05] sm:tracking-tight md:text-5xl lg:text-6xl">
             {process.heading}
             <span className="italic text-muted">{process.headingHighlight}</span>
           </h2>
-          <p className="mt-2 text-[16px] leading-7 text-muted sm:mt-2 sm:text-base md:text-lg md:leading-8">
+          <p className="mt-2 text-[15px] leading-6 text-muted xs:mt-3 xs:text-[15.5px] xs:leading-[1.7] sm:mt-2 sm:text-base sm:leading-7 md:text-lg md:leading-8">
             {process.intro}
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function ProcessSection() {
             </div>
           </div>
 
-          <div className="grid gap-10 sm:grid-cols-2 sm:gap-8 md:grid-cols-4 md:gap-6 lg:gap-8">
+          <div className="grid gap-8 xs:gap-9 sm:grid-cols-2 sm:gap-8 md:grid-cols-4 md:gap-6 lg:gap-8">
             {PROCESS.map((step, i) => {
               const on = activeProcess >= i;
               return (
@@ -86,9 +86,9 @@ export default function ProcessSection() {
                   key={step.n}
                   className="group relative flex flex-col items-start md:items-center md:text-center"
                 >
-                  <div className="relative z-10 mb-6 sm:mb-8">
+                  <div className="relative z-10 mb-5 xs:mb-6 sm:mb-8">
                     <span
-                      className={`relative flex h-12 w-12 items-center justify-center rounded-full border-2 text-base font-bold tracking-[-0.02em] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-14 sm:w-14 sm:text-lg ${
+                      className={`relative flex h-11 w-11 items-center justify-center rounded-full border-2 text-[15px] font-bold tracking-[-0.02em] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] xs:h-12 xs:w-12 xs:text-base sm:h-14 sm:w-14 sm:text-lg ${
                         on
                           ? "scale-110 border-accent bg-accent text-white"
                           : "border-border-strong bg-bg"
@@ -107,18 +107,18 @@ export default function ProcessSection() {
                   <div className="flex w-full flex-col items-start md:items-center">
                     <span
                       aria-hidden="true"
-                      className={`mb-4 block h-px bg-gradient-to-r from-accent to-transparent transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:mb-5 ${
-                        on ? "w-16" : "w-10"
+                      className={`mb-3 block h-px bg-gradient-to-r from-accent to-transparent transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] xs:mb-4 sm:mb-5 ${
+                        on ? "w-14 xs:w-16" : "w-9 xs:w-10"
                       }`}
                     />
                     <h3
-                      className={`text-[22px] font-semibold leading-[1.15] tracking-[-0.02em] transition-colors duration-300 sm:text-xl md:text-2xl ${
+                      className={`text-[18px] font-semibold leading-[1.2] tracking-[-0.02em] transition-colors duration-300 xs:text-[19px] sm:text-xl md:text-2xl ${
                         on ? "text-text" : "text-text/60"
                       }`}
                     >
                       {step.t}
                     </h3>
-                    <p className="mt-3 max-w-xs text-[17px] leading-7 text-muted sm:text-sm md:text-[15px]">
+                    <p className="mt-2 max-w-xs text-[14px] leading-6 text-muted xs:mt-3 xs:text-[15px] xs:leading-7 sm:text-sm md:text-[15px]">
                       {step.d}
                     </p>
                   </div>

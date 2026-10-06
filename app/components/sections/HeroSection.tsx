@@ -87,7 +87,7 @@ export default function HeroSection() {
       <div className="relative mx-auto flex min-h-full w-full max-w-[1440px] flex-col justify-center">
         <div className="grid w-full items-center lg:grid-cols-[42%_58%]">
           <div className="relative z-20 py-8 lg:py-0">
-            <div className="reveal mb-5 inline-flex items-center gap-2 rounded-full border border-[#e5e7eb] bg-white px-3.5 py-2 text-xs font-medium text-[#4b5563] shadow-[0_6px_20px_-12px_rgba(15,23,42,0.25)]">
+            <div className="reveal mb-5 inline-flex items-center gap-2 rounded-full border border-[#e5e7eb] bg-white px-3.5 py-2 text-[11px] font-medium text-[#4b5563] shadow-[0_6px_20px_-12px_rgba(15,23,42,0.25)] sm:text-xs">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inset-0 animate-ping rounded-full bg-emerald-500/40" />
                 <span className="relative block h-2 w-2 rounded-full bg-emerald-500" />
@@ -95,7 +95,7 @@ export default function HeroSection() {
               {hero.badgeText}
             </div>
 
-            <h1 className="reveal max-w-[650px] text-[3.50rem] font-semibold leading-[0.99] tracking-[-0.070em] text-[#111318] sm:text-5xl md:text-[4rem] lg:text-[4.9rem] xl:text-[5.5rem]">
+            <h1 className="reveal max-w-[650px] text-[3rem] font-semibold leading-[1.02] tracking-[-0.055em] text-[#111318] sm:text-5xl sm:tracking-[-0.070em] md:text-[4rem] lg:text-[4.9rem] xl:text-[5.5rem]">
               {hero.headlineLines}{" "}
               <span className="bg-gradient-to-r from-[#2563EB] to-[#7C3AED] bg-clip-text text-transparent">
                 {hero.headlineHighlight}
@@ -104,14 +104,14 @@ export default function HeroSection() {
               {hero.headlinehighlight2}
             </h1>
 
-            <p className="reveal mt-5 max-w-[510px] text-[16px] leading-7 text-[#596171] sm:mt-6 sm:text-base md:text-lg md:leading-8">
+            <p className="reveal mt-5 max-w-[510px] text-[15px] leading-6 text-[#596171] sm:mt-6 sm:text-base sm:leading-7 md:text-lg md:leading-8">
               {hero.introBody}
             </p>
 
             <div className="reveal mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
               <a
                 href={hero.primaryCta.href}
-                className="group inline-flex items-center gap-3 rounded-full bg-[#111827] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#2563EB] hover:shadow-[0_12px_30px_-12px_rgba(37,99,235,0.45)] sm:px-6 sm:py-3.5"
+                className="group inline-flex items-center gap-3 rounded-full bg-[#111827] px-5 py-3 text-[13px] font-semibold text-white transition-all duration-300 hover:bg-[#2563EB] hover:shadow-[0_12px_30px_-12px_rgba(37,99,235,0.45)] sm:px-6 sm:py-3.5 sm:text-sm"
               >
                 {hero.primaryCta.label}
                 <span className="text-base transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -119,7 +119,7 @@ export default function HeroSection() {
 
               <a
                 href={hero.secondaryCta.href}
-                className="inline-flex items-center rounded-full border border-[#d1d5db] bg-white px-5 py-3 text-sm font-semibold text-[#111318] transition-all duration-300 hover:border-[#2563EB] hover:text-[#2563EB] sm:px-6 sm:py-3.5"
+                className="inline-flex items-center rounded-full border border-[#d1d5db] bg-white px-5 py-3 text-[13px] font-semibold text-[#111318] transition-all duration-300 hover:border-[#2563EB] hover:text-[#2563EB] sm:px-6 sm:py-3.5 sm:text-sm"
               >
                 {hero.secondaryCta.label}
               </a>
@@ -168,10 +168,10 @@ export default function HeroSection() {
                     <ServiceIcon name={s.icon} className="h-5 w-5" />
                   </div>
                   <div className="whitespace-nowrap">
-                    <p className="text-[16px] font-semibold leading-4 text-[#111318] lg:text-sm lg:leading-5">
+                    <p className="text-[14px] font-semibold leading-4 text-[#111318] lg:text-sm lg:leading-5">
                       {s.title}
                     </p>
-                    <p className="mt-0.5 text-[15px] text-[#667085] lg:text-xs">
+                    <p className="mt-0.5 text-[13px] text-[#667085] lg:text-xs">
                       {s.subtitle}
                     </p>
                   </div>

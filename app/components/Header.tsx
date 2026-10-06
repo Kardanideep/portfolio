@@ -49,7 +49,7 @@ export default function Header() {
             <img
               src="/logo.png"
               alt="Deep Kardani"
-              className="h-12 w-auto object-contain lg:h-16"
+              className="h-10 w-auto object-contain lg:h-16"
             />
           </Link>
 
@@ -88,20 +88,20 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setOpen(!open)}
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-xl border border-border-soft bg-surface transition hover:border-[#2563EB] md:hidden"
+            className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 rounded-xl border border-border-soft bg-surface transition hover:border-[#2563EB] md:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
           >
             <span
-              className={`h-px w-5 bg-text transition ${
+              className={`h-px w-4 bg-text transition ${
                 open ? "translate-y-[7px] rotate-45" : ""
               }`}
             />
             <span
-              className={`h-px w-5 bg-text transition ${open ? "opacity-0" : ""}`}
+              className={`h-px w-4 bg-text transition ${open ? "opacity-0" : ""}`}
             />
             <span
-              className={`h-px w-5 bg-text transition ${
+              className={`h-px w-4 bg-text transition ${
                 open ? "-translate-y-[7px] -rotate-45" : ""
               }`}
             />

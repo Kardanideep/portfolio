@@ -17,28 +17,28 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="border-y border-border-soft bg-surface px-5 py-16 sm:px-6 sm:py-20 md:px-8 md:py-25"
+      className="border-y border-border-soft bg-surface px-4 py-14 xs:px-5 xs:py-16 sm:px-6 sm:py-20 md:px-8 md:py-25"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="flex items-center gap-3">
-          <span className="text-[14px] font-semibold uppercase tracking-[0.25em] text-accent sm:text-xs">
+          <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-accent xs:text-[13px] xs:tracking-[0.25em] sm:text-xs">
             {services.eyebrow}
           </span>
         </div>
 
-        <div className="mt-4 mb-8 flex flex-col gap-4 sm:mt-5 sm:mb-10 sm:gap-5 md:mb-14">
-          <h2 className="text-4xl font-semibold leading-[1] tracking-[-0.04em] sm:text-4xl sm:leading-[0.95] md:text-5xl lg:text-7xl">
+        <div className="mt-3 mb-7 flex flex-col gap-3 xs:mt-4 xs:mb-8 xs:gap-4 sm:mt-5 sm:mb-10 sm:gap-5 md:mb-14">
+          <h2 className="text-[1.75rem] font-semibold leading-[1.05] tracking-[-0.035em] xs:text-[2rem] xs:leading-[1] sm:text-4xl sm:leading-[0.95] sm:tracking-[-0.04em] md:text-5xl lg:text-7xl">
             {services.heading}{" "}
             <span className="text-muted">{services.headingHighlight}</span>
           </h2>
-          <p className="text-[16px] leading-6 text-muted sm:text-base sm:leading-7">
+          <p className="text-[15px] leading-6 text-muted xs:text-[15.5px] xs:leading-[1.6] sm:text-base sm:leading-7">
             {services.intro}
           </p>
         </div>
 
         <div
           style={{ gridTemplateColumns: columns }}
-          className={`flex flex-col gap-3 md:grid md:h-[480px] md:transition-[grid-template-columns] md:duration-700 lg:h-[540px] ${EASE} motion-reduce:transition-none`}
+          className={`flex flex-col gap-2.5 xs:gap-3 md:grid md:h-[480px] md:transition-[grid-template-columns] md:duration-700 lg:h-[540px] ${EASE} motion-reduce:transition-none`}
         >
           {SERVICES.map((service, i) => {
             const isActive = i === active;
@@ -47,7 +47,7 @@ export default function ServicesSection() {
               <div
                 key={service.n}
                 onMouseEnter={() => setActive(i)}
-                className={`relative min-w-0 overflow-hidden rounded-3xl border transition-colors duration-700 md:rounded-[2rem] ${EASE} motion-reduce:transition-none ${
+                className={`relative min-w-0 overflow-hidden rounded-2xl border transition-colors duration-700 xs:rounded-3xl md:rounded-[2rem] ${EASE} motion-reduce:transition-none ${
                   isActive
                     ? "border-transparent bg-[#0F1117] text-white"
                     : "border-border-soft text-text hover:bg-bg-soft"
@@ -59,25 +59,25 @@ export default function ServicesSection() {
                     type="button"
                     onClick={() => setActive(i)}
                     aria-expanded={isActive}
-                    className="flex w-full items-start justify-between gap-4 p-5 text-left sm:p-6"
+                    className="flex w-full items-start justify-between gap-3 p-4 text-left xs:gap-4 xs:p-5 sm:p-6"
                   >
                     <div className="min-w-0 flex-1">
                       <h3
-                        className={`text-[22px] font-semibold leading-tight tracking-[-0.02em] transition-colors duration-300 sm:text-2xl ${
+                        className={`text-[17px] font-semibold leading-tight tracking-[-0.02em] transition-colors duration-300 xs:text-[18px] sm:text-2xl ${
                           isActive ? "text-white" : "text-text"
                         }`}
                       >
                         {service.title}
                       </h3>
                       {!isActive && (
-                        <p className="mt-1.5 line-clamp-2 text-[16px] leading-6 text-muted sm:text-sm">
+                        <p className="mt-1 line-clamp-2 text-[13px] leading-5 text-muted xs:mt-1.5 xs:text-[14px] xs:leading-6 sm:text-sm">
                           {service.desc}
                         </p>
                       )}
                     </div>
                     <span
                       aria-hidden="true"
-                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm transition-all duration-500 ${EASE} ${
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[13px] transition-all duration-500 xs:h-9 xs:w-9 xs:text-sm ${EASE} ${
                         isActive
                           ? "-rotate-45 bg-[#2563EB] text-white"
                           : "border border-border-soft text-muted"
@@ -93,23 +93,25 @@ export default function ServicesSection() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <div className="space-y-4 px-5 pb-5 sm:px-6 sm:pb-6">
-                        <p className="text-[17px] leading-7 text-white/70 sm:text-sm">{service.desc}</p>
+                      <div className="space-y-3 px-4 pb-4 xs:space-y-4 xs:px-5 xs:pb-5 sm:px-6 sm:pb-6">
+                        <p className="text-[14px] leading-6 text-white/70 xs:text-[15px] xs:leading-7 sm:text-sm">
+                          {service.desc}
+                        </p>
 
                         {service.points?.length > 0 && (
-                          <ul className="space-y-2.5">
+                          <ul className="space-y-2 xs:space-y-2.5">
                             {service.points.map((point: string) => (
                               <li
                                 key={point}
-                                className="flex items-start gap-3 text-[16px] text-white/80 sm:text-sm"
+                                className="flex items-start gap-2.5 text-[13px] text-white/80 xs:gap-3 xs:text-[14px] sm:text-sm"
                               >
                                 <span
                                   aria-hidden="true"
-                                  className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2563EB] text-[12px] font-bold text-white sm:text-[11px]"
+                                  className="mt-0.5 flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full bg-[#2563EB] text-[10px] font-bold text-white xs:h-5 xs:w-5 xs:text-[11px] sm:text-[11px]"
                                 >
                                   ✓
                                 </span>
-                                <span className="leading-6">{point}</span>
+                                <span className="leading-5 xs:leading-6">{point}</span>
                               </li>
                             ))}
                           </ul>
@@ -117,12 +119,12 @@ export default function ServicesSection() {
 
                         <Link
                           href="/contact"
-                          className="inline-flex w-full items-center justify-between gap-3 rounded-full bg-white py-2 pl-5 pr-2 text-[15px] font-semibold text-[#0F1117] transition-colors duration-300 hover:bg-[#2563EB] hover:text-white sm:w-auto sm:justify-start sm:text-sm"
+                          className="inline-flex w-full items-center justify-between gap-3 rounded-full bg-white py-2 pl-4 pr-2 text-[13px] font-semibold text-[#0F1117] transition-colors duration-300 hover:bg-[#2563EB] hover:text-white xs:py-2.5 xs:pl-5 xs:text-[14px] sm:w-auto sm:justify-start sm:text-sm"
                         >
                           <span>{services.discussLabel}</span>
                           <span
                             aria-hidden="true"
-                            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#2563EB] text-white"
+                            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#2563EB] text-white xs:h-9 xs:w-9"
                           >
                             →
                           </span>
@@ -232,15 +234,15 @@ export default function ServicesSection() {
           })}
         </div>
 
-        <div className="mt-12 flex justify-center sm:mt-14">
+        <div className="mt-10 flex justify-center xs:mt-12 sm:mt-14">
           <Link
             href="/services"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#111827] py-2 pl-6 pr-2 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-[#2563EB] hover:shadow-[0_12px_30px_-12px_rgba(37,99,235,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] sm:text-sm"
+            className="group inline-flex items-center gap-2 rounded-full bg-[#111827] py-2 pl-5 pr-2 text-[13px] font-semibold text-white transition-all duration-300 hover:bg-[#2563EB] hover:shadow-[0_12px_30px_-12px_rgba(37,99,235,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] xs:gap-3 xs:py-2.5 xs:pl-6 xs:text-[14px] sm:text-sm"
           >
             Explore all services
             <span
               aria-hidden="true"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#2563EB] transition-transform duration-300 group-hover:translate-x-0.5"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#2563EB] transition-transform duration-300 group-hover:translate-x-0.5 xs:h-9 xs:w-9"
             >
               →
             </span>

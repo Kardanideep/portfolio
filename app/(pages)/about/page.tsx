@@ -131,7 +131,7 @@ export default function AboutPage() {
                                 {hero.eyebrow}
                             </div>
 
-                            <h1 className="mt-4 text-[2.2rem] font-semibold leading-[1.05] tracking-[-0.035em] xs:text-[2.125rem] sm:mt-5 sm:text-[2.5rem] sm:leading-[1] md:text-[3rem] lg:text-[3.5rem] xl:text-[3.75rem]">
+                            <h1 className="mt-4 text-[2rem] font-semibold leading-[1.08] tracking-[-0.03em] xs:text-[2.25rem] sm:mt-5 sm:text-[2.5rem] sm:leading-[1] md:text-[3rem] lg:text-[3.5rem] xl:text-[3.75rem]">
                                 {hero.headingLine1}{" "}
                                 <span className="relative inline-block">
                                     <span className="relative z-10 text-[#2563EB]">
@@ -154,7 +154,7 @@ export default function AboutPage() {
                                 {hero.headingSuffix}
                             </h1>
 
-                            <p className="mx-auto mt-5 max-w-xl text-[16px] leading-7 text-muted sm:mt-6 sm:text-base sm:leading-7 md:text-lg md:leading-8 lg:mx-0">
+                            <p className="mx-auto mt-5 max-w-xl text-[15px] leading-6 text-muted xs:text-[16px] xs:leading-7 sm:mt-6 sm:text-base sm:leading-7 md:text-lg md:leading-8 lg:mx-0">
                                 {hero.description}
                             </p>
 
@@ -307,7 +307,7 @@ export default function AboutPage() {
                                 <span className="text-[#2563EB]">{story.headingHighlight}</span>
                             </h2>
 
-                            <div className="mt-5 space-y-4 text-[17px] leading-7 text-muted sm:mt-6 sm:text-base sm:leading-7 md:text-[17px] md:leading-8">
+                            <div className="mt-5 space-y-4 text-[15px] leading-6 text-muted xs:text-[16px] xs:leading-7 sm:mt-6 sm:text-base sm:leading-7 md:text-[17px] md:leading-8">
                                 {story.paragraphs.map((p, i) => (
                                     <p key={i}>{p}</p>
                                 ))}
@@ -334,7 +334,7 @@ export default function AboutPage() {
                                             <h3 className="text-[15px] font-semibold text-text sm:text-[15px]">
                                                 {item.title}
                                             </h3>
-                                            <p className="mt-1 text-[14px] leading-5 text-muted sm:text-xs">
+                                            <p className="mt-1 text-[13px] leading-5 text-muted xs:text-[14px] sm:text-xs">
                                                 {item.desc}
                                             </p>
                                         </div>
@@ -395,7 +395,7 @@ export default function AboutPage() {
                             <span className="text-muted">{values.headingHighlight}</span>
                         </h2>
 
-                        <p className="mt-3 max-w-2xl text-[16px] leading-7 text-muted sm:mt-4 sm:text-base sm:leading-7 md:text-lg md:leading-8">
+                        <p className="mt-3 text-[15px] leading-6 text-muted xs:text-[16px] xs:leading-7 sm:mt-4 sm:text-base sm:leading-7 md:text-lg md:leading-8">
                             {values.intro}
                         </p>
                     </div>
@@ -407,7 +407,7 @@ export default function AboutPage() {
                                 className="group relative flex min-h-[180px] flex-col justify-between overflow-hidden rounded-2xl border border-border-soft bg-bg p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/30 hover:shadow-[0_20px_50px_-25px_rgba(15,23,42,0.2)] sm:min-h-[220px] sm:p-6 md:min-h-[240px] md:p-7"
                             >
                                 <div className="flex items-start justify-between">
-                                    <span className="font-mono text-[15px] text-muted sm:text-xs">
+                                    <span className="font-mono text-[13px] text-muted sm:text-xs">
                                         {value.n}
                                     </span>
 
@@ -419,10 +419,10 @@ export default function AboutPage() {
                                 </div>
 
                                 <div className="mt-6 sm:mt-8">
-                                    <h3 className="text-[20px] font-semibold tracking-[-0.02em] text-text xs:text-lg sm:text-xl">
+                                    <h3 className="text-[17px] font-semibold tracking-[-0.02em] text-text xs:text-[18px] sm:text-xl">
                                         {value.title}
                                     </h3>
-                                    <p className="mt-2 text-[17px] leading-6 text-muted sm:mt-3 sm:text-sm">
+                                    <p className="mt-2 text-[15px] leading-6 text-muted xs:text-[15.5px] sm:mt-3 sm:text-sm">
                                         {value.desc}
                                     </p>
                                 </div>
