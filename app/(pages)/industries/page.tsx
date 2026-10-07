@@ -136,7 +136,7 @@ export default function IndustriesPage() {
                             <span className="text-muted">{industries.headingHighlight}</span>
                         </h2>
 
-                        <p className="mt-3 max-w-2xl text-[15px] leading-6 text-muted xs:text-[16px] xs:leading-7 sm:mt-4 sm:text-base sm:leading-7 md:text-[17px] md:leading-8">
+                        <p className="mt-3  text-[15px] leading-6 text-muted xs:text-[16px] xs:leading-7 sm:mt-4 sm:text-base sm:leading-7 md:text-[17px] md:leading-8">
                             {industries.intro}
                         </p>
                     </div>

@@ -75,7 +75,17 @@ function CardIcon({ type, className }: { type: string; className?: string }) {
 export default function ServicesPage() {
   const SERVICES = servicesItems;
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [active, setActive] = useState(0);
+  // Multiple services can stay open at once — prevents the page from jumping up
+  const [openSet, setOpenSet] = useState<Set<number>>(new Set([0]));
+
+  const toggleService = (i: number) => {
+    setOpenSet((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
+  };
 
   return (
     <main id="top" className="relative min-h-screen overflow-x-hidden bg-bg text-text">
@@ -319,7 +329,7 @@ export default function ServicesPage() {
 
           <div className="mt-10 border-t border-border-soft sm:mt-14 lg:mt-16">
             {SERVICES.map((service, i) => {
-              const isActive = i === active;
+              const isActive = openSet.has(i);
               const panelId = `service-panel-${i}`;
               const triggerId = `service-trigger-${i}`;
 
@@ -328,23 +338,21 @@ export default function ServicesPage() {
                   <button
                     id={triggerId}
                     type="button"
-                    onClick={() => setActive(i)}
+                    onClick={() => toggleService(i)}
                     aria-expanded={isActive}
                     aria-controls={panelId}
                     className="group flex w-full items-center gap-3 py-5 text-left sm:gap-5 sm:py-6 md:gap-6 md:py-7"
                   >
                     <span
-                      className={`font-mono text-[13px] tabular-nums transition-colors duration-300 sm:text-xs ${
-                        isActive ? "text-[#2563EB]" : "text-muted"
-                      }`}
+                      className={`font-mono text-[13px] tabular-nums transition-colors duration-300 sm:text-xs ${isActive ? "text-[#2563EB]" : "text-muted"
+                        }`}
                     >
                       {service.n}
                     </span>
 
                     <span
-                      className={`flex-1 text-[18px] font-semibold tracking-[-0.02em] transition-colors duration-300 xs:text-[19px] sm:text-xl md:text-2xl lg:text-3xl ${
-                        isActive ? "text-[#2563EB]" : "text-text group-hover:text-text/60"
-                      }`}
+                      className={`flex-1 text-[18px] font-semibold tracking-[-0.02em] transition-colors duration-300 xs:text-[19px] sm:text-xl md:text-2xl lg:text-3xl ${isActive ? "text-[#2563EB]" : "text-text group-hover:text-text/60"
+                        }`}
                     >
                       {service.title}
                     </span>
@@ -357,11 +365,10 @@ export default function ServicesPage() {
 
                     <span
                       aria-hidden="true"
-                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 sm:h-9 sm:w-9 ${
-                        isActive
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 sm:h-9 sm:w-9 ${isActive
                           ? "rotate-180 border-[#2563EB] bg-[#2563EB] text-white"
                           : "border-border-soft text-muted group-hover:border-[#2563EB]/40 group-hover:text-[#2563EB]"
-                      }`}
+                        }`}
                     >
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5 sm:h-4 sm:w-4">
                         <path d="m6 9 6 6 6-6" />
@@ -373,12 +380,12 @@ export default function ServicesPage() {
                     id={panelId}
                     role="region"
                     aria-labelledby={triggerId}
-                    className={`grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                      isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                    }`}
+                    className={`grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                      }`}
                   >
                     <div className="overflow-hidden">
                       <div className="mb-6 rounded-2xl border border-border-soft bg-bg p-4 xs:p-5 sm:mb-8 sm:p-6 md:p-8 lg:p-10">
+                        {/* Tagline + Overview */}
                         <div>
                           {service.tagline && (
                             <p className="text-[15px] font-medium text-[#2563EB] sm:text-sm">
@@ -392,14 +399,15 @@ export default function ServicesPage() {
                           )}
                         </div>
 
+                        {/* Key Features + Ideal For */}
                         <div className="mt-8 grid gap-8 border-t border-border-soft pt-6 sm:mt-10 sm:pt-8 md:grid-cols-2 md:gap-12 lg:gap-16">
-                          {service.points?.length > 0 && (
+                          {(service.keyFeatures?.length ?? 0) > 0 && (
                             <div>
                               <p className="text-[13px] font-bold uppercase tracking-[0.25em] text-muted sm:text-[11px]">
                                 Key features
                               </p>
                               <ul className="mt-4 space-y-3.5 sm:mt-5 sm:space-y-4">
-                                {service.points.map((point: string, idx: number) => (
+                                {service.keyFeatures?.map((point: string, idx: number) => (
                                   <li key={point} className="flex items-start gap-3">
                                     <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#2563EB]/10 font-mono text-[11px] font-bold text-[#2563EB] sm:text-[10px]">
                                       {(idx + 1).toString().padStart(2, "0")}
@@ -413,13 +421,13 @@ export default function ServicesPage() {
                             </div>
                           )}
 
-                          {service.idealFor?.length > 0 && (
+                          {(service.idealFor?.length ?? 0) > 0 && (
                             <div>
                               <p className="text-[13px] font-bold uppercase tracking-[0.25em] text-muted sm:text-[11px]">
                                 Ideal for
                               </p>
                               <ul className="mt-4 space-y-3.5 sm:mt-5 sm:space-y-4">
-                                {service.idealFor.map((item: string) => (
+                                {service.idealFor?.map((item: string) => (
                                   <li key={item} className="flex items-start gap-3">
                                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2563EB]" />
                                     <span className="text-[15px] leading-6 text-text sm:text-sm">{item}</span>
@@ -430,18 +438,76 @@ export default function ServicesPage() {
                           )}
                         </div>
 
+                        {/* Deliverables */}
+                        {(service.deliverables?.length ?? 0) > 0 && (
+                          <div className="mt-8 border-t border-border-soft pt-6 sm:mt-10 sm:pt-8">
+                            <p className="text-[13px] font-bold uppercase tracking-[0.25em] text-muted sm:text-[11px]">
+                              Deliverables
+                            </p>
+                            <ul className="mt-4 grid gap-3.5 sm:mt-5 sm:gap-4 md:grid-cols-2">
+                              {service.deliverables.map((item: string) => (
+                                <li key={item} className="flex items-start gap-3">
+                                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2563EB]/10">
+                                    <svg
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      strokeWidth="3"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      className="h-3 w-3 text-[#2563EB]"
+                                    >
+                                      <path d="M5 13l4 4L19 7" />
+                                    </svg>
+                                  </span>
+                                  <span className="text-[15px] leading-6 text-text sm:text-sm">
+                                    {item}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {/* Tech Stack */}
+                        {(service.techStack?.length ?? 0) > 0 && (
+                          <div className="mt-8 border-t border-border-soft pt-6 sm:mt-10 sm:pt-8">
+                            <p className="text-[13px] font-bold uppercase tracking-[0.25em] text-muted sm:text-[11px]">
+                              Tech stack
+                            </p>
+                            <div className="mt-4 flex flex-wrap gap-2 sm:mt-5">
+                              {service.techStack.map(
+                                (tech: { name: string; color: string; faIcon: string }) => (
+                                  <span
+                                    key={tech.name}
+                                    className="inline-flex items-center gap-2 rounded-full border border-border-soft bg-white px-3.5 py-1.5 text-[13px] font-medium text-text transition-colors duration-200 hover:border-[#2563EB]/30 sm:text-xs"
+                                  >
+                                    <i
+                                      className={`${tech.faIcon} text-[13px] sm:text-[12px]`}
+                                      style={{ color: tech.color }}
+                                      aria-hidden="true"
+                                    />
+                                    {tech.name}
+                                  </span>
+                                )
+                              )}
+                            </div>
+                          </div>
+                        )}
+                        {/* Footer: Timeline + Price + CTA */}
                         <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-border-soft pt-5 sm:mt-10 sm:pt-6">
-                          {service.timeline ? (
-                            <span className="inline-flex items-center gap-2 text-[14px] font-medium text-muted sm:text-xs">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
-                                <circle cx="12" cy="12" r="9" />
-                                <path d="M12 8v4l3 2" />
-                              </svg>
-                              Timeline · {service.timeline}
-                            </span>
-                          ) : (
-                            <span />
-                          )}
+                          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                            {service.timeline && (
+                              <span className="inline-flex items-center gap-2 text-[14px] font-medium text-muted sm:text-xs">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+                                  <circle cx="12" cy="12" r="9" />
+                                  <path d="M12 8v4l3 2" />
+                                </svg>
+                                Timeline · {service.timeline}
+                              </span>
+                            )}
+
+                          </div>
 
                           <Link
                             href="/contact"
@@ -505,11 +571,10 @@ export default function ServicesPage() {
               return (
                 <div
                   key={item.q}
-                  className={`overflow-hidden rounded-2xl border transition-all duration-300 ${
-                    isOpen
+                  className={`overflow-hidden rounded-2xl border transition-all duration-300 ${isOpen
                       ? "border-[#2563EB]/25 bg-[#F7F8FA] shadow-[0_20px_45px_-30px_rgba(37,99,235,0.35)]"
                       : "border-border-soft bg-surface hover:border-[#2563EB]/20 hover:bg-[#F7F8FA]/60"
-                  }`}
+                    }`}
                 >
                   <button
                     id={triggerId}
@@ -520,28 +585,25 @@ export default function ServicesPage() {
                     className="flex w-full items-center gap-3 px-4 py-4 text-left sm:gap-5 sm:px-6 sm:py-6"
                   >
                     <span
-                      className={`font-mono text-[13px] tabular-nums transition-colors duration-300 sm:text-xs ${
-                        isOpen ? "text-[#2563EB]" : "text-muted"
-                      }`}
+                      className={`font-mono text-[13px] tabular-nums transition-colors duration-300 sm:text-xs ${isOpen ? "text-[#2563EB]" : "text-muted"
+                        }`}
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
 
                     <span
-                      className={`flex-1 text-[15px] font-semibold tracking-[-0.01em] transition-colors duration-300 xs:text-[16px] sm:text-base md:text-lg ${
-                        isOpen ? "text-[#2563EB]" : "text-text"
-                      }`}
+                      className={`flex-1 text-[15px] font-semibold tracking-[-0.01em] transition-colors duration-300 xs:text-[16px] sm:text-base md:text-lg ${isOpen ? "text-[#2563EB]" : "text-text"
+                        }`}
                     >
                       {item.q}
                     </span>
 
                     <span
                       aria-hidden="true"
-                      className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
-                        isOpen
+                      className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${isOpen
                           ? "rotate-180 border-[#2563EB] bg-[#2563EB] text-white"
                           : "border-border-soft text-muted"
-                      }`}
+                        }`}
                     >
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
                         <path d="m6 9 6 6 6-6" />
@@ -553,9 +615,8 @@ export default function ServicesPage() {
                     id={panelId}
                     role="region"
                     aria-labelledby={triggerId}
-                    className={`grid transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${
-                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                    }`}
+                    className={`grid transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                      }`}
                   >
                     <div className="overflow-hidden">
                       <p className="border-t border-border-soft px-4 pb-5 pt-4 text-[14px] leading-6 text-muted xs:text-[15px] xs:leading-7 sm:px-6 sm:pb-6 sm:pl-[3.75rem] sm:pt-5 sm:text-[15px] sm:leading-7">

@@ -32,7 +32,7 @@
       },
       {
         "title": "Mobile Applications",
-        "subtitle": "Android & iOS solutions",
+        "subtitle": "Android applications",
         "icon": "mobile",
         "color": "text-[#6366F1]"
       },
@@ -342,7 +342,7 @@
     "secondaryHref": "/work",
     "stats": [
       {
-        "value": "05",
+        "value": "09",
         "suffix": "+",
         "label": "Core solution areas"
       },
@@ -380,34 +380,34 @@
     "eyebrow": "Ready to get started?",
     "heading": "Let's build something",
     "headingHighlight": "that moves your business forward.",
-    "intro": "Have a new website, mobile application, custom software requirement, or an idea you want to explore? Tell us about your project and let's discuss how we can turn it into a practical digital solution.",
+    "intro": "Have a project in mind? Let’s turn your idea into a practical digital solution.",
     "primaryLabel": "Start a Project",
     "secondaryLabel": "Chat on WhatsApp"
   },
-  "testimonials": [
-    {
-      "quote": "ISHWAT Technologies understood what we needed and turned our requirements into a professional, easy-to-use website. The communication throughout the project was clear and the overall experience was smooth.",
-      "name": "Kahyap Patel",
-      "initials": "RS",
-      "accent": "blue"
-    },
-    {
-      "quote": "The team took the time to understand our workflow before development started. The result was a much more structured and practical platform that fits the way we work.",
-      "name": "Chintu Chavda",
-      "initials": "PM",
-      "accent": "violet"
-    },
-    {
-      "quote": "What we appreciated most was the practical approach. ISHWAT Technologies focused on our actual requirements instead of adding unnecessary complexity, and the development process stayed clear from start to finish.",
-      "name": "Arjun Patel",
-      "initials": "AP",
-      "accent": "amber"
-    },
-    {
-      "quote": "The process was straightforward from the first discussion to the final delivery. The team listened to our requirements, communicated clearly, and delivered a solution that matched our expectations.",
-      "name": "Neha Desai",
-      "initials": "ND",
-      "accent": "pink"
-    }
-  ]
+"testimonials": [
+  {
+    "quote": "We needed a professional website that was simple for our customers to understand. ISHWAT Technologies understood our requirements well and delivered exactly what we were looking for. The communication was also very smooth throughout the project.",
+    "name": "Kahyap Patel",
+    "initials": "KP",
+    "accent": "blue"
+  },
+  {
+    "quote": "They first took the time to understand how our work actually happens before starting the development. That made a big difference in the final result. The platform feels practical and much more organised for our day-to-day work.",
+    "name": "Chintu Chavda",
+    "initials": "CC",
+    "accent": "violet"
+  },
+  {
+    "quote": "I liked the way ISHWAT Technologies kept things practical. They understood what we actually needed and didn't make the project unnecessarily complicated. The development process was clear and easy to follow.",
+    "name": "Arjun Patel",
+    "initials": "AP",
+    "accent": "amber"
+  },
+  {
+    "quote": "The whole process was quite straightforward. We discussed what we needed, got regular updates during development, and the final website came out the way we expected. Overall, it was a good experience working with the team.",
+    "name": "Neha Desai",
+    "initials": "ND",
+    "accent": "pink"
+  }
+]
 }

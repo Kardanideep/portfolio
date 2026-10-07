@@ -1,5 +1,9 @@
-"use client";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "ISHWAT Technologies | Custom Web & Mobile Applications",
+  description: "We build digital solutions for businesses. Specialized in web development, e-commerce, mobile applications, and custom software.",
+};
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {

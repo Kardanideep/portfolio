@@ -56,80 +56,29 @@
       },
       {
         "n": "02",
-        "key": "labour",
-        "title": "Labour & Compliance",
-        "tagline": "Digital tools for compliance-focused businesses.",
-        "desc": "We develop practical business applications that help labour consultants organize clients, documents, workflows, tasks, and important deadlines.",
-        "icon": "briefcase",
-        "img": "/images/industries/ecommerce.jpg",
+        "key": "small-business",
+        "title": "Local & Small Businesses",
+        "tagline": "Digital foundations for growing businesses.",
+        "desc": "We help smaller businesses establish a professional digital presence and introduce practical tools for customer communication, enquiries, and day-to-day operations.",
+        "icon": "store",
+        "img": "/images/industries/Small-Businesses.jpg",
         "accentText": "text-[#7C3AED]",
         "accentSoft": "bg-[#7C3AED]/10",
         "useCases": [
-          "Client management systems",
-          "Compliance workflow management",
-          "Document organization",
-          "Task and deadline tracking"
+          "Business websites",
+          "Lead and enquiry systems",
+          "Customer-facing applications",
+          "Custom business tools"
         ]
       },
-      {
+        {
         "n": "03",
-        "key": "professional-services",
-        "title": "Professional Services",
-        "tagline": "Digital presence for service-led businesses.",
-        "desc": "We create professional websites and custom digital solutions that help service businesses present their offerings clearly and make it easier for customers to connect.",
-        "icon": "building",
-        "img": "/images/industries/ecommerce.jpg",
-        "accentText": "text-[#EC4899]",
-        "accentSoft": "bg-[#EC4899]/10",
-        "useCases": [
-          "Company and service websites",
-          "Lead and enquiry forms",
-          "Service information platforms",
-          "Custom internal business tools"
-        ]
-      },
-      {
-        "n": "04",
-        "key": "travel",
-        "title": "Travel & Hospitality",
-        "tagline": "Digital experiences for travel businesses.",
-        "desc": "We build travel and property-focused applications that make it easier to discover listings, manage information, and move through booking-related workflows.",
-        "icon": "plane",
-        "img": "/images/industries/ecommerce.jpg",
-        "accentText": "text-[#2563EB]",
-        "accentSoft": "bg-[#2563EB]/10",
-        "useCases": [
-          "Property listing platforms",
-          "Search and filtering",
-          "Booking-related workflows",
-          "Property management interfaces"
-        ]
-      },
-      {
-        "n": "05",
-        "key": "technology",
-        "title": "Technology & Digital Products",
-        "tagline": "Custom products for digital-first ideas.",
-        "desc": "We develop web applications and digital products for teams that need a tailored solution rather than an off-the-shelf tool.",
-        "icon": "layers",
-        "img": "/images/industries/ecommerce.jpg",
-        "accentText": "text-[#7C3AED]",
-        "accentSoft": "bg-[#7C3AED]/10",
-        "useCases": [
-          "Custom web applications",
-          "Admin and business dashboards",
-          "User and access management",
-          "API-driven digital products"
-        ]
-      },
-      {
-        "n": "06",
         "key": "manufacturing",
         "title": "Manufacturing & Operations",
         "tagline": "Digital tools for smoother operations.",
         "desc": "Custom business applications can help teams organize operational workflows, manage information, and reduce repetitive manual processes.",
         "icon": "settings",
-        "img": "/images/industries/ecommerce.jpg",
+        "img": "/images/industries/Manufacturing.jpg",
         "accentText": "text-[#2563EB]",
         "accentSoft": "bg-[#2563EB]/10",
         "useCases": [
@@ -140,37 +89,54 @@
         ]
       },
       {
-        "n": "07",
-        "key": "small-business",
-        "title": "Local & Small Businesses",
-        "tagline": "Digital foundations for growing businesses.",
-        "desc": "We help smaller businesses establish a professional digital presence and introduce practical tools for customer communication, enquiries, and day-to-day operations.",
-        "icon": "store",
-        "img": "/images/industries/ecommerce.jpg",
-        "accentText": "text-[#7C3AED]",
-        "accentSoft": "bg-[#7C3AED]/10",
-        "useCases": [
-          "Business websites",
-          "Lead and enquiry systems",
-          "Customer-facing applications",
-          "Custom business tools"
-        ]
-      },
-      {
-        "n": "08",
-        "key": "content-community",
-        "title": "Content & Communities",
-        "tagline": "Platforms built around people and content.",
-        "desc": "We create content and community platforms with structured publishing, search, discussions, and interactive user experiences.",
-        "icon": "book",
-        "img": "/images/industries/ecommerce.jpg",
+        "n": "04",
+        "key": "professional-services",
+        "title": "Professional Services",
+        "tagline": "Digital presence for service-led businesses.",
+        "desc": "We create professional websites and custom digital solutions that help service businesses present their offerings clearly and make it easier for customers to connect.",
+        "icon": "building",
+        "img": "/images/industries/Professional.jpg",
         "accentText": "text-[#EC4899]",
         "accentSoft": "bg-[#EC4899]/10",
         "useCases": [
-          "Content publishing platforms",
-          "Blog and article systems",
-          "Discussion and community features",
-          "Search and content organization"
+          "Company and service websites",
+          "Lead and enquiry forms",
+          "Service information platforms",
+          "Custom internal business tools"
+        ]
+      },
+      {
+        "n": "05",
+        "key": "travel",
+        "title": "Travel & Hospitality",
+        "tagline": "Digital experiences for travel businesses.",
+        "desc": "We build travel and property-focused applications that make it easier to discover listings, manage information, and move through booking-related workflows.",
+        "icon": "plane",
+        "img": "/images/industries/Travel-Hospitality.jpg",
+        "accentText": "text-[#2563EB]",
+        "accentSoft": "bg-[#2563EB]/10",
+        "useCases": [
+          "Property listing platforms",
+          "Search and filtering",
+          "Booking-related workflows",
+          "Property management interfaces"
+        ]
+      },
+      {
+        "n": "06",
+        "key": "technology",
+        "title": "Technology & Digital Products",
+        "tagline": "Custom products for digital-first ideas.",
+        "desc": "We develop web applications and digital products for teams that need a tailored solution rather than an off-the-shelf tool.",
+        "icon": "layers",
+        "img": "/images/industries/Technology.jpg",
+        "accentText": "text-[#7C3AED]",
+        "accentSoft": "bg-[#7C3AED]/10",
+        "useCases": [
+          "Custom web applications",
+          "Admin and business dashboards",
+          "User and access management",
+          "API-driven digital products"
         ]
       }
     ]

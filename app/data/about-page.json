@@ -1,8 +1,8 @@
 {
   "hero": {
     "eyebrow": "About ISHWAT Technologies",
-    "headingLine1": "We don't just build",
-    "headingHighlight1": "websites.",
+    "headingLine1": "We don't just write",
+    "headingHighlight1": "code.",
     "headingLine2": "We build",
     "headingHighlight2": "digital solutions",
     "headingSuffix": ".",
@@ -88,11 +88,11 @@
         "icon": "chart"
       },
       {
-        "value": "01",
-        "suffix": "",
-        "label": "Single Point of Contact",
-        "icon": "headset"
-      }
+  "value": "01",
+  "suffix": "",
+  "label": "Dedicated Support",
+  "icon": "headset"
+}
     ]
   },
   "values": {

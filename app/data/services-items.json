@@ -10,12 +10,18 @@
     ],
     "icon": "globe",
     "tagline": "Professional websites built around your business.",
-    "overview": "Your website is often the first digital interaction customers have with your business. We design and develop modern, responsive websites that present your brand clearly, make information easy to find, and guide visitors toward meaningful actions such as contacting your team, requesting a service, or making a purchase.",
+    "overview": "We design and develop modern websites that help businesses establish a strong online presence, communicate their value clearly, and create smooth digital experiences for their customers and users.",
+    "keyFeatures": [
+      "Responsive and mobile-first design",
+      "Fast, scalable, and performance-focused development",
+      "SEO-friendly structure and technical setup",
+      "Custom functionality and third-party integrations"
+    ],
     "idealFor": [
-      "Small and medium businesses",
-      "Consultants and professional services",
-      "Local businesses building their online presence",
-      "Companies updating an outdated website"
+      "Businesses and startups",
+      "Brands and organizations",
+      "Professional services and consultants",
+      "Products, platforms, and digital ventures"
     ],
     "deliverables": [
       "Custom design aligned with your brand",
@@ -25,7 +31,83 @@
       "Analytics and tracking integration",
       "Deployment and launch support"
     ],
-    "techStack": ["Next.js", "React", "Tailwind CSS", "Node.js"],
+    "techStack": [
+      {
+        "name": "Next.js",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-n"
+      },
+      {
+        "name": "React",
+        "color": "#61DAFB",
+        "faIcon": "fa-brands fa-react"
+      },
+      {
+        "name": "JavaScript",
+        "color": "#F7DF1E",
+        "faIcon": "fa-brands fa-js"
+      },
+      {
+        "name": "HTML5",
+        "color": "#E34F26",
+        "faIcon": "fa-brands fa-html5"
+      },
+      {
+        "name": "CSS3",
+        "color": "#1572B6",
+        "faIcon": "fa-brands fa-css3-alt"
+      },
+      {
+        "name": "Tailwind CSS",
+        "color": "#06B6D4",
+        "faIcon": "fa-solid fa-wind"
+      },
+      {
+        "name": "Bootstrap",
+        "color": "#7952B3",
+        "faIcon": "fa-brands fa-bootstrap"
+      },
+      {
+        "name": "Node.js",
+        "color": "#68A063",
+        "faIcon": "fa-brands fa-node-js"
+      },
+      {
+        "name": "Express.js",
+        "color": "#222222",
+        "faIcon": "fa-solid fa-server"
+      },
+      {
+        "name": "PHP",
+        "color": "#777BB4",
+        "faIcon": "fa-brands fa-php"
+      },
+      {
+        "name": "Laravel",
+        "color": "#FF2D20",
+        "faIcon": "fa-brands fa-laravel"
+      },
+      {
+        "name": "MySQL",
+        "color": "#00758F",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "MongoDB",
+        "color": "#4DB33D",
+        "faIcon": "fa-solid fa-leaf"
+      },
+      {
+        "name": "PostgreSQL",
+        "color": "#336791",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "REST APIs",
+        "color": "#4F46E5",
+        "faIcon": "fa-solid fa-plug"
+      }
+    ],
     "timeline": "2 – 4 weeks",
     "startingPrice": "From ₹25,000"
   },
@@ -43,9 +125,15 @@
     "overview": "A successful online store needs more than a product catalogue. We build e-commerce platforms with clear navigation, practical product management, checkout flows, payment integration, and the tools businesses need to manage customers and orders effectively.",
     "idealFor": [
       "Retail and D2C brands",
-      "Local businesses moving online",
-      "Businesses expanding beyond marketplace platforms",
-      "Brands needing a tailored shopping experience"
+      "Businesses starting online sales",
+      "Existing stores moving to custom platforms",
+      "Brands needing tailored e-commerce experiences"
+    ],
+    "keyFeatures": [
+      "Product catalogue, search, and category management",
+      "Cart, checkout, and payment integration",
+      "Customer accounts and order management",
+      "Admin dashboard and business workflows"
     ],
     "deliverables": [
       "Product catalogue with categories and search",
@@ -55,7 +143,68 @@
       "User accounts and order history",
       "Email notifications and transactional workflows"
     ],
-    "techStack": ["Next.js", "Node.js", "MongoDB", "Razorpay / Stripe"],
+    "techStack": [
+      {
+        "name": "Next.js",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-n"
+      },
+      {
+        "name": "React",
+        "color": "#61DAFB",
+        "faIcon": "fa-brands fa-react"
+      },
+      {
+        "name": "Tailwind CSS",
+        "color": "#06B6D4",
+        "faIcon": "fa-solid fa-wind"
+      },
+      {
+        "name": "Node.js",
+        "color": "#68A063",
+        "faIcon": "fa-brands fa-node-js"
+      },
+      {
+        "name": "Express.js",
+        "color": "#222222",
+        "faIcon": "fa-solid fa-server"
+      },
+      {
+        "name": "REST APIs",
+        "color": "#4F46E5",
+        "faIcon": "fa-solid fa-plug"
+      },
+      {
+        "name": "MongoDB",
+        "color": "#4DB33D",
+        "faIcon": "fa-solid fa-leaf"
+      },
+      {
+        "name": "MySQL",
+        "color": "#00758F",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "PostgreSQL",
+        "color": "#336791",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "Razorpay",
+        "color": "#3395FF",
+        "faIcon": "fa-solid fa-credit-card"
+      },
+      {
+        "name": "Stripe",
+        "color": "#635BFF",
+        "faIcon": "fa-solid fa-credit-card"
+      },
+      {
+        "name": "Firebase",
+        "color": "#FFCA28",
+        "faIcon": "fa-solid fa-fire"
+      }
+    ],
     "timeline": "4 – 8 weeks",
     "startingPrice": "From ₹60,000"
   },
@@ -72,10 +221,16 @@
     "tagline": "Practical AI for real business needs.",
     "overview": "AI can be useful when it solves a specific business problem rather than being added simply because it is a trend. We help businesses identify suitable AI use cases and integrate practical capabilities such as intelligent assistants, document processing, content workflows, data interactions, and task automation into their existing products or new applications.",
     "idealFor": [
-      "Businesses exploring practical AI use cases",
-      "Teams looking to automate repetitive tasks",
-      "Existing products that need AI-powered features",
-      "Companies building AI-enabled internal tools"
+      "Businesses exploring AI opportunities",
+      "Teams automating repetitive workflows",
+      "Existing products adding AI capabilities",
+      "Companies building AI-powered internal tools"
+    ],
+    "keyFeatures": [
+      "AI features built around practical use cases",
+      "Intelligent assistants and content workflows",
+      "Document and data processing",
+      "AI integration with existing applications"
     ],
     "deliverables": [
       "AI use-case planning",
@@ -85,7 +240,53 @@
       "Document and data processing workflows",
       "Integration with existing business systems"
     ],
-    "techStack": ["Node.js", "Next.js", "OpenAI API", "REST APIs"],
+    "techStack": [
+      {
+        "name": "OpenAI API",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-wand-magic-sparkles"
+      },
+      {
+        "name": "Node.js",
+        "color": "#68A063",
+        "faIcon": "fa-brands fa-node-js"
+      },
+      {
+        "name": "Next.js",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-n"
+      },
+      {
+        "name": "React",
+        "color": "#61DAFB",
+        "faIcon": "fa-brands fa-react"
+      },
+      {
+        "name": "REST APIs",
+        "color": "#4F46E5",
+        "faIcon": "fa-solid fa-plug"
+      },
+      {
+        "name": "MongoDB",
+        "color": "#4DB33D",
+        "faIcon": "fa-solid fa-leaf"
+      },
+      {
+        "name": "MySQL",
+        "color": "#00758F",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "PostgreSQL",
+        "color": "#336791",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "Firebase",
+        "color": "#FFCA28",
+        "faIcon": "fa-solid fa-fire"
+      }
+    ],
     "timeline": "3 – 8 weeks",
     "startingPrice": "From ₹50,000"
   },
@@ -107,6 +308,12 @@
       "Startups developing an initial product",
       "Teams needing custom dashboards or admin systems"
     ],
+    "keyFeatures": [
+      "Custom workflows and business logic",
+      "User roles, permissions, and authentication",
+      "Dashboards, admin panels, and reporting",
+      "Scalable architecture and system integrations"
+    ],
     "deliverables": [
       "Custom dashboard and admin panel",
       "User roles and permission management",
@@ -115,41 +322,159 @@
       "Authentication and access control",
       "Deployment and handover support"
     ],
-    "techStack": ["Next.js", "Node.js", "PostgreSQL", "JWT"],
+    "techStack": [
+      {
+        "name": "Next.js",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-n"
+      },
+      {
+        "name": "React",
+        "color": "#61DAFB",
+        "faIcon": "fa-brands fa-react"
+      },
+      {
+        "name": "JavaScript",
+        "color": "#F7DF1E",
+        "faIcon": "fa-brands fa-js"
+      },
+      {
+        "name": "Tailwind CSS",
+        "color": "#06B6D4",
+        "faIcon": "fa-solid fa-wind"
+      },
+      {
+        "name": "Node.js",
+        "color": "#68A063",
+        "faIcon": "fa-brands fa-node-js"
+      },
+      {
+        "name": "Express.js",
+        "color": "#222222",
+        "faIcon": "fa-solid fa-server"
+      },
+      {
+        "name": "PHP",
+        "color": "#777BB4",
+        "faIcon": "fa-brands fa-php"
+      },
+      {
+        "name": "Laravel",
+        "color": "#FF2D20",
+        "faIcon": "fa-brands fa-laravel"
+      },
+      {
+        "name": "REST APIs",
+        "color": "#4F46E5",
+        "faIcon": "fa-solid fa-plug"
+      },
+      {
+        "name": "JWT",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-key"
+      },
+      {
+        "name": "MySQL",
+        "color": "#00758F",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "MongoDB",
+        "color": "#4DB33D",
+        "faIcon": "fa-solid fa-leaf"
+      },
+      {
+        "name": "PostgreSQL",
+        "color": "#336791",
+        "faIcon": "fa-solid fa-database"
+      }
+    ],
     "timeline": "6 – 12 weeks",
     "startingPrice": "From ₹1,20,000"
   },
   {
     "n": "05",
     "title": "Mobile App Development",
-    "desc": "Mobile applications designed for customer-facing products, business services, internal operations, and digital experiences across Android and iOS.",
+    "desc": "Mobile applications designed for customer-facing products, business services, internal operations, and digital experiences across Android.",
     "points": [
       "Modern and user-friendly interfaces",
       "Built around practical business use cases",
-      "Cross-platform development for Android and iOS"
+      "Native and cross-platform Android development"
     ],
     "icon": "smartphone",
     "tagline": "Mobile experiences built for your users.",
-    "overview": "Mobile applications can help businesses deliver services, connect with customers, manage operations, and provide convenient digital experiences. We develop cross-platform applications with practical interfaces, backend integration, authentication, and the features required for the intended use case.",
+    "overview": "Mobile applications can help businesses deliver services, connect with customers, manage operations, and provide convenient digital experiences. We develop Android applications with practical interfaces, backend integration, authentication, and the features required for the intended use case.",
     "idealFor": [
-      "Service-based businesses",
-      "Booking and delivery platforms",
-      "Membership and customer applications",
-      "Internal business tools"
+      "Businesses and startups",
+      "Service and booking platforms",
+      "Customer and membership applications",
+      "Internal business and operational tools"
+    ],
+    "keyFeatures": [
+      "Modern and responsive Android interfaces",
+      "Authentication and user account management",
+      "API integration and real-time functionality",
+      "Push notifications and app deployment"
     ],
     "deliverables": [
-      "Cross-platform Android and iOS application",
+      "Android application",
       "Modern mobile interface",
       "Push notification integration",
       "User authentication and profiles",
       "Backend API integration",
       "Release and deployment support"
     ],
-    "techStack": ["React Native", "Node.js", "MongoDB", "Firebase"],
+    "techStack": [
+      {
+        "name": "React Native",
+        "color": "#61DAFB",
+        "faIcon": "fa-brands fa-react"
+      },
+      {
+        "name": "JavaScript",
+        "color": "#F7DF1E",
+        "faIcon": "fa-brands fa-js"
+      },
+      {
+        "name": "Node.js",
+        "color": "#68A063",
+        "faIcon": "fa-brands fa-node-js"
+      },
+      {
+        "name": "Express.js",
+        "color": "#222222",
+        "faIcon": "fa-solid fa-server"
+      },
+      {
+        "name": "REST APIs",
+        "color": "#4F46E5",
+        "faIcon": "fa-solid fa-plug"
+      },
+      {
+        "name": "MongoDB",
+        "color": "#4DB33D",
+        "faIcon": "fa-solid fa-leaf"
+      },
+      {
+        "name": "MySQL",
+        "color": "#00758F",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "PostgreSQL",
+        "color": "#336791",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "Firebase",
+        "color": "#FFCA28",
+        "faIcon": "fa-solid fa-fire"
+      }
+    ],
     "timeline": "6 – 10 weeks",
     "startingPrice": "From ₹1,00,000"
   },
-   {
+  {
     "n": "07",
     "title": "Backend & API Development",
     "desc": "Reliable backend systems with APIs, authentication, databases, business logic, payments, and third-party integrations.",
@@ -162,10 +487,16 @@
     "tagline": "Reliable systems behind your digital product.",
     "overview": "A well-structured backend provides the foundation for reliable digital products. We develop APIs, business logic, database systems, authentication, payment workflows, and third-party integrations based on the requirements of the application.",
     "idealFor": [
-      "Frontend teams needing backend services",
       "Businesses building custom applications",
-      "Products requiring payment integrations",
-      "Applications that need a structured backend"
+      "Frontend teams needing backend development",
+      "Products requiring APIs and integrations",
+      "Applications requiring secure data systems"
+    ],
+    "keyFeatures": [
+      "Scalable REST API architecture",
+      "Secure authentication and access control",
+      "Database design and business logic",
+      "Payment and third-party integrations"
     ],
     "deliverables": [
       "REST API design and implementation",
@@ -175,7 +506,68 @@
       "API documentation",
       "Deployment support"
     ],
-    "techStack": ["Node.js", "Express", "PostgreSQL", "MySQL"],
+    "techStack": [
+      {
+        "name": "Node.js",
+        "color": "#68A063",
+        "faIcon": "fa-brands fa-node-js"
+      },
+      {
+        "name": "Express.js",
+        "color": "#222222",
+        "faIcon": "fa-solid fa-server"
+      },
+      {
+        "name": "PHP",
+        "color": "#777BB4",
+        "faIcon": "fa-brands fa-php"
+      },
+      {
+        "name": "Laravel",
+        "color": "#FF2D20",
+        "faIcon": "fa-brands fa-laravel"
+      },
+      {
+        "name": "REST APIs",
+        "color": "#4F46E5",
+        "faIcon": "fa-solid fa-plug"
+      },
+      {
+        "name": "JWT",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-key"
+      },
+      {
+        "name": "MySQL",
+        "color": "#00758F",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "MongoDB",
+        "color": "#4DB33D",
+        "faIcon": "fa-solid fa-leaf"
+      },
+      {
+        "name": "PostgreSQL",
+        "color": "#336791",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "Razorpay",
+        "color": "#3395FF",
+        "faIcon": "fa-solid fa-credit-card"
+      },
+      {
+        "name": "Stripe",
+        "color": "#635BFF",
+        "faIcon": "fa-brands fa-stripe"
+      },
+      {
+        "name": "Firebase",
+        "color": "#FFCA28",
+        "faIcon": "fa-solid fa-fire"
+      }
+    ],
     "timeline": "3 – 8 weeks",
     "startingPrice": "From ₹50,000"
   },
@@ -195,7 +587,13 @@
       "New websites and digital products",
       "Businesses redesigning existing interfaces",
       "Web and mobile applications",
-      "Products that need a clearer user experience"
+      "Products improving their user experience"
+    ],
+    "keyFeatures": [
+      "User flows and information architecture",
+      "Modern and consistent interface design",
+      "Responsive design systems",
+      "Interactive prototypes and developer handoff"
     ],
     "deliverables": [
       "User flow planning",
@@ -205,11 +603,26 @@
       "Prototype and interaction planning",
       "Developer-ready design handoff"
     ],
-    "techStack": ["Figma", "Design Systems", "Responsive UI", "Prototyping"],
+    "techStack": [
+      {
+        "name": "Figma",
+        "color": "#F24E1E",
+        "faIcon": "fa-brands fa-figma"
+      },
+      {
+        "name": "Tailwind CSS",
+        "color": "#06B6D4",
+        "faIcon": "fa-solid fa-wind"
+      },
+      {
+        "name": "Bootstrap",
+        "color": "#7952B3",
+        "faIcon": "fa-brands fa-bootstrap"
+      }
+    ],
     "timeline": "1 – 4 weeks",
     "startingPrice": "From ₹20,000"
   },
- 
   {
     "n": "08",
     "title": "Quality Assurance & Testing",
@@ -228,6 +641,12 @@
       "Existing applications with recurring issues",
       "Development teams needing additional testing support"
     ],
+    "keyFeatures": [
+      "Functional and regression testing",
+      "Cross-browser and responsive testing",
+      "API and integration testing",
+      "Bug reporting and fix verification"
+    ],
     "deliverables": [
       "Functional and regression testing",
       "Cross-browser testing",
@@ -236,7 +655,28 @@
       "Detailed bug and issue reports",
       "Fix verification and release testing"
     ],
-    "techStack": ["Playwright", "Postman", "Newman", "Manual Testing"],
+    "techStack": [
+      {
+        "name": "Playwright",
+        "color": "#2EAD33",
+        "faIcon": "fa-solid fa-vial"
+      },
+      {
+        "name": "Postman",
+        "color": "#FF6C37",
+        "faIcon": "fa-solid fa-paper-plane"
+      },
+      {
+        "name": "Newman",
+        "color": "#FF6C37",
+        "faIcon": "fa-solid fa-flask"
+      },
+      {
+        "name": "Manual Testing",
+        "color": "#4F46E5",
+        "faIcon": "fa-solid fa-check-double"
+      }
+    ],
     "timeline": "1 – 4 weeks",
     "startingPrice": "From ₹15,000"
   },
@@ -253,10 +693,16 @@
     "tagline": "Improve, maintain, and move your existing product forward.",
     "overview": "Existing projects often need focused technical support, whether development has slowed down, issues have accumulated, or new functionality is required. We review the current application, understand its structure, and provide targeted improvements without unnecessarily rebuilding what already works.",
     "idealFor": [
+      "Existing applications needing improvements",
       "Projects paused during development",
-      "Applications with technical issues",
-      "Codebases needing cleanup or improvements",
+      "Codebases requiring maintenance or refactoring",
       "Businesses needing ongoing development support"
+    ],
+    "keyFeatures": [
+      "Bug fixes and stability improvements",
+      "New feature development",
+      "Performance optimisation and code improvements",
+      "Ongoing maintenance and technical support"
     ],
     "deliverables": [
       "Code review and technical assessment",
@@ -266,7 +712,63 @@
       "Code refactoring and cleanup",
       "Ongoing maintenance support"
     ],
-    "techStack": ["Next.js", "React", "Node.js", "MySQL / MongoDB"],
+    "techStack": [
+      {
+        "name": "Next.js",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-n"
+      },
+      {
+        "name": "React",
+        "color": "#61DAFB",
+        "faIcon": "fa-brands fa-react"
+      },
+      {
+        "name": "Node.js",
+        "color": "#68A063",
+        "faIcon": "fa-brands fa-node-js"
+      },
+      {
+        "name": "Express.js",
+        "color": "#222222",
+        "faIcon": "fa-solid fa-server"
+      },
+      {
+        "name": "PHP",
+        "color": "#777BB4",
+        "faIcon": "fa-brands fa-php"
+      },
+      {
+        "name": "Laravel",
+        "color": "#FF2D20",
+        "faIcon": "fa-brands fa-laravel"
+      },
+      {
+        "name": "REST APIs",
+        "color": "#4F46E5",
+        "faIcon": "fa-solid fa-plug"
+      },
+      {
+        "name": "MySQL",
+        "color": "#00758F",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "MongoDB",
+        "color": "#4DB33D",
+        "faIcon": "fa-solid fa-leaf"
+      },
+      {
+        "name": "PostgreSQL",
+        "color": "#336791",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "Firebase",
+        "color": "#FFCA28",
+        "faIcon": "fa-solid fa-fire"
+      }
+    ],
     "timeline": "1 – 4 weeks (varies by scope)",
     "startingPrice": "From ₹15,000"
   }

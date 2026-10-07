@@ -44,7 +44,7 @@
       {
         "key": "mobile",
         "title": "Mobile Applications",
-        "subtitle": "Android & iOS solutions",
+        "subtitle": "Android solutions",
         "iconBg": "bg-[#ECFDF5]",
         "iconColor": "text-[#059669]",
         "icon": "phone",
@@ -87,52 +87,52 @@
       }
     ]
   },
- "services": {
-  "eyebrow": "✦ What We Offer",
-  "heading": "Services",
-  "headingHighlight": "built around your needs.",
-  "intro": "Every project is different, so we shape our services around your business requirements, goals, and scope. Choose the service you need or talk to us about a custom requirement.",
-  "counterSuffix": "Services",
-  "footerNote": "Not sure which service you need?",
-  "footerLinkLabel": "Let's talk",
-  "footerLinkHref": "/contact",
-  "discussCtaLabel": "Discuss This Service"
-},
- "faq": {
-  "eyebrow": "✦ FAQ",
-  "heading": "Common",
-  "headingHighlight": "questions.",
-  "intro": "Answers to common questions businesses have before starting a digital project with us.",
-  "items": [
-    {
-      "q": "How long does a project usually take?",
-      "a": "The timeline depends on the scope, features, and complexity of the project. A business website may take a few weeks, while e-commerce platforms and custom applications can require more time. We provide a project timeline after understanding your requirements."
-    },
-    {
-      "q": "Do you work with clients outside India?",
-      "a": "Yes. We can work with businesses outside India through remote communication, including email, messaging, and video calls. Project coordination and communication are agreed based on the needs of each engagement."
-    },
-    {
-      "q": "What do you need from us to get started?",
-      "a": "A clear understanding of what you want to build and the business problem or goal behind it is a good starting point. We then help define the scope, requirements, priorities, and next steps."
-    },
-    {
-      "q": "Do you provide support after launch?",
-      "a": "Yes. Support can include issue resolution, maintenance, updates, improvements, and new feature development. The scope and duration of post-launch support are discussed based on the project and your requirements."
-    },
-    {
-      "q": "Can you take over an existing project?",
-      "a": "Yes. We can review an existing codebase, understand the current structure and issues, and help with bug fixes, improvements, feature development, or continued maintenance."
-    },
-    {
-      "q": "How do project payments work?",
-      "a": "Payment terms depend on the project scope and engagement. For larger projects, payments can be structured around agreed milestones, while smaller projects may follow a simpler payment schedule. The payment terms are confirmed before development begins."
+  "services": {
+    "eyebrow": "✦ What We Offer",
+    "heading": "Services",
+    "headingHighlight": "built around your needs.",
+    "intro": "Every project is different, so we shape our services around your business requirements, goals, and scope. Choose the service you need or talk to us about a custom requirement.",
+    "counterSuffix": "Services",
+    "footerNote": "Not sure which service you need?",
+    "footerLinkLabel": "Let's talk",
+    "footerLinkHref": "/contact",
+    "discussCtaLabel": "Discuss This Service"
+  },
+  "faq": {
+    "eyebrow": "✦ FAQ",
+    "heading": "Common",
+    "headingHighlight": "questions.",
+    "intro": "Answers to common questions businesses have before starting a digital project with us.",
+    "items": [
+      {
+        "q": "How long does a project usually take?",
+        "a": "The timeline depends on the scope, features, and complexity of the project. A business website may take a few weeks, while e-commerce platforms and custom applications can require more time. We provide a project timeline after understanding your requirements."
+      },
+      {
+        "q": "How do we communicate during the project?",
+        "a": "We keep communication clear throughout the project using email, messaging, and video calls when required, with regular updates based on the project's scope and progress."
+      },
+      {
+        "q": "What do you need from us to get started?",
+        "a": "A clear understanding of what you want to build and the business problem or goal behind it is a good starting point. We then help define the scope, requirements, priorities, and next steps."
+      },
+      {
+        "q": "Do you provide support after launch?",
+        "a": "Yes. Support can include issue resolution, maintenance, updates, improvements, and new feature development. The scope and duration of post-launch support are discussed based on the project and your requirements."
+      },
+      {
+        "q": "Can you take over an existing project?",
+        "a": "Yes. We can review an existing codebase, understand the current structure and issues, and help with bug fixes, improvements, feature development, or continued maintenance."
+      },
+      {
+        "q": "How do project payments work?",
+        "a": "Payment terms depend on the project scope and engagement. For larger projects, payments can be structured around agreed milestones, while smaller projects may follow a simpler payment schedule. The payment terms are confirmed before development begins."
+      }
+    ],
+    "footerText": "Still have questions? Let's discuss your project.",
+    "footerCta": {
+      "label": "Get in Touch",
+      "href": "/contact"
     }
-  ],
-  "footerText": "Still have questions? Let's discuss your project.",
-  "footerCta": {
-    "label": "Get in Touch",
-    "href": "/contact"
   }
-}
 }
