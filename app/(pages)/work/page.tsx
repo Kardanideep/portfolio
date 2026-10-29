@@ -37,9 +37,13 @@ const accentMap: Record<
   },
 };
 
-/* ═══════════════════════════════════════════════════
-   PROJECT MODAL
-═══════════════════════════════════════════════════ */
+/* ── Project type badge colors ── */
+const projectTypeMap: Record<string, { bg: string; text: string }> = {
+  "Client Project": { bg: "bg-emerald-500/10", text: "text-emerald-600" },
+  "In-house Product": { bg: "bg-violet-500/10", text: "text-violet-600" },
+  "Portfolio Project": { bg: "bg-amber-500/10", text: "text-amber-600" },
+};
+
 /* ═══════════════════════════════════════════════════
    PROJECT MODAL
 ═══════════════════════════════════════════════════ */
@@ -55,7 +59,6 @@ function ProjectModal({
   const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
 
-  // Keep component mounted during exit animation
   useEffect(() => {
     if (project) {
       setShouldRender(true);
@@ -97,6 +100,7 @@ function ProjectModal({
 
   const theme = accentMap[project.accent] ?? accentMap.blue;
   const isOpen = isVisible && !isClosing;
+  const hasLive = Boolean(project.liveLink && project.liveLink.trim());
 
   return (
     <div
@@ -104,16 +108,14 @@ function ProjectModal({
       aria-modal="true"
       aria-labelledby="project-modal-title"
       className="fixed inset-0 z-[100] flex items-end justify-center overflow-y-auto sm:items-center"
-      style={{
-        perspective: "1200px",
-      }}
+      style={{ perspective: "1200px" }}
     >
       {/* Backdrop */}
       <button
         type="button"
         aria-label="Close modal"
         onClick={onClose}
-        className={`fixed inset-0 cursor-default bg-[#0B1F4D]/60 backdrop-blur-md transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none ${
+        className={`fixed inset-0 cursor-default bg-[#0B1F4D]/60 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none ${
           isOpen ? "opacity-100 backdrop-blur-md" : "opacity-0 backdrop-blur-0"
         }`}
       />
@@ -122,7 +124,7 @@ function ProjectModal({
       <div
         className={`relative my-0 w-full max-w-4xl overflow-hidden rounded-t-3xl border border-border-soft bg-surface shadow-[0_40px_100px_-30px_rgba(15,23,42,0.5)] transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none sm:my-8 sm:rounded-3xl ${
           isOpen
-            ? "translate-y-0 scale-100 opacity-100 rotate-x-0"
+            ? "translate-y-0 scale-100 opacity-100"
             : "translate-y-12 scale-[0.92] opacity-0"
         }`}
         style={{
@@ -133,7 +135,6 @@ function ProjectModal({
           transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
         }}
       >
-
         <div className="max-h-[92vh] overflow-y-auto sm:max-h-[90vh]">
           {/* Top: image */}
           <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-3xl bg-bg-soft sm:aspect-[16/9]">
@@ -145,7 +146,6 @@ function ProjectModal({
               }`}
             />
 
-            {/* Gradient overlay for legibility */}
             <div
               className={`pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent transition-opacity duration-500 ${
                 isOpen ? "opacity-20" : "opacity-0"
@@ -163,9 +163,9 @@ function ProjectModal({
                 {project.year}
               </span>
               <span
-                className={`rounded-full bg-blue-400 px-2.5 py-1 text-[11px] font-semibold text-white backdrop-blur-sm transition-all duration-500 sm:px-3 sm:py-1.5 sm:text-[11px] ${
+                className={`rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold backdrop-blur-sm transition-all duration-500 sm:px-3 sm:py-1.5 sm:text-[11px] ${theme.text} ${
                   isOpen
-                    ? "translate-y-0 opacity-90 delay-200"
+                    ? "translate-y-0 opacity-100 delay-200"
                     : "-translate-y-2 opacity-0"
                 }`}
               >
@@ -177,7 +177,7 @@ function ProjectModal({
               type="button"
               onClick={onClose}
               aria-label="Close"
-              className={`absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-text shadow-[0_10px_25px_-10px_rgba(15,23,42,0.4)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:rotate-90 sm:right-4 sm:top-4 sm:h-10 sm:w-10 ${
+              className={`absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-text shadow-[0_10px_25px_-10px_rgba(15,23,42,0.4)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:rotate-90 hover:bg-white sm:right-4 sm:top-4 sm:h-10 sm:w-10 ${
                 isOpen
                   ? "translate-y-0 opacity-100 delay-100"
                   : "-translate-y-2 opacity-0"
@@ -198,7 +198,7 @@ function ProjectModal({
             </button>
           </div>
 
-          {/* Body — staggered content reveal */}
+          {/* Body */}
           <div
             className={`p-4 xs:p-6 sm:p-8 md:p-10 transition-all duration-700 ${
               isOpen
@@ -214,6 +214,20 @@ function ProjectModal({
               <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]">
                 {project.tag}
               </span>
+              {project.projectType && (
+                <>
+                  <span className="h-3 w-px bg-border-soft" />
+                  <span
+                    className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${
+                      (projectTypeMap[project.projectType] ?? projectTypeMap["Portfolio Project"]).bg
+                    } ${
+                      (projectTypeMap[project.projectType] ?? projectTypeMap["Portfolio Project"]).text
+                    }`}
+                  >
+                    {project.projectType}
+                  </span>
+                </>
+              )}
             </div>
 
             <h2
@@ -224,64 +238,59 @@ function ProjectModal({
             </h2>
 
             {/* Meta grid */}
-            {(project.client ||
-              project.role ||
-              project.timeline ||
-              project.year) && (
-              <div
-                className={`mt-5 grid grid-cols-2 gap-4 border-y border-border-soft py-5 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] xs:mt-6 sm:mt-7 sm:grid-cols-4 sm:py-6 ${
-                  isOpen
-                    ? "translate-y-0 opacity-100 delay-[280ms]"
-                    : "translate-y-3 opacity-0"
-                }`}
-              >
-                {project.client && (
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
-                      {modal.clientLabel}
-                    </p>
-                    <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
-                      {project.client}
-                    </p>
-                  </div>
-                )}
+            <div
+              className={`mt-5 grid grid-cols-2 gap-4 border-y border-border-soft py-5 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] xs:mt-6 sm:mt-7 sm:grid-cols-4 sm:py-6 ${
+                isOpen
+                  ? "translate-y-0 opacity-100 delay-[280ms]"
+                  : "translate-y-3 opacity-0"
+              }`}
+            >
+              {project.client && (
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
+                    {modal.clientLabel}
+                  </p>
+                  <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
+                    {project.client}
+                  </p>
+                </div>
+              )}
 
-                {project.role && (
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
-                      {modal.roleLabel}
-                    </p>
-                    <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
-                      {project.role}
-                    </p>
-                  </div>
-                )}
+              {project.role && (
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
+                    {modal.roleLabel}
+                  </p>
+                  <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
+                    {project.role}
+                  </p>
+                </div>
+              )}
 
-                {project.timeline && (
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
-                      {modal.timelineLabel}
-                    </p>
-                    <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
-                      {project.timeline}
-                    </p>
-                  </div>
-                )}
+              {project.timeline && (
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
+                    {modal.timelineLabel}
+                  </p>
+                  <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
+                    {project.timeline}
+                  </p>
+                </div>
+              )}
 
-                {project.year && (
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
-                      {modal.yearLabel}
-                    </p>
-                    <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
-                      {project.year}
-                    </p>
-                  </div>
-                )}
-              </div>
-            )}
+              {project.year && (
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted xs:text-[11px] sm:text-[10px]">
+                    {modal.yearLabel}
+                  </p>
+                  <p className="mt-1 text-[14px] font-semibold text-text xs:text-[15px] sm:text-sm">
+                    {project.year}
+                  </p>
+                </div>
+              )}
+            </div>
 
-            {/* Overview */}
+                     {/* Overview */}
             <div
               className={`mt-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-8 ${
                 isOpen
@@ -297,6 +306,26 @@ function ProjectModal({
               </p>
             </div>
 
+
+            {/* Objective (new) */}
+            {project.objective && (
+              <div
+                className={`mt-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-8 ${
+                  isOpen
+                    ? "translate-y-0 opacity-100 delay-[320ms]"
+                    : "translate-y-3 opacity-0"
+                }`}
+              >
+                <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[12px] sm:text-[11px]">
+                  Project Objective
+                </p>
+                <p className="mt-3 text-[15px] leading-6 text-text xs:text-[16px] xs:leading-7 sm:text-base sm:leading-7 md:text-[17px] md:leading-8">
+                  {project.objective}
+                </p>
+              </div>
+            )}
+
+   
             {/* Two-column: features + highlights */}
             <div
               className={`mt-7 grid gap-7 border-t border-border-soft pt-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] xs:gap-8 sm:pt-8 md:grid-cols-2 md:gap-12 ${
@@ -307,7 +336,7 @@ function ProjectModal({
             >
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[12px] sm:text-[11px]">
-                  {modal.keyFeaturesLabel}
+                 What I Built
                 </p>
                 <ul className="mt-4 space-y-3">
                   {project.features.map((f, i) => (
@@ -319,9 +348,7 @@ function ProjectModal({
                           : "-translate-x-3 opacity-0"
                       }`}
                       style={{
-                        transitionDelay: isOpen
-                          ? `${420 + i * 60}ms`
-                          : "0ms",
+                        transitionDelay: isOpen ? `${420 + i * 60}ms` : "0ms",
                       }}
                     >
                       <span className="mt-0.5 w-6 shrink-0 font-mono text-[12px] text-[#2563EB] xs:text-[13px] sm:text-xs">
@@ -335,7 +362,7 @@ function ProjectModal({
 
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[12px] sm:text-[11px]">
-                  {modal.highlightsLabel}
+                  Project Snapshot
                 </p>
                 <ul className="mt-4 space-y-4">
                   {project.highlights.map((h, i) => (
@@ -347,12 +374,10 @@ function ProjectModal({
                           : "translate-x-3 opacity-0"
                       }`}
                       style={{
-                        transitionDelay: isOpen
-                          ? `${420 + i * 80}ms`
-                          : "0ms",
+                        transitionDelay: isOpen ? `${420 + i * 80}ms` : "0ms",
                       }}
                     >
-                      <span className="text-xl font-bold tracking-[-0.02em] text-text xs:text-2xl sm:text-3xl">
+                      <span className="text-[15px] font-bold tracking-[-0.02em] text-text xs:text-base sm:text-lg">
                         {h.value}
                       </span>
                       <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[10px]">
@@ -364,6 +389,7 @@ function ProjectModal({
               </div>
             </div>
 
+          
             {/* Stack */}
             <div
               className={`mt-7 border-t border-border-soft pt-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-8 ${
@@ -373,7 +399,7 @@ function ProjectModal({
               }`}
             >
               <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[12px] sm:text-[11px]">
-                {modal.techStackLabel}
+                 Technology Stack &amp; Integrations
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {project.stack.map((tech, i) => (
@@ -385,9 +411,7 @@ function ProjectModal({
                         : "translate-y-2 scale-90 opacity-0"
                     }`}
                     style={{
-                      transitionDelay: isOpen
-                        ? `${520 + i * 40}ms`
-                        : "0ms",
+                      transitionDelay: isOpen ? `${520 + i * 40}ms` : "0ms",
                     }}
                   >
                     {tech}
@@ -395,6 +419,25 @@ function ProjectModal({
                 ))}
               </div>
             </div>
+
+              {/* Deliverable (new) */}
+            {project.deliverable && (
+              <div
+                className={`mt-7 border-t border-border-soft pt-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-8 ${
+                  isOpen
+                    ? "translate-y-0 opacity-100 delay-[480ms]"
+                    : "translate-y-3 opacity-0"
+                }`}
+              >
+                <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted xs:text-[12px] sm:text-[11px]">
+                  Deliverable
+                </p>
+                <p className="mt-3 text-[14px] leading-6 text-text xs:text-[15px] xs:leading-7 sm:text-sm sm:leading-7">
+                  {project.deliverable}
+                </p>
+              </div>
+            )}
+
 
             {/* Footer actions */}
             <div
@@ -404,7 +447,7 @@ function ProjectModal({
                   : "translate-y-3 opacity-0"
               }`}
             >
-              {project.liveLink ? (
+              {hasLive ? (
                 <a
                   href={project.liveLink}
                   target="_blank"
@@ -456,7 +499,9 @@ function ProjectCard({
   onOpen: () => void;
 }) {
   const theme = accentMap[project.accent] ?? accentMap.blue;
-  const hasLink = Boolean(project.liveLink);
+  const hasLink = Boolean(project.liveLink && project.liveLink.trim());
+  const typeStyle =
+    projectTypeMap[project.projectType] ?? projectTypeMap["Portfolio Project"];
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border-soft bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/30 hover:shadow-[0_20px_50px_-25px_rgba(15,23,42,0.2)] xs:rounded-2xl sm:rounded-3xl">
@@ -486,8 +531,10 @@ function ProjectCard({
           <span className="font-mono text-[12px] text-muted xs:text-[13px] sm:text-[11px]">
             {project.n}
           </span>
-          <span className="text-[10px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[11px] sm:text-[10px]">
-            {project.tag}
+          <span
+            className={`rounded-full px-2 py-0.5 text-[9px] font-semibold xs:text-[10px] sm:text-[9px] ${typeStyle.bg} ${typeStyle.text}`}
+          >
+            {project.projectType}
           </span>
         </div>
 
@@ -505,7 +552,7 @@ function ProjectCard({
 
         {/* Stack */}
         <div className="my-4 flex flex-wrap gap-1.5">
-          {project.stack.map((tech) => (
+          {project.stack.slice(0, 5).map((tech) => (
             <span
               key={tech}
               className="rounded-full border border-border-soft bg-bg px-2 py-0.5 text-[11px] text-muted xs:text-[12px] sm:text-[10px]"
@@ -513,6 +560,11 @@ function ProjectCard({
               {tech}
             </span>
           ))}
+          {project.stack.length > 5 && (
+            <span className="rounded-full border border-border-soft bg-bg px-2 py-0.5 text-[11px] text-muted xs:text-[12px] sm:text-[10px]">
+              +{project.stack.length - 5}
+            </span>
+          )}
         </div>
 
         {/* Footer actions */}
@@ -572,7 +624,7 @@ export default function WorkPage() {
     window.setTimeout(() => {
       setOpenProject(null);
       setIsModalClosing(false);
-    }, 300);
+    }, 450);
   };
 
   return (

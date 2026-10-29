@@ -61,6 +61,24 @@ function LinkedInIcon({ className }: { className?: string }) {
   );
 }
 
+function ChevronDownIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
+
 /* Helper: resolve CTA href — supports "whatsapp" keyword */
 function resolveHref(href: string) {
   return href === "whatsapp" ? WHATSAPP_URL : href;
@@ -74,6 +92,7 @@ export default function ContactPage() {
     email: "",
     phone: "",
     project: "",
+    budget: "",
     message: "",
     website: "",
   });
@@ -103,6 +122,7 @@ export default function ContactPage() {
         email: "",
         phone: "",
         project: "",
+        budget: "",
         message: "",
         website: "",
       });
@@ -543,6 +563,7 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {/* Service dropdown */}
                   <div className="flex flex-col gap-1.5">
                     <label
                       htmlFor="project"
@@ -550,22 +571,78 @@ export default function ContactPage() {
                     >
                       {contact.form.projectLabel}
                     </label>
-                    <input
-                      id="project"
-                      type="text"
-                      name="project"
-                      required
-                      placeholder={contact.form.projectPlaceholder}
-                      value={form.project}
+                    <div className="relative">
+                      <select
+                        id="project"
+                        name="project"
+                        required
+                        value={form.project}
+                        onChange={(e) =>
+                          setForm((current) => ({
+                            ...current,
+                            project: e.target.value,
+                          }))
+                        }
+                        className={`w-full cursor-pointer appearance-none rounded-xl border border-border-soft bg-surface px-4 py-3 pr-10 text-[14px] outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 xs:text-[15px] sm:py-3.5 sm:text-sm ${
+                          form.project ? "text-text" : "text-muted"
+                        }`}
+                      >
+                        {contact.form.projectOptions.map((opt) => (
+                          <option
+                            key={opt.value || "placeholder"}
+                            value={opt.value}
+                            disabled={opt.disabled}
+                          >
+                            {opt.label}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDownIcon className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Budget (optional) */}
+                <div className="mt-3 flex flex-col gap-1.5">
+                  <label
+                    htmlFor="budget"
+                    className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.15em] text-muted xs:text-[12px] sm:text-[11px]"
+                  >
+                    {contact.form.budgetLabel}
+                    <span className="rounded-full bg-muted/10 px-2 py-0.5 text-[9px] normal-case tracking-normal text-muted">
+                      optional
+                    </span>
+                  </label>
+                  <div className="relative">
+                    <select
+                      id="budget"
+                      name="budget"
+                      value={form.budget}
                       onChange={(e) =>
                         setForm((current) => ({
                           ...current,
-                          project: e.target.value,
+                          budget: e.target.value,
                         }))
                       }
-                      className="w-full rounded-xl border border-border-soft bg-surface px-4 py-3 text-[14px] text-text placeholder-muted outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 xs:text-[15px] sm:py-3.5 sm:text-sm"
-                    />
+                      className={`w-full cursor-pointer appearance-none rounded-xl border border-border-soft bg-surface px-4 py-3 pr-10 text-[14px] outline-none transition duration-300 focus:border-[#2563EB] focus:ring-4 focus:ring-[#2563EB]/10 xs:text-[15px] sm:py-3.5 sm:text-sm ${
+                        form.budget ? "text-text" : "text-muted"
+                      }`}
+                    >
+                      {contact.form.budgetOptions.map((opt) => (
+                        <option
+                          key={opt.value || "placeholder"}
+                          value={opt.value}
+                          disabled={opt.disabled}
+                        >
+                          {opt.label}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDownIcon className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
                   </div>
+                  <p className="text-[11px] text-muted xs:text-[12px]">
+                    {contact.form.budgetHelper}
+                  </p>
                 </div>
 
                 {/* Message */}
@@ -579,7 +656,7 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     name="message"
-                    rows={7}
+                    rows={4}
                     required
                     placeholder={contact.form.messagePlaceholder}
                     value={form.message}

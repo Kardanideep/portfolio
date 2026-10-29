@@ -2,9 +2,10 @@
   {
     "n": "01",
     "title": "LabourFlow",
-    "tag": "Business Website",
+    "tag": "SaaS Product Landing Page",
     "short": "LF",
-    "desc": "A modern business website for LabourFlow, presenting its compliance-focused platform for labour law consultants with a clear product message and waitlist experience.",
+    "projectType": "Client Project",
+    "desc": "A product-focused landing page for LabourFlow, introducing its labour compliance platform, explaining its value to labour law consultants, and encouraging visitors to request launch updates.",
     "stack": [
       "Next.js",
       "React",
@@ -13,8 +14,7 @@
       "Node.js",
       "MongoDB",
       "Email SMTP",
-      "REST APIs",
-      "Responsive Design"
+      "REST APIs"
     ],
     "accent": "blue",
     "liveLink": "https://www.labourflow.in",
@@ -22,38 +22,41 @@
     "year": "2026",
     "client": "LabourFlow",
     "role": "Website design & development",
-    "timeline": "1 weeks",
-    "category": "Business Website",
-    "overview": "A modern landing website created for LabourFlow to introduce its compliance-focused platform for labour law consultants. The website communicates the product concept, highlights its core value proposition, presents key business metrics, and encourages visitors to join the waitlist.",
+    "timeline": "1 week",
+    "category": "SaaS Product Landing Page",
+    "objective": "Introduce LabourFlow to labour law consultants, communicate the platform's value proposition, and provide a clear way for interested visitors to request launch updates.",
+    "overview": "A product-focused landing website for LabourFlow, a platform designed for labour law consultants. The website explains the product concept, presents its compliance-focused capabilities, and guides interested visitors toward the launch-update signup.",
     "features": [
-      "Modern product-focused landing page",
-      "Clear LabourFlow value proposition",
-      "Compliance-focused messaging",
-      "Waitlist and email capture",
-      "Responsive design across devices",
+      "Product-focused landing page structure",
+      "Clear value proposition for labour law consultants",
+      "Compliance-focused product messaging",
+      "Waitlist and email capture functionality",
+      "Responsive layouts across devices",
       "Product metrics and trust elements"
     ],
     "highlights": [
       {
-        "label": "Website type",
-        "value": "Business website"
+        "label": "Primary Goal",
+        "value": "Explain the platform to consultants"
       },
       {
-        "label": "Development",
-        "value": "Design + development"
+        "label": "Main Deliverable",
+        "value": "Responsive product landing page"
       },
       {
-        "label": "Focus",
-        "value": "Product positioning"
+        "label": "Primary Action",
+        "value": "Request launch updates"
       }
-    ]
+    ],
+    "deliverable": "A responsive marketing website that presents LabourFlow's product concept and capabilities and gives prospective users a clear path to request launch updates."
   },
   {
     "n": "02",
     "title": "KDM Associates",
     "tag": "Business Website",
     "short": "KDM",
-    "desc": "A professional business website designed to present services clearly, strengthen the company's digital presence, and make it easier for potential customers to get in touch.",
+    "projectType": "Client Project",
+    "desc": "A professional services website built to present KDM Associates' offerings clearly, establish a consistent online presence, and help prospective customers make contact.",
     "stack": [
       "React",
       "JavaScript",
@@ -70,39 +73,42 @@
     "img": "/images/projects/kdm-associates.png",
     "year": "2026",
     "client": "KDM Associates",
-    "role": "Design + development",
+    "role": "Design & development",
     "timeline": "1.5 weeks",
     "category": "Business Website",
-    "overview": "A brand-focused website developed for a professional services business. The project focused on presenting the company and its services clearly, creating a trustworthy online presence, and providing straightforward ways for visitors to make contact.",
+    "objective": "Present KDM Associates' services and professional identity clearly while making it straightforward for prospective customers to understand the offering and get in touch.",
+    "overview": "A business website developed for KDM Associates, a professional services firm. The website organises service information, presents a consistent brand experience, and provides clear contact and enquiry paths for prospective customers.",
     "features": [
       "Custom brand-aligned interface",
       "Structured service presentation",
       "Contact and enquiry functionality",
-      "Strong on-page SEO setup",
+      "On-page SEO setup",
       "Responsive layouts across devices",
       "Analytics and tracking integration"
     ],
     "highlights": [
       {
-        "label": "Project type",
-        "value": "Company website"
+        "label": "Primary Goal",
+        "value": "Present services clearly"
       },
       {
-        "label": "Delivery",
-        "value": "Design + development"
+        "label": "Main Deliverable",
+        "value": "Professional business website"
       },
       {
-        "label": "Focus",
-        "value": "Professional presence"
+        "label": "Visitor Action",
+        "value": "Make a business enquiry"
       }
-    ]
+    ],
+    "deliverable": "A professional business website with structured service information, responsive page layouts, and contact options designed to help prospective customers connect with the business."
   },
   {
     "n": "03",
     "title": "Deep Blogs",
     "tag": "Content Platform",
     "short": "DB",
-    "desc": "A modern content platform created for publishing and organizing articles with a structured content experience and responsive interface for readers.",
+    "projectType": "In-house Product",
+    "desc": "A full-stack content platform for publishing, organising, and discovering articles, with content management functionality and a responsive reading experience.",
     "stack": [
       "Next.js",
       "React",
@@ -123,36 +129,39 @@
     "role": "Full-stack development",
     "timeline": "2 weeks",
     "category": "Content Platform",
-    "overview": "A modern content platform focused on publishing, organizing, and presenting articles through a clean reading experience. The project includes content management functionality, categorization, search, and responsive layouts.",
+    "objective": "Create a structured publishing experience that allows content to be managed efficiently and helps readers browse, search, and discover articles.",
+    "overview": "Deep Blogs is a full-stack content platform for publishing, organising, and presenting articles. The application combines a reader-facing content experience with administrative workflows for managing articles and organising content.",
     "features": [
       "Article creation and editing",
-      "Category and tag organization",
-      "Content search",
-      "Structured reading experience",
-      "Admin content management",
-      "Responsive design"
+      "Category and tag organisation",
+      "Content search functionality",
+      "Structured article reading experience",
+      "Administrative content management",
+      "Responsive layouts across devices"
     ],
     "highlights": [
       {
-        "label": "Project type",
-        "value": "Content Platform"
+        "label": "Core Workflow",
+        "value": "Create and publish articles"
+      },
+      {
+        "label": "Content Discovery",
+        "value": "Categories, tags, and search"
       },
       {
         "label": "Platform",
-        "value": "Web application"
-      },
-      {
-        "label": "Focus",
-        "value": "Content publishing"
+        "value": "Full-stack web application"
       }
-    ]
+    ],
+    "deliverable": "A full-stack content platform with article publishing, content organisation, search, and administrative management functionality."
   },
   {
     "n": "04",
     "title": "Quick Cart",
     "tag": "E-Commerce",
     "short": "QC",
-    "desc": "A full-stack e-commerce platform featuring product browsing, authentication, shopping cart management, and a structured online ordering experience.",
+    "projectType": "Client Project",
+    "desc": "A full-stack e-commerce application covering product discovery, customer accounts, shopping cart management, checkout, and order administration.",
     "stack": [
       "React",
       "JavaScript",
@@ -171,85 +180,41 @@
     "year": "2025",
     "role": "Full-stack development",
     "timeline": "4 weeks",
-    "category": "E-Commerce",
-    "overview": "A full-stack e-commerce platform designed to provide a complete online shopping experience, including product discovery, customer accounts, cart management, checkout, order history, and administrative product and order management.",
+    "category": "E-Commerce Platform",
+    "objective": "Build an online shopping experience that connects product discovery, customer account management, cart operations, checkout, and administrative workflows.",
+    "overview": "Quick Cart is a full-stack e-commerce platform built around the main workflows of an online store. It brings together product browsing, customer accounts, cart management, checkout, order history, and administrative product and order management.",
     "features": [
       "Product catalogue with search and filters",
-      "User authentication and profiles",
+      "User authentication and profile management",
       "Shopping cart management",
       "Checkout and order workflow",
       "Order history",
-      "Admin product and order management"
+      "Administrative product and order management"
     ],
     "highlights": [
       {
-        "label": "Project type",
-        "value": "E-Commerce Platform"
+        "label": "Shopping Experience",
+        "value": "Product discovery and checkout"
       },
       {
-        "label": "Platform",
-        "value": "E-commerce web app"
+        "label": "Customer Features",
+        "value": "Accounts, cart, and order history"
       },
       {
-        "label": "Focus",
-        "value": "Online shopping"
+        "label": "Admin Workflows",
+        "value": "Product and order management"
       }
-    ]
+    ],
+    "deliverable": "A full-stack e-commerce application combining customer-facing shopping functionality with administrative product and order management."
   },
+
   {
     "n": "05",
-    "title": "iDiscuss",
-    "tag": "Community Platform",
-    "short": "iD",
-    "desc": "A real-time coding discussion platform designed for developers to share questions, exchange ideas, and participate in live conversations.",
-    "stack": [
-      "React",
-      "JavaScript",
-      "Bootstrap",
-      "Node.js",
-      "Express.js",
-      "Socket.io",
-      "REST APIs",
-      "MongoDB",
-      "JWT"
-    ],
-    "accent": "blue",
-    "liveLink": "",
-    "img": "/images/projects/idiscuss.png",
-    "year": "2025",
-    "role": "Full-stack development",
-    "timeline": "2 weeks",
-    "category": "Community Platform",
-    "overview": "A real-time community platform designed for developer discussions and interactive communication. The application combines discussion threads with real-time updates to create an engaging experience for participants.",
-    "features": [
-      "Real-time communication with Socket.io",
-      "Question and discussion threads",
-      "User profiles",
-      "Topic categorization",
-      "Real-time activity updates",
-      "Code snippet support"
-    ],
-    "highlights": [
-      {
-        "label": "Project type",
-        "value": "Community Platform"
-      },
-      {
-        "label": "Core technology",
-        "value": "WebSockets"
-      },
-      {
-        "label": "Focus",
-        "value": "Developer community"
-      }
-    ]
-  },
-  {
-    "n": "06",
     "title": "Wanderlust",
     "tag": "Travel Platform",
     "short": "W",
-    "desc": "A travel and property listing platform designed to help users explore properties, filter listings, and move through a structured booking experience.",
+    "projectType": "Client Project",
+    "desc": "A travel and property listing application for discovering properties, filtering listings, managing properties, and exploring booking-related workflows.",
     "stack": [
       "React",
       "JavaScript",
@@ -268,28 +233,81 @@
     "role": "Full-stack development",
     "timeline": "3 weeks",
     "category": "Travel Platform",
-    "overview": "A travel and property listing platform focused on property discovery and booking-related workflows. The project includes listing management, search and filtering, user accounts, booking flows, image management, and property administration through a responsive interface.",
+    "objective": "Develop a travel and property listing experience that helps users discover properties, explore listing details, and move through booking-related workflows.",
+    "overview": "Wanderlust is a full-stack travel and property listing platform focused on property discovery and booking-related workflows. It combines listing management, search and filtering, user accounts, booking functionality, image management, and property administration in a responsive web experience.",
     "features": [
       "Property listings with image galleries",
       "Location-based search and filters",
       "Date-based booking workflow",
-      "User accounts and saved listings",
-      "Property management dashboard",
-      "Responsive browsing experience"
+      "User account functionality",
+      "Property listing management",
+      "Responsive property browsing experience"
     ],
     "highlights": [
       {
-        "label": "Project type",
-        "value": "Travel Platform"
+        "label": "Discovery",
+        "value": "Property listings and filters"
+      },
+      {
+        "label": "Booking Workflow",
+        "value": "Date-based booking functionality"
+      },
+      {
+        "label": "Management",
+        "value": "Property listing administration"
+      }
+    ],
+    "deliverable": "A full-stack travel and property listing application with search, listing management, user functionality, and booking-related workflows."
+  },
+  {
+    "n": "06",
+    "title": "iDiscuss",
+    "tag": "Community Platform",
+    "short": "iD",
+    "projectType": "Portfolio Project",
+    "desc": "A developer discussion platform combining topic-based questions, code sharing, user profiles, and real-time communication using Socket.io.",
+    "stack": [
+      "React",
+      "JavaScript",
+      "Bootstrap",
+      "Node.js",
+      "Express.js",
+      "Socket.io",
+      "REST APIs",
+      "MongoDB",
+      "JWT"
+    ],
+    "accent": "blue",
+    "liveLink": "",
+    "img": "/images/projects/idiscuss.png",
+    "year": "2025",
+    "role": "Full-stack development",
+    "timeline": "2 weeks",
+    "category": "Community Platform",
+    "objective": "Create a community experience where developers can participate in discussions, share questions and code, and communicate through real-time features.",
+    "overview": "iDiscuss is a full-stack community platform designed for developer discussions and interactive communication. It combines topic-based discussion features with real-time updates to support a more interactive experience for participants.",
+    "features": [
+      "Real-time communication using Socket.io",
+      "Question and discussion threads",
+      "User profile functionality",
+      "Topic categorisation",
+      "Real-time activity updates",
+      "Code snippet support"
+    ],
+    "highlights": [
+      {
+        "label": "Core Experience",
+        "value": "Developer discussions"
+      },
+      {
+        "label": "Communication",
+        "value": "Real-time features with Socket.io"
       },
       {
         "label": "Platform",
-        "value": "Travel web app"
-      },
-      {
-        "label": "Focus",
-        "value": "Property discovery"
+        "value": "Full-stack community application"
       }
-    ]
+    ],
+    "deliverable": "A community web application combining discussion workflows, user features, and real-time communication capabilities."
   }
 ]

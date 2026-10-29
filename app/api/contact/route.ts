@@ -5,6 +5,7 @@ type ContactPayload = {
   name?: string;
   email?: string;
   project?: string;
+  budget?: string;
   message?: string;
   website?: string;
   phone?: string;
@@ -14,6 +15,31 @@ type ContactPayload = {
 const BRAND_NAME = "Your Name";
 const BRAND_COLOR = "#2563EB";
 
+/* ── Budget label map (matches contact-page.json) ──── */
+const BUDGET_LABELS: Record<string, string> = {
+  "under-25k": "Under ₹25,000",
+  "25k-50k": "₹25,000 – ₹50,000",
+  "50k-1l": "₹50,000 – ₹1,00,000",
+  "1l-3l": "₹1,00,000 – ₹3,00,000",
+  "3l-plus": "₹3,00,000+",
+  "not-sure": "Not sure yet",
+};
+
+/* ── Service label map (matches contact-page.json) ─── */
+const SERVICE_LABELS: Record<string, string> = {
+  website: "Website",
+  ecommerce: "E-commerce",
+  "custom-app": "Custom App",
+  "ai-integration": "AI Integration",
+  "mobile-app": "Mobile App",
+  other: "Other",
+};
+
+function labelFor(value: string | undefined, map: Record<string, string>) {
+  if (!value) return "Not specified";
+  return map[value] ?? value; // fall back to raw value if unknown
+}
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as ContactPayload;
@@ -21,6 +47,7 @@ export async function POST(request: Request) {
     const name = body.name?.trim();
     const email = body.email?.trim();
     const project = body.project?.trim();
+    const budget = body.budget?.trim();
     const message = body.message?.trim();
     const website = body.website?.trim();
     const phone = body.phone?.trim();
@@ -34,7 +61,7 @@ export async function POST(request: Request) {
     }
 
     /* ── Validation ────────────────────────────────── */
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !project) {
       return NextResponse.json(
         { message: "Please complete all required fields." },
         { status: 400 },
@@ -74,12 +101,16 @@ export async function POST(request: Request) {
       },
     });
 
+    /* ── Resolve human-readable labels ─────────────── */
+    const projectLabel = labelFor(project, SERVICE_LABELS);
+    const budgetLabel = labelFor(budget, BUDGET_LABELS);
+
     /* ── Send email to you (site owner) ────────────── */
     const ownerMail = {
       from: `"${BRAND_NAME} — Contact Form" <${process.env.SMTP_USER}>`,
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: email,
-      subject: `New enquiry from ${name}`,
+      subject: `New enquiry from ${name} — ${projectLabel}`,
       text: [
         `New portfolio enquiry`,
         `───────────────────────`,
@@ -87,7 +118,8 @@ export async function POST(request: Request) {
         `Name:    ${name}`,
         `Email:   ${email}`,
         `Phone:   ${phone || "Not provided"}`,
-        `Project: ${project || "Not specified"}`,
+        `Service: ${projectLabel}`,
+        `Budget:  ${budgetLabel}`,
         ``,
         `Message:`,
         `───────────────────────`,
@@ -96,7 +128,14 @@ export async function POST(request: Request) {
         `───────────────────────`,
         `Reply directly to this email to respond to ${name}.`,
       ].join("\n"),
-      html: buildOwnerEmail({ name, email, phone, project, message }),
+      html: buildOwnerEmail({
+        name,
+        email,
+        phone,
+        project: projectLabel,
+        budget: budgetLabel,
+        message,
+      }),
     };
 
     await transporter.sendMail(ownerMail);
@@ -124,12 +163,14 @@ function buildOwnerEmail({
   email,
   phone,
   project,
+  budget,
   message,
 }: {
   name: string;
   email: string;
   phone?: string;
   project?: string;
+  budget?: string;
   message: string;
 }) {
   return `
@@ -155,6 +196,9 @@ function buildOwnerEmail({
               <h1 style="margin:8px 0 0;font-size:22px;font-weight:600;color:#ffffff;line-height:1.3;">
                 ${escapeHtml(name)} just reached out
               </h1>
+              <p style="margin:8px 0 0;font-size:13px;color:rgba(255,255,255,0.85);">
+                ${escapeHtml(project || "Service not specified")}${budget && budget !== "Not specified" ? ` · ${escapeHtml(budget)}` : ""}
+              </p>
             </td>
           </tr>
 
@@ -184,8 +228,20 @@ function buildOwnerEmail({
                 </tr>
                 <tr>
                   <td style="padding:10px 0;border-bottom:1px solid #eef0f3;">
-                    <p style="margin:0;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6b7280;font-weight:600;">Project</p>
+                    <p style="margin:0;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6b7280;font-weight:600;">Service</p>
                     <p style="margin:4px 0 0;font-size:15px;font-weight:600;color:#0F1117;">${escapeHtml(project || "Not specified")}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:10px 0;border-bottom:1px solid #eef0f3;">
+                    <p style="margin:0;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6b7280;font-weight:600;">Budget</p>
+                    <p style="margin:4px 0 0;font-size:15px;font-weight:600;color:#0F1117;">
+                      ${
+                        budget && budget !== "Not specified"
+                          ? `<span style="display:inline-block;background:${BRAND_COLOR}1A;color:${BRAND_COLOR};padding:3px 10px;border-radius:999px;font-size:13px;">${escapeHtml(budget)}</span>`
+                          : `<span style="color:#9ca3af;font-weight:500;">Not specified</span>`
+                      }
+                    </p>
                   </td>
                 </tr>
               </table>

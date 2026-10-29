@@ -46,7 +46,7 @@ export default function IndustriesPage() {
                         </p>
                     </div>
 
-                    <h1 className="mt-4 text-[2rem] font-bold leading-[1.05] tracking-[-0.03em] text-[#0B1F4D] xs:text-[2.25rem] xs:leading-[1.02] sm:mt-5 sm:text-[2.75rem] sm:leading-[1] sm:tracking-[-0.035em] md:text-[3.25rem] lg:text-[4rem]">
+                    <h1 className="mt-4 text-[2rem] font-bold leading-[1.05] tracking-[-0.03em] text-[#0B1F4D] xs:text-[2.25rem] xs:leading-[1.02] sm:mt-5 sm:text-[2.75rem] sm:leading-[1] sm:tracking-[-0.035em] md:text-[3.25rem] lg:text-[3.50rem]">
                         {hero.headingLine1}{" "}
                         <span className="relative inline-block">
                             <span className="relative z-10 bg-gradient-to-r from-[#2563EB] via-[#4F46E5] to-[#7C3AED] bg-clip-text text-transparent">

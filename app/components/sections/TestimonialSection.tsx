@@ -128,7 +128,7 @@ export default function TestimonialSection() {
           </h2>
 
           <p className="mt-2 text-[15px] leading-6 text-muted xs:text-[15.5px] xs:leading-[1.7] sm:text-[17px] sm:leading-8">
-            A few words from clients I&apos;ve worked with — from early-stage
+            Feedback from clients and collaborators — from early-stage
             founders to established teams shipping real products.
           </p>
         </div>

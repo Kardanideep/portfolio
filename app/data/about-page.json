@@ -71,8 +71,8 @@
     "stats": [
       {
         "value": "09",
-        "suffix": "+",
-        "label": "Services",
+        "suffix": "",
+        "label": "Service Areas",
         "icon": "briefcase"
       },
       {
@@ -84,13 +84,13 @@
       {
         "value": "04",
         "suffix": "",
-        "label": "Project Stages",
+        "label": "stage delivery process",
         "icon": "chart"
       },
       {
-  "value": "01",
+  "value": "One",
   "suffix": "",
-  "label": "Dedicated Support",
+  "label": "point of contact",
   "icon": "headset"
 }
     ]

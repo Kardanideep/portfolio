@@ -5,7 +5,7 @@
     "introBody": "We help businesses build professional websites, e-commerce stores, and custom web applications that strengthen their online presence, build customer trust, and simplify everyday work.",
     "badgeText": "Your Idea. Our Expertise.",
     "primaryCta": {
-      "label": "Start a Project",
+      "label": "Discuss Your Project",
       "href": "/contact"
     },
     "secondaryCta": {
@@ -337,23 +337,20 @@
     "ctaHref": "/contact",
     "secondaryLabel": "See Our Work",
     "secondaryHref": "/work",
-    "stats": [
-      {
-        "value": "09",
-        "suffix": "+",
-        "label": "Core solution areas"
-      },
-      {
-        "value": "01",
-        "suffix": "",
-        "label": "Dedicated technology partner"
-      },
-      {
-        "value": "360",
-        "suffix": "°",
-        "label": "Project support"
-      }
-    ],
+     "stats": [
+    {
+      "label": "10+ Projects built",
+      "icon": "rocket"
+    },
+    {
+      "label": "One direct point of contact",
+      "icon": "user-tie"
+    },
+    {
+      "label": "Planning to launch and support",
+      "icon": "shield-halved"
+    }
+  ],
     "values": [
       {
         "n": "01",
