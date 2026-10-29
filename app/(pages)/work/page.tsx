@@ -506,12 +506,12 @@ function ProjectCard({
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border-soft bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/30 hover:shadow-[0_20px_50px_-25px_rgba(15,23,42,0.2)] xs:rounded-2xl sm:rounded-3xl">
       {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-bg-soft">
+      <div className="relative aspect-[4/3] m-5  overflow-hidden ">
         <img
           src={project.img}
           alt={project.title}
           loading="lazy"
-          className="h-full w-full object-fit transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+          className="h-full w-full border border-border-soft rounded-xl object-fit transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
         />
 
         <span className="absolute left-3 top-3 rounded-full bg-black/60 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm xs:text-[11px] sm:text-[10px]">
