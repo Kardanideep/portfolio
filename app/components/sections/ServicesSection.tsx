@@ -9,7 +9,7 @@ const EASE = "ease-[cubic-bezier(0.22,1,0.36,1)]";
 
 export default function ServicesSection() {
   const services = home.services;
-  const SERVICES = servicesItems.slice(0, 6);
+  const SERVICES = servicesItems.slice(0, 7);
   const [active, setActive] = useState(0);
 
   const columns = SERVICES.map((_, i) => (i === active ? "5fr" : "1fr")).join(" ");

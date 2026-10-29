@@ -107,7 +107,7 @@ export default function AboutPage() {
             <Header />
 
             {/* ═══ HERO ═══ */}
-            <section className="relative isolate overflow-hidden border-b border-border-soft bg-surface px-4 py-12 xs:px-5 xs:py-14 sm:px-6 sm:py-15 md:px-8 md:py-15 lg:px-10 lg:py-15">
+            <section className="relative isolate overflow-hidden border-b border-border-soft  px-4 py-12 xs:px-5 xs:py-14 sm:px-6 sm:py-15 md:px-8 md:py-15 lg:px-10 lg:py-15">
                 <div
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35]"

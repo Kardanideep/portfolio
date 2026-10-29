@@ -101,7 +101,7 @@ export default function ServicesPage() {
       {/* ═══════════════════════════════════════════════════
           HERO
       ═══════════════════════════════════════════════════ */}
-      <section className="relative isolate overflow-hidden bg-[#FBFCFE] px-4 py-10 xs:px-5 xs:py-14 sm:px-6 sm:py-15 md:px-8 md:py-15 lg:px-10 lg:py-15">
+      <section className="relative isolate overflow-hidden  px-4 py-10 xs:px-5 xs:py-14 sm:px-6 sm:py-15 md:px-8 md:py-15 lg:px-10 lg:py-15">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute -right-32 -top-32 h-[20rem] w-[20rem] rounded-full bg-[#6366F1]/[0.07] blur-3xl sm:h-[26rem] sm:w-[26rem]" />
           <div className="absolute -bottom-40 right-[20%] h-[18rem] w-[18rem] rounded-full bg-[#4F46E5]/[0.05] blur-3xl sm:h-[24rem] sm:w-[24rem]" />

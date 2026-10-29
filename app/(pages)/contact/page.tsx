@@ -136,7 +136,7 @@ export default function ContactPage() {
       <Header />
 
       {/* ── Contact Hero ─────────────────────────────────── */}
-      <section className="relative overflow-hidden border-b border-border-soft bg-surface px-4 pb-12 pt-12 xs:px-5 xs:pb-14 xs:pt-14 sm:px-6 sm:pb-16 sm:pt-16 md:px-8 md:pb-20 md:pt-20 lg:px-10 lg:pb-24 lg:pt-24">
+      <section className="relative overflow-hidden border-b border-border-soft  px-4 pb-12 pt-12 xs:px-5 xs:pb-14 xs:pt-14 sm:px-6 sm:pb-16 sm:pt-16 md:px-8 md:pb-20 md:pt-20 lg:px-10 lg:pb-24 lg:pt-24">
         {/* Ambient glows — blue accent */}
         <div
           aria-hidden="true"

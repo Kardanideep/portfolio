@@ -1,8 +1,6 @@
 {
   "hero": {
-    "headlineLines": [
-      "Turning ideas into"
-    ],
+    "headlineLines": ["Turning ideas into"],
     "headlineHighlight": "Digital",
     "headlinehighlight2": "Products.",
     "introBody": "We help businesses turn ideas, processes, and challenges into practical digital products through thoughtful design, reliable development, and solutions built around real business needs.",
@@ -384,30 +382,34 @@
     "primaryLabel": "Start a Project",
     "secondaryLabel": "Chat on WhatsApp"
   },
-"testimonials": [
-  {
-    "quote": "We needed a professional website that was simple for our customers to understand. ISHWAT Technologies understood our requirements well and delivered exactly what we were looking for. The communication was also very smooth throughout the project.",
-    "name": "Kahyap Patel",
-    "initials": "KP",
-    "accent": "blue"
-  },
-  {
-    "quote": "They first took the time to understand how our work actually happens before starting the development. That made a big difference in the final result. The platform feels practical and much more organised for our day-to-day work.",
-    "name": "Chintu Chavda",
-    "initials": "CC",
-    "accent": "violet"
-  },
-  {
-    "quote": "I liked the way ISHWAT Technologies kept things practical. They understood what we actually needed and didn't make the project unnecessarily complicated. The development process was clear and easy to follow.",
-    "name": "Arjun Patel",
-    "initials": "AP",
-    "accent": "amber"
-  },
-  {
-    "quote": "The whole process was quite straightforward. We discussed what we needed, got regular updates during development, and the final website came out the way we expected. Overall, it was a good experience working with the team.",
-    "name": "Neha Desai",
-    "initials": "ND",
-    "accent": "pink"
-  }
-]
+  "testimonials": [
+    {
+      "quote": "ISHWAT Technologies understood our requirements and created a professional website that presents our labour law consultancy services clearly. The entire process was smooth, and we are happy with how the website represents our business.",
+      "name": "Kashyap Patel",
+      "role": "Owner, KDM Associates",
+      "initials": "KP",
+      "accent": "blue"
+    },
+    {
+      "quote": "ISHWAT Technologies understood our vision for LabourFlow and created a professional website that explains our labour compliance solutions, highlights key features, and makes it easier for potential clients to understand the value of our platform.",
+      "name": "Deep Patel",
+      "role": "Co-Founder, LabourFlow",
+      "initials": "DP",
+      "accent": "violet"
+    },
+    {
+      "quote": "I liked the way ISHWAT Technologies kept things practical. They understood what we actually needed and didn't make the project unnecessarily complicated. The development process was clear and easy to follow.",
+      "name": "Chintu Chavda",
+      "role": "Product Manager",
+      "initials": "AP",
+      "accent": "amber"
+    },
+    {
+      "quote": "The whole process was quite straightforward. We discussed what we needed, got regular updates during development, and the final website came out the way we expected. Overall, it was a good experience working with the team.",
+      "name": "Neha Desai",
+      "role": "Business Owner",
+      "initials": "ND",
+      "accent": "pink"
+    }
+  ]
 }

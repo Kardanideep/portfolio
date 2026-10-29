@@ -186,6 +186,26 @@ export default function Footer() {
             </div>
           </div>
 
+           {/* Services */}
+          <div className="md:col-span-3">
+            <p className="text-[13px] font-semibold text-white">
+              {footer.servicesTitle}
+            </p>
+
+            <ul className="mt-3.5 space-y-2 text-[13px]">
+              {SERVICES.map((service) => (
+                <li key={service}>
+                  <Link
+                    href="/services"
+                    className="text-slate-400 transition-colors duration-300 hover:text-[#60A5FA]"
+                  >
+                    {service}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Company */}
           <nav aria-label="Company" className="md:col-span-2">
             <p className="text-[13px] font-semibold text-white">
@@ -205,26 +225,6 @@ export default function Footer() {
               ))}
             </ul>
           </nav>
-
-          {/* Services */}
-          <div className="md:col-span-3">
-            <p className="text-[13px] font-semibold text-white">
-              {footer.servicesTitle}
-            </p>
-
-            <ul className="mt-3.5 space-y-2 text-[13px]">
-              {SERVICES.map((service) => (
-                <li key={service}>
-                  <Link
-                    href="/services"
-                    className="text-slate-400 transition-colors duration-300 hover:text-[#60A5FA]"
-                  >
-                    {service}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Work */}
           <div className="md:col-span-3">
