@@ -53,7 +53,7 @@ export default function ProcessSection() {
           </p>
           <h2 className="mt-3 text-[1.75rem] font-bold leading-[1.1] tracking-[-0.03em] xs:mt-4 xs:text-[2rem] xs:leading-[1.08] sm:text-4xl sm:leading-[1.05] sm:tracking-tight md:text-5xl lg:text-6xl">
             {process.heading}
-            <span className="italic text-muted">{process.headingHighlight}</span>
+            <span className="italic text-muted">{" "}{process.headingHighlight}</span>
           </h2>
           <p className="mt-2 text-[15px] leading-6 text-muted xs:mt-3 xs:text-[15.5px] xs:leading-[1.7] sm:mt-2 sm:text-base sm:leading-7 md:text-lg md:leading-8">
             {process.intro}

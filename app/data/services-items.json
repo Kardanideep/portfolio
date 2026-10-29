@@ -210,88 +210,6 @@
   },
   {
     "n": "03",
-    "title": "AI Solutions",
-    "desc": "Practical AI-powered features and solutions that help businesses automate repetitive work, improve workflows, and create better digital experiences.",
-    "points": [
-      "AI features built around real use cases",
-      "Workflow and task automation",
-      "Integration with existing applications"
-    ],
-    "icon": "sparkles",
-    "tagline": "Practical AI for real business needs.",
-    "overview": "AI can be useful when it solves a specific business problem rather than being added simply because it is a trend. We help businesses identify suitable AI use cases and integrate practical capabilities such as intelligent assistants, document processing, content workflows, data interactions, and task automation into their existing products or new applications.",
-    "idealFor": [
-      "Businesses exploring AI opportunities",
-      "Teams automating repetitive workflows",
-      "Existing products adding AI capabilities",
-      "Companies building AI-powered internal tools"
-    ],
-    "keyFeatures": [
-      "AI features built around practical use cases",
-      "Intelligent assistants and content workflows",
-      "Document and data processing",
-      "AI integration with existing applications"
-    ],
-    "deliverables": [
-      "AI use-case planning",
-      "AI-powered application features",
-      "API and model integrations",
-      "Prompt and workflow design",
-      "Document and data processing workflows",
-      "Integration with existing business systems"
-    ],
-    "techStack": [
-      {
-        "name": "OpenAI API",
-        "color": "#111111",
-        "faIcon": "fa-solid fa-wand-magic-sparkles"
-      },
-      {
-        "name": "Node.js",
-        "color": "#68A063",
-        "faIcon": "fa-brands fa-node-js"
-      },
-      {
-        "name": "Next.js",
-        "color": "#111111",
-        "faIcon": "fa-solid fa-n"
-      },
-      {
-        "name": "React",
-        "color": "#61DAFB",
-        "faIcon": "fa-brands fa-react"
-      },
-      {
-        "name": "REST APIs",
-        "color": "#4F46E5",
-        "faIcon": "fa-solid fa-plug"
-      },
-      {
-        "name": "MongoDB",
-        "color": "#4DB33D",
-        "faIcon": "fa-solid fa-leaf"
-      },
-      {
-        "name": "MySQL",
-        "color": "#00758F",
-        "faIcon": "fa-solid fa-database"
-      },
-      {
-        "name": "PostgreSQL",
-        "color": "#336791",
-        "faIcon": "fa-solid fa-database"
-      },
-      {
-        "name": "Firebase",
-        "color": "#FFCA28",
-        "faIcon": "fa-solid fa-fire"
-      }
-    ],
-    "timeline": "3 – 8 weeks",
-    "startingPrice": "From ₹50,000"
-  },
-  {
-    "n": "04",
     "title": "Custom Web Applications",
     "desc": "Full-stack web applications built around business workflows, including dashboards, user systems, admin panels, and custom functionality.",
     "points": [
@@ -393,7 +311,7 @@
     "startingPrice": "From ₹1,20,000"
   },
   {
-    "n": "05",
+    "n": "04",
     "title": "Mobile App Development",
     "desc": "Mobile applications designed for customer-facing products, business services, internal operations, and digital experiences across Android.",
     "points": [
@@ -474,8 +392,90 @@
     "timeline": "6 – 10 weeks",
     "startingPrice": "From ₹1,00,000"
   },
+   {
+    "n": "05",
+    "title": "AI Solutions",
+    "desc": "Practical AI-powered features and solutions that help businesses automate repetitive work, improve workflows, and create better digital experiences.",
+    "points": [
+      "AI features built around real use cases",
+      "Workflow and task automation",
+      "Integration with existing applications"
+    ],
+    "icon": "sparkles",
+    "tagline": "Practical AI for real business needs.",
+    "overview": "AI can be useful when it solves a specific business problem rather than being added simply because it is a trend. We help businesses identify suitable AI use cases and integrate practical capabilities such as intelligent assistants, document processing, content workflows, data interactions, and task automation into their existing products or new applications.",
+    "idealFor": [
+      "Businesses exploring AI opportunities",
+      "Teams automating repetitive workflows",
+      "Existing products adding AI capabilities",
+      "Companies building AI-powered internal tools"
+    ],
+    "keyFeatures": [
+      "AI features built around practical use cases",
+      "Intelligent assistants and content workflows",
+      "Document and data processing",
+      "AI integration with existing applications"
+    ],
+    "deliverables": [
+      "AI use-case planning",
+      "AI-powered application features",
+      "API and model integrations",
+      "Prompt and workflow design",
+      "Document and data processing workflows",
+      "Integration with existing business systems"
+    ],
+    "techStack": [
+      {
+        "name": "OpenAI API",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-wand-magic-sparkles"
+      },
+      {
+        "name": "Node.js",
+        "color": "#68A063",
+        "faIcon": "fa-brands fa-node-js"
+      },
+      {
+        "name": "Next.js",
+        "color": "#111111",
+        "faIcon": "fa-solid fa-n"
+      },
+      {
+        "name": "React",
+        "color": "#61DAFB",
+        "faIcon": "fa-brands fa-react"
+      },
+      {
+        "name": "REST APIs",
+        "color": "#4F46E5",
+        "faIcon": "fa-solid fa-plug"
+      },
+      {
+        "name": "MongoDB",
+        "color": "#4DB33D",
+        "faIcon": "fa-solid fa-leaf"
+      },
+      {
+        "name": "MySQL",
+        "color": "#00758F",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "PostgreSQL",
+        "color": "#336791",
+        "faIcon": "fa-solid fa-database"
+      },
+      {
+        "name": "Firebase",
+        "color": "#FFCA28",
+        "faIcon": "fa-solid fa-fire"
+      }
+    ],
+    "timeline": "3 – 8 weeks",
+    "startingPrice": "From ₹50,000"
+  },
   {
-    "n": "07",
+    "n": "06",
     "title": "Backend & API Development",
     "desc": "Reliable backend systems with APIs, authentication, databases, business logic, payments, and third-party integrations.",
     "points": [
@@ -572,7 +572,7 @@
     "startingPrice": "From ₹50,000"
   },
   {
-    "n": "06",
+    "n": "07",
     "title": "UI/UX Design",
     "desc": "Clear and modern digital interfaces designed around user needs, business goals, and a consistent brand experience.",
     "points": [

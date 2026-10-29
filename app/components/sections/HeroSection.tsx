@@ -95,13 +95,11 @@ export default function HeroSection() {
               {hero.badgeText}
             </div>
 
-            <h1 className="reveal max-w-[650px] text-[3rem] font-semibold leading-[1.02] tracking-[-0.055em] text-[#111318] sm:text-5xl sm:tracking-[-0.070em] md:text-[4rem] lg:text-[4.9rem] xl:text-[5.5rem]">
+            <h1 className="reveal max-w-[650px] text-[2.5rem] font-semibold leading-[1.02] tracking-[-0.055em] text-[#111318] sm:text-5xl sm:tracking-[-0.070em] md:text-[4rem] lg:text-[4rem] xl:text-[4rem]">
               {hero.headlineLines}{" "}
               <span className="bg-gradient-to-r from-[#2563EB] to-[#7C3AED] bg-clip-text text-transparent">
                 {hero.headlineHighlight}
               </span>
-              <br />
-              {hero.headlinehighlight2}
             </h1>
 
             <p className="reveal mt-5 max-w-[510px] text-[15px] leading-6 text-[#596171] sm:mt-6 sm:text-base sm:leading-7 md:text-lg md:leading-8">

@@ -1,9 +1,8 @@
 {
   "hero": {
-    "headlineLines": ["Turning ideas into"],
-    "headlineHighlight": "Digital",
-    "headlinehighlight2": "Products.",
-    "introBody": "We help businesses turn ideas, processes, and challenges into practical digital products through thoughtful design, reliable development, and solutions built around real business needs.",
+    "headlineLines": ["Websites and Digital Solutions Built for"],
+    "headlineHighlight": "Growing Businesses.",
+    "introBody": "We help businesses build professional websites, e-commerce stores, and custom web applications that strengthen their online presence, build customer trust, and simplify everyday work.",
     "badgeText": "Your Idea. Our Expertise.",
     "primaryCta": {
       "label": "Start a Project",
