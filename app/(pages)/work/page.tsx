@@ -148,7 +148,7 @@ function ProjectModal({
             {/* Gradient overlay for legibility */}
             <div
               className={`pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent transition-opacity duration-500 ${
-                isOpen ? "opacity-100" : "opacity-0"
+                isOpen ? "opacity-20" : "opacity-0"
               }`}
             />
 
