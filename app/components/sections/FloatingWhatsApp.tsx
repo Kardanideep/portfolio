@@ -1,7 +1,7 @@
 import WhatsAppIcon from "../shared/WhatsAppIcon";
 
 const WHATSAPP_URL = `https://wa.me/919727927266?text=${encodeURIComponent(
-  "Hi Deep, I need a website for my business",
+  "Hi! I'm interested in ISHWAT Technologies' services. Let's connect!",
 )}`;
 
 export default function FloatingWhatsApp() {
